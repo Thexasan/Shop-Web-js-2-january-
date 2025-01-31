@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.tabs {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.tabs button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ddd;
+    cursor: pointer;
+}
+.tabs button.active {
+    background-color: #007bff;
+    color: white;
+}
+.content {
+    display: none;
+}
+.content.active {
+    display: block;
+}

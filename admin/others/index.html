@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Other</title>
-  </head>
-  <body>
-    <h1>Otherjon</h1>
-  </body>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+    <div class="tabs">
+        <button id="categoriesBtn" class="active" onclick="showSection('categories')">Categories</button>
+        <button id="brandsBtn" onclick="showSection('brands')">Brands</button>
+    </div>
+
+    <div id="categories" class="content active">
+        <h2>Categories</h2>
+        <p>List of categories displayed here...</p>
+    </div>
+
+    <div id="brands" class="content">
+        <h2>Brands</h2>
+        <p>List of brands displayed here...</p>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
 </html>
