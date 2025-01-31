@@ -115,7 +115,7 @@ a {
   /* background-color: #1FD286; */
 }
 .add {
-  padding: 10px 20px;
+  padding: 5px 10px;
   border: none;
   background-color: #2563eb;
   color: #fff;
@@ -125,7 +125,7 @@ a {
   font-weight: bold;
 }
 .head h1 {
-  font-size: 40px;
+  font-size: 30px;
 }
 .jsBox {
   width: 78.7%;
@@ -143,7 +143,85 @@ a {
   gap: 20px;
 }
 .searchForm input , select {
-  padding: 10px 20px;
+  padding: 5px 15px;
   border: 2px solid gray;
   font-weight: bold;
+}
+#deleteAllBut
+{
+    color: red;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.table
+{
+    border-collapse: collapse;
+    border-bottom: 1px solid gray;
+    padding: 10px 0px;
+    text-align: center;
+    width: 95%;
+    margin: 20px auto;
+}
+th
+{
+    padding: 10px 0px;
+    color: rgb(56, 56, 56);
+    border-bottom: 1px solid gray;
+}
+td
+{
+    padding: 10px 0px;
+    border-bottom: 1px solid gray;
+}
+.checkTd
+{
+    width: 50px;
+}
+.productTd
+{
+    width: 200px;
+}
+.product img
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+.product
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.product p
+{
+    font-size: 18px;
+    font-weight: 600;
+}
+.actionsDiv
+{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* background-color: red; */
+    width: 70px;
+}
+.actionsTd
+{
+    width: 70px;
+}
+.actionsDiv i
+{
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+#editBut
+{
+    color: #2563eb;
+}
+#deleteBut
+{
+    color: red;
 }
