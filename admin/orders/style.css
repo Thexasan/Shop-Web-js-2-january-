@@ -1,0 +1,122 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+.navbar
+{
+    display: flex;
+    align-items: center;
+    background-color: #1C2536;
+    justify-content: space-between;
+    padding: 10px 20px;
+    width: 96.9%;
+}
+.left
+{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+#searchIcon
+{
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+.right
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.circle
+{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #1FD286;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px;
+    font-size: 20px;
+}
+.name
+{
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
+.notifications
+{
+    cursor: pointer;
+}
+.profileAdmin
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.searchInp
+{
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+}
+::placeholder
+{
+    color: #fff;
+}
+.searchBox
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.main 
+{
+    display: flex;
+}
+.asideBar
+{
+    width: 15%;
+    padding: 50px 20px;
+    background-color: #1C2536;
+    height: 100vh;
+}
+.asideBar i
+{
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+}
+.asideBar li
+{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0px;
+    cursor: pointer;
+}
+.active
+{
+    background-color: #878787;
+    color: #1C2536;
+    border-radius: 10px;
+}
+a
+{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+}
