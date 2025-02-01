@@ -1,3 +1,3 @@
-document.getElementById('toggleBtn').addEventListener('click', function() {
-    document.getElementById('screen').classList.toggle('active');
-});
+import {getData} from "../../../requests/request.js";
+
+getData();
