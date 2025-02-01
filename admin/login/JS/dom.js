@@ -57,6 +57,7 @@ export function findUsers(users) {
     if (userEmail == "" && userPassword == "") {
       errorUserDate.innerHTML = "";
     }
+    form.reset();
   };
 }
 
