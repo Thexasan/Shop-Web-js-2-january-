@@ -2,13 +2,17 @@
   margin: 0;
   padding: 0;
 }
+html , body
+{
+  height: 100%;
+}
 .navbar {
   display: flex;
   align-items: center;
   background-color: #1c2536;
   justify-content: space-between;
   padding: 10px 20px;
-  width: 96.9%;
+  width: 96.%;
 }
 .left {
   display: flex;
@@ -71,12 +75,15 @@
 }
 .main {
   display: flex;
+  height: 100vh;
+  align-items: stretch;
+  flex: 1;
 }
 .asideBar {
   width: 15%;
   padding: 50px 20px;
   background-color: #1c2536;
-  height: 69.5vh;
+  height: 100%;
 }
 .asideBar i {
   font-size: 30px;
@@ -111,7 +118,7 @@ a {
   align-items: center;
   padding: 20px;
   justify-content: space-between;
-  width: 100%;
+  width: 95%;
   /* background-color: #1FD286; */
 }
 .add {
@@ -129,6 +136,7 @@ a {
 }
 .jsBox {
   width: 78.7%;
+  flex: 1;
 }
 .selectsNavigation {
   display: flex;
@@ -142,86 +150,105 @@ a {
   align-items: center;
   gap: 20px;
 }
-.searchForm input , select {
+.searchForm input,
+select {
   padding: 5px 15px;
   border: 2px solid gray;
   font-weight: bold;
 }
-#deleteAllBut
-{
-    color: red;
-    font-size: 25px;
-    font-weight: bold;
-    cursor: pointer;
+#deleteAllBut {
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
 }
-.table
-{
-    border-collapse: collapse;
-    border-bottom: 1px solid gray;
-    padding: 10px 0px;
-    text-align: center;
-    width: 95%;
-    margin: 20px auto;
+.table {
+  border-collapse: collapse;
+  border-bottom: 1px solid gray;
+  padding: 10px 0px;
+  text-align: center;
+  width: 95%;
+  margin: 20px auto;
 }
-th
-{
-    padding: 10px 0px;
-    color: rgb(56, 56, 56);
-    border-bottom: 1px solid gray;
+th {
+  padding: 10px 0px;
+  color: rgb(56, 56, 56);
+  border-bottom: 1px solid gray;
 }
-td
-{
-    padding: 10px 0px;
-    border-bottom: 1px solid gray;
+td {
+  padding: 10px 0px;
+  border-bottom: 1px solid gray;
 }
-.checkTd
-{
-    width: 50px;
+.checkTd {
+  width: 50px;
 }
-.productTd
-{
-    width: 200px;
+.productTd {
+  width: 200px;
 }
-.product img
-{
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
+.product img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
 }
-.product
-{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.product {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.product p
-{
-    font-size: 18px;
-    font-weight: 600;
+.product p {
+  font-size: 18px;
+  font-weight: 600;
 }
-.actionsDiv
-{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    /* background-color: red; */
-    width: 70px;
+.actionsDiv {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  /* background-color: red; */
+  width: 70px;
 }
-.actionsTd
-{
-    width: 70px;
+.actionsTd {
+  width: 70px;
 }
-.actionsDiv i
-{
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: bold;
+.actionsDiv i {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
 }
-#editBut
-{
-    color: #2563eb;
+#editBut {
+  color: #2563eb;
 }
-#deleteBut
+#deleteBut {
+  color: red;
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 95%;
+  margin: auto;
+}
+.pagination button {
+  padding: 5px 10px;
+  border: none;
+  color: gray;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.pagination button:active {
+  background-color: gray;
+  color: #fff;
+}
+.number {
+  padding: 10px;
+  color: black;
+  cursor: pointer;
+}
+.activePag
 {
-    color: red;
+  padding: 10px 15px;
+  background-color: rgba(0, 76, 255, 0.612);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
 }
