@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
 }
+html , body
+{
+  height: 100%;
+}
 .navbar {
   display: flex;
   align-items: center;
@@ -71,12 +75,15 @@
 }
 .main {
   display: flex;
+  height: 100vh;
+  align-items: stretch;
+  flex: 1;
 }
 .asideBar {
   width: 15%;
   padding: 50px 20px;
   background-color: #1c2536;
-  height: 69.5vh;
+  height: 100%;
 }
 .asideBar i {
   font-size: 30px;
@@ -129,6 +136,7 @@ a {
 }
 .jsBox {
   width: 78.7%;
+  flex: 1;
 }
 .selectsNavigation {
   display: flex;
@@ -234,4 +242,13 @@ td {
 .number {
   padding: 10px;
   color: black;
+  cursor: pointer;
+}
+.activePag
+{
+  padding: 10px 15px;
+  background-color: rgba(0, 76, 255, 0.612);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
 }

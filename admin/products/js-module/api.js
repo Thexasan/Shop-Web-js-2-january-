@@ -1,12 +1,11 @@
 import { getData , deleteData } from "../../../requests/request.js";
 import { get } from "./dom.js";
 import { updateControl } from "./dom.js";
-export async function fetchData(params = "") {
+export async function fetchData() {
   try {
-    let products = await getData(`/products${params}`);
+    let products = await getData(`/products`);
     console.log(products);
     get(products);
-    updateControl(products.length)
   } catch (error) {
     console.error(error);
     get(error);
