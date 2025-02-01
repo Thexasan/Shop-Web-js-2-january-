@@ -1,51 +1,63 @@
+export function findUsers(users) {
+  const initialWelcome = document.getElementById("initialWelcome");
+  const container = document.getElementById("container");
 
-document.addEventListener('DOMContentLoaded', () => {
-    const initialWelcome = document.getElementById('initialWelcome');
-    const splashScreen = document.getElementById('splashScreen');
-    const loginForm = document.getElementById('loginForm');
-    const container = document.getElementById('container');
-    
-    initialWelcome.onclick = () => {
-        initialWelcome.style.opacity = '0';
-        setTimeout(() => {
-            initialWelcome.style.display = 'none';
-            container.classList.add('visible');
-        
-            setTimeout(() => {
-                container.classList.add('active');
-            }, 100);
-        }, 500);
-    };
-
+  initialWelcome.onclick = () => {
+    initialWelcome.style.opacity = "0";
     setTimeout(() => {
-        splashScreen.style.opacity = '0';
+      initialWelcome.style.display = "none";
+      if (container) {
+        container.classList.add("visible");
         setTimeout(() => {
-            splashScreen.style.display = 'none';
-            loginForm.style.display = 'block';
-        }, 500);
-    }, 2000);
+          container.classList.add("active");
+        }, 100);
+      }
+    }, 500);
+  };
 
-    container.onclick = () => {
-        if (!container.classList.contains('active')) {
-            container.classList.add('active');
-        }
-    };
+  container.onclick = () => {
+    if (!container.classList.contains("active")) {
+      container.classList.add("active");
+    }
+  };
 
-    const passwordToggle = document.querySelector('.password-toggle');
-    const passwordInput = document.querySelector('input[type="password"]');
-    
-    passwordToggle.onclick = (e) => {
-        e.stopPropagation();
-        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-        passwordInput.setAttribute('type', type);
-    };
+  const passwordToggle = document.querySelector(".password-toggle");
+  const passwordInput = document.querySelector('input[type="password"]');
 
-    const form = document.querySelector('form');
-    form.onclick = (e) => {
-        e.stopPropagation();
-    };
+  passwordToggle.onclick = (e) => {
+    e.stopPropagation();
+    const type =
+      passwordInput.getAttribute("type") === "password" ? "text" : "password";
+    passwordInput.setAttribute("type", type);
+  };
 
-    document.getElementById('loginBtn').addEventListener('click', function() {
-        document.getElementById('screen').classList.add('active');
-    });
-});
+  const form = document.querySelector(".form");
+  const btnLogin = document.querySelector(".login-btn");
+  const errorUserDate = document.querySelector(".error-userData");
+
+  btnLogin.onclick = (e) => {
+    e.preventDefault();
+    let userEmail = form["inpEmail"].value;
+    let userPassword = form["inpPassword"].value;
+
+    const user = users.find(
+      (u) => u.email === userEmail && u.password === userPassword
+    );
+
+    if (user) {
+      if (user.roleId === 0) {
+        window.location.href = "../../dashboard/dashboard.html";
+      } else {
+        errorUserDate.innerHTML = "You don't have enough rights!";
+      }
+    } else {
+      errorUserDate.innerHTML = "User not found!";
+    }
+
+    if (userEmail == "" && userPassword == "") {
+      errorUserDate.innerHTML = "";
+    }
+  };
+}
+
+document.addEventListener("DOMContentLoaded", findUsers);

@@ -1,3 +1,3 @@
-import {getData} from "../../../requests/request.js";
+import { fetchOrders } from "./api.js";
 
-getData();
+fetchOrders();
