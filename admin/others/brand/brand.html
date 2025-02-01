@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brand</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <aside class="left">
+        <img src="../img/r1.png" alt="" />
+        <div class="searchBox">
+          <i class="bi bi-search" id="searchIcon"></i>
+          <input type="search" class="searchInp" placeholder="search..." />
+        </div>
+      </aside>
+      <aside class="right">
+        <img src="../img/r2.png" alt="" class="notifications" />
+        <div class="profileAdmin">
+          <div class="circle">R</div>
+          <p class="name">rahdin kumar</p>
+        </div>
+      </aside>
+    </nav>
+    <main class="main">
+      <aside class="asideBar">
+        <li class="">
+          <i class="bi bi-house-door"></i><a href="" class="">Dashboard</a>
+        </li>
+        <li class="">
+          <i class="bi bi-list-ul"></i><a href="" class="">Orders</a>
+        </li>
+        <li><i class="bi bi-tag"></i><a href="" class="">Products</a></li>
+        <li class="active">
+          <i class="bi bi-folder"></i><a href="" class="">other</a>
+        </li>
+      </aside>
+
+      <!-- ADDDMODAL -->
+
+      <dialog id="categoryModal">
+        <form method="dialog" class="modal">
+          <span
+            class="close"
+            onclick="document.getElementById('categoryModal').close()"
+            >&times;</span
+          >
+          <h2>Add category</h2>
+          <input type="text" placeholder="Category name" class="input-field" />
+          <div class="upload-box">
+            <label for="file-upload" class="upload-label">
+              <div class="upload-icon">⬆</div>
+              <p><strong>Click to upload</strong> or drag and drop</p>
+              <p class="file-info">(SVG, JPG, PNG, or GIF maximum 900×400)</p>
+            </label>
+            <input type="file" id="file-upload" hidden />
+          </div>
+          <div class="modal-actions">
+            <button
+              class="cancel"
+              onclick="document.getElementById('categoryModal').close()"
+            >
+              Cancel
+            </button>
+            <button class="create" type="submit">Create</button>
+          </div>
+        </form>
+      </dialog>
+      <!-- CARDSSS -->
+
+      <aside class="div">
+        <div class="container">
+          <div class="navbar2">
+            <button class="tab active">Categories</button>
+            <button class="tab">Brands</button>
+            <button class="tab">Banners</button>
+          </div>
+          <div class="grid1">
+            <div class="content">
+                <div class="brands-list">
+                    <!-- <h3>Brands</h3> -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Brands</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Samsung</td>
+                                <td>
+                                    <span class="edit">✏️</span>
+                                    <span class="delete">🗑️</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xiaomi</td>
+                                <td>
+                                    <span class="edit">✏️</span>
+                                    <span class="delete">🗑️</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>LG</td>
+                                <td>
+                                    <span class="edit">✏️</span>
+                                    <span class="delete">🗑️</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Nokia</td>
+                                <td>
+                                    <span class="edit">✏️</span>
+                                    <span class="delete">🗑️</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Panasonic</td>
+                                <td>
+                                    <span class="edit">✏️</span>
+                                    <span class="delete">🗑️</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+    
+                <div class="add-brand">
+                    <h3>Add new brand</h3>
+                    <input type="text" placeholder="Brand name">
+                    <button class="create-btn">Create</button>
+                </div>
+            </div>
+        </div> 
+          </div>
+        </div>
+      </aside>
+    </main>
+    <script type="module" src="main1.js"></script>
+  </body>
+</html>

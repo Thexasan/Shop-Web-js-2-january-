@@ -33,7 +33,7 @@
         "cost": 200.99,
         "discount": 20,
         "count": 10
-      },
+      },  
       "options": {},
       "color": [
         {
@@ -44,7 +44,7 @@
       "images": [
         {
           "id": 1,
-          "src": "base64"
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/800px-BMW.svg.png"
         },
         {
           "id": 2,
