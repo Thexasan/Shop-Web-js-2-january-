@@ -1,24 +1,27 @@
 import { getData,deleteData } from "../../../requests/request.js";
 import { showOrdersTable } from "./dom.js";
 
-export async function fetchOrders() {
+export async function fetchOrders(name) {
  try {
-    let orders = await getData("/orders"); 
+   if(name){
+      let orders = await getData(`/orders?fullName=${name}`); 
     showOrdersTable(orders)
-    
+
+   }
+   else {
+      let orders = await getData("/orders"); 
+       showOrdersTable(orders)
+   }  
  } catch (error) {
     console.error(error);
-    showOrdersTable(error)
  }
 }
 
 export async function deleteUser(id) {
  try {
-    await deleteData(`/orders/${id}`) 
-    fetchOrders()
+   await deleteData(`/orders/${id}`);
+   fetchOrders()
  } catch (error) {
     console.error(error);
-    showOrdersTable(error)
  }
 }
-

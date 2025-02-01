@@ -121,15 +121,18 @@ a{
     justify-content: center;
     align-items: center;
     margin: auto;
+    text-align: center;
 }
 .h3{
     margin: 20px 0 0 0;
+    text-align: center;
 }
 .para{
     color: gray;
-    width: 60%;
+    width: 100%;
     text-align: center;
     margin: 5px 0 20px 0;
+    text-align: center;
 }
 .AddOrders{
     background-color: #2563EB;
