@@ -1,3 +1,4 @@
-import { getData } from "../requests/request.js";
+import { getCategory } from "./api.js";
 
-getData();
+
+getCategory()
