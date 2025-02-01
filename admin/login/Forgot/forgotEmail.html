@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forgot</title>
+    <link rel="stylesheet" href="./forgotEmail.css" />
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="split left">
+            <div class="welcome-content">
+                <h1>Welcome to admin panel</h1>
+                <img src="../img/ruleee.png" alt="FastCart" />
+            </div>
+        </div>
+        <div class="split right">
+            <div class="login-form">
+                <div class="navigate-back">
+                    <span><a href="../MainPageLogin/login.html"><img src="../img/arrow_back.png" alt=""></a></span>
+                    <h3>Log in</h3>
+                </div>
+                <h2>Forgot password</h2>
+                    <div class="input-group">
+                        <input type="email" id="email" placeholder="Email" required />
+                        <p class="error-message"></p>
+                    </div>
+                    <div class="form-footer">
+                        <button type="button" class="login-btn" onclick="validateEmail()">Send reset link</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function validateEmail() {
+            let emailInput = document.getElementById("email");
+            let errorMessage = document.querySelector(".error-message");
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            let valid = true;
+
+            // Очистка предыдущих ошибок
+            errorMessage.textContent = "";
+
+            if (emailInput.value.trim() === "") {
+                errorMessage.textContent = "Please enter your email";
+                errorMessage.style.color = "red";
+                valid = false;
+            } else if (!emailPattern.test(emailInput.value.trim())) {
+                errorMessage.textContent = "Please enter a valid email address";
+                errorMessage.style.color = "red";
+                valid = false;
+            }
+
+            if (valid) {
+                window.location.href = '../Forgot/forgotPass.html';
+            }
+        }
+    </script>
+</body>
+</html>

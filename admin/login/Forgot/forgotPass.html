@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forgot</title>
+    <link rel="stylesheet" href="./forgotPass.css" />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="split left">
+        <div class="welcome-content">
+          <h1>Welcome to admin panel</h1>
+          <img src="../img/ruleee.png" alt="FastCart" />
+        </div>
+      </div>
+      <div class="split right">
+        <div class="login-form">
+          <div class="navigate-back">
+            <span
+              ><a href="../MainPageLogin/login.html"
+                ><img src="../img/arrow_back.png" alt="" /></a
+            ></span>
+            <h3>Log in</h3>
+          </div>
+          <h2>Forgot password</h2>
+          <form id="reset-form">
+            <div class="input-group">
+              <input
+                type="password"
+                id="password1"
+                placeholder="Password"
+                required
+              />
+              <span class="password-toggle" onclick="togglePassword('password1')">👁</span>
+              <p class="error-message" id="error-password1"></p>
+            </div>
+            <div class="input-group">
+              <input
+                type="password"
+                id="password2"
+                placeholder="Confirm Password"
+                required
+              />
+              <span class="password-toggle" onclick="togglePassword('password2')">👁</span>
+              <p class="error-message" id="error-password2"></p>
+            </div>
+            <div class="form-footer">
+              <button type="button" class="login-btn" onclick="validateForm()">
+                Send reset link
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function validateForm() {
+        let password1 = document.getElementById("password1");
+        let password2 = document.getElementById("password2");
+        let errorPassword1 = document.getElementById("error-password1");
+        let errorPassword2 = document.getElementById("error-password2");
+        let valid = true;
+
+
+        errorPassword1.textContent = "";
+        errorPassword2.textContent = "";
+        errorPassword1.classList.remove("show");
+        errorPassword2.classList.remove("show");
+
+        if (password1.value.trim() === "") {
+          errorPassword1.textContent = "Please fill out this field";
+          errorPassword1.classList.add("show");
+          valid = false;
+        }
+
+        if (password2.value.trim() === "") {
+          errorPassword2.textContent = "Please fill out this field";
+          errorPassword2.classList.add("show");
+          valid = false;
+        }
+
+        if (password1.value !== password2.value) {
+          errorPassword2.textContent = "Passwords do not match";
+          errorPassword2.classList.add("show");
+          valid = false;
+        }
+
+        if (valid) {
+          window.location.href = "../MainPageLogin/login.html";
+        }
+      }
+
+      function togglePassword(passwordId) {
+        const passwordInput = document.getElementById(passwordId);
+        const type =
+          passwordInput.getAttribute("type") === "password" ? "text" : "password";
+        passwordInput.setAttribute("type", type);
+      }
+    </script>
+  </body>
+</html>

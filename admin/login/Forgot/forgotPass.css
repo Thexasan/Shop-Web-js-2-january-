@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+body {
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #1b214e, #20355b);
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.split {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  transition: all 0.8s ease-in-out;
+}
+
+.split.left {
+  background: linear-gradient(135deg, #08183b 0%, #1f113d 35%, #101b2b 100%);
+  background-size: 300% 300%;
+  animation: gradientAnimation 15s ease-in-out infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.welcome-content {
+  color: white;
+  text-align: center;
+  transition: all 0.8s ease-in-out;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.welcome-content h1 {
+  margin-bottom: 1rem;
+  font-size: 2em;
+  white-space: nowrap;
+}
+
+.split.right {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form {
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  transition: all 0.8s ease-in-out;
+}
+
+.login-form h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-align: left;
+}
+
+.navigate-back {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0px;
+  color: #333;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4285f4;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  user-select: none;
+}
+
+.form-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.forgot-link {
+  color: #4285f4;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+.login-btn {
+  background: #4285f4;
+  color: white;
+  border: none;
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.login-btn:hover {
+  background: #3367d6;
+}
+
+.error-message {
+  position: absolute;
+  bottom: -15px; 
+  left: 0;
+  color: red;
+  font-size: 14px;
+  visibility: hidden;
+}
+
+.error-message.show {
+  visibility: visible;
+}
