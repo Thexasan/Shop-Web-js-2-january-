@@ -1,130 +1,271 @@
-*
-{
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.navbar
-{
-    display: flex;
-    align-items: center;
-    background-color: #1C2536;
-    justify-content: space-between;
-    padding: 10px 20px;
-    width: 96.9%;
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #1c2536;
+  justify-content: space-between;
+  padding: 10px 20px;
+  width: 97.3%;
 }
-.left
-{
-    display: flex;
-    align-items: center;
-    gap: 30px;
+.left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
-#searchIcon
-{
-    font-size: 20px;
-    font-weight: bold;
-    color: #fff;
+#searchIcon {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
 }
-.right
-{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.circle
-{
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #1FD286;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-weight: bold;
-    padding: 5px;
-    font-size: 20px;
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #1fd286;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px;
+  font-size: 20px;
 }
-.name
-{
-    font-size: 20px;
-    font-weight: bold;
-    color: #fff;
-    cursor: pointer;
+.name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
 }
-.notifications
-{
-    cursor: pointer;
+.notifications {
+  cursor: pointer;
 }
-.profileAdmin
-{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
+.profileAdmin {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
 }
-.searchInp
-{
-    background-color: transparent;
-    border: none;
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-    outline: none;
+.searchInp {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
 }
-::placeholder
-{
-    color: #fff;
+::placeholder {
+  color: #fff;
 }
-.searchBox
-{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.main 
-{
-    display: flex;
+.main {
+  display: flex;
 }
-.asideBar
-{
-    width: 15%;
-    padding: 50px 20px;
-    background-color: #1C2536;
-    height: 100vh;
+.asideBar {
+  width: 15%;
+  padding: 50px 20px;
+  background-color: #1c2536;
+  height: 122vh;
 }
-.asideBar i
-{
-    font-size: 30px;
-    font-weight: bold;
-    color: #fff;
+.asideBar i {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
 }
-.asideBar li
-{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 0px;
-    cursor: pointer;
+.asideBar li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0px;
+  cursor: pointer;
 }
-.asideBar li:hover
-{
-    background-color: #878787;
-    color: #1C2536;
+.asideBar li:hover {
+  background-color: #878787;
+  color: #1c2536;
 }
-.active
-{
-    background-color: #878787;
-    color: #1C2536;
-    border-radius: 10px;
+.active {
+  background-color: #878787;
+  color: #1c2536;
+  border-radius: 10px;
 }
-a
-{
-    text-decoration: none;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 600;
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+#chart {
+  width: 100%;
+  box-shadow: 0px 0px 10px rgb(163, 161, 161);
+  border-radius: 10px;
+}
+.div {
+  width: 80%;
+  padding: 25px;
+}
+.div h1 {
+  padding: 10px 0px;
+}
+.main-box {
+  width: 100%;
+  height: 530px;
+  display: flex;
+  gap: 30px;
+}
+.left-box {
+  width: 70%;
+  height: 500px;
+}
+.right-box {
+  width: 30%;
+  height: 465px;
+  box-shadow: 0px 0px 10px rgb(163, 161, 161);
+  border-radius: 10px;
+  padding: 20px;
+}
+.prices {
+  width: 32%;
+  height: 100px;
+  margin: 20px 0px;
+  box-shadow: 0px 0px 10px rgb(163, 161, 161);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.prices:hover {
+  transform: scale(1.09);
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.prices img {
+  width: 60px;
+  height: 60px;
+}
+.data-price {
+  font-size: 30px;
+  font-weight: bold;
+}
+.price-boxes {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+}
+.main-actions {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  gap: 30px;
+}
+.actions {
+  width: 49%;
+  height: 400px;
+  box-shadow: 0px 0px 10px rgb(163, 161, 161);
+  border-radius: 10px;
+  padding: 20px;
+}
+.clred {
+  background-color: #fef3f2;
+}
+.clpink {
+  background-color: #fffaeb;
+}
+.clgreen {
+  background-color: #f0fdf9;
+}
+.box-navigate {
+  display: flex;
+  justify-content: space-between;
+}
+.objProduct {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  padding: 10px 0px;
+}
+.objProduct:hover {
+  transform: scale(1.05);
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+.navigate {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.some-product {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.box-navigate p {
+  font-size: 18px;
+  font-weight: bold;
+}
+.price-style {
+  color: green;
+  font-weight: bold;
+}
+.clrSale {
+  color: gray;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
 
+th {
+  background-color: #f4f4f4;
+}
+
+.status-paid {
+  padding: 5px 15px;
+  background-color: #c4f8e2;
+  font-weight: bold;
+  color: #06a561;
+  border-radius: 10px;
+}
+.status-paids {
+  padding: 5px 10px;
+  background-color: #e6e9f4;
+  font-weight: bold;
+  color: #5a607f;
+  border-radius: 10px;
+}
+.info-icon {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #ecf2ff;
+}
+tr:hover {
+  transform: scale(1.03);
+  transition: 1s ease;
+}
