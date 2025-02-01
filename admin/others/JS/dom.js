@@ -2,6 +2,7 @@
 // import { getCategory} from "../../../requests/request"; 
 
 import { fileTobase64 } from "../../../config.js";
+import { postCategory } from "./api.js";
 
 
 let grid = document.querySelector(".grid")
@@ -25,6 +26,7 @@ export function get(categories) {
 
 
 
+
 let categoryModal = document.querySelector("#categoryModal")
 
 let add_new = document.querySelector(".add-new")
@@ -45,4 +47,5 @@ modalForm.onsubmit = (event) => {
         name: modalForm["categoryInp"].value,
         avatar: file,
     }
+    postCategory(newCategory)
 }
