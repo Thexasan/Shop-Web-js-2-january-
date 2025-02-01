@@ -3,8 +3,7 @@
     margin: 0;
     padding: 0;
 }
-.navbar
-{
+.navbar{
     display: flex;
     align-items: center;
     background-color: #1C2536;
@@ -12,14 +11,12 @@
     padding: 10px 20px;
     width: 96.9%;
 }
-.left
-{
+.left{
     display: flex;
     align-items: center;
     gap: 30px;
 }
-#searchIcon
-{
+#searchIcon{
     font-size: 20px;
     font-weight: bold;
     color: #fff;
@@ -81,8 +78,7 @@
     align-items: center;
     gap: 10px;
 }
-.main 
-{
+.main {
     display: flex;
 }
 .asideBar
@@ -113,10 +109,121 @@
     color: #1C2536;
     border-radius: 10px;
 }
-a
-{
+a{
     text-decoration: none;
     color: #fff;
     font-size: 20px;
     font-weight: 600;
+}
+.emptyMSG{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.h3{
+    margin: 20px 0 0 0;
+}
+.para{
+    color: gray;
+    width: 60%;
+    text-align: center;
+    margin: 5px 0 20px 0;
+}
+.AddOrders{
+    background-color: #2563EB;
+    color: #fff;
+    width: 120px;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+}
+.AddOrderss{
+    background-color: #2563EB;
+    color: #fff;
+    width: 120px;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    margin: 20px 30px;
+}
+.h1{
+    margin: 20px 4%;
+}
+.searchWith{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 630px;
+}
+.searchForm{
+    display: flex;
+    border: 1px solid rgb(172, 170, 170);
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+.search{
+    outline: none;
+    border: none;
+    color: black;
+}
+.search::placeholder {
+    color: gray; 
+    opacity: 1; 
+}
+.secondPart{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+.uppp{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 630px;
+}
+.boxes{
+    display: flex;
+    gap: 10px;
+}
+
+table{
+    border: 1px solid rgb(241, 234, 234);
+    margin: auto;
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+    border-radius: 10px;
+}
+th,td{
+    border: 1px solid rgb(223, 218, 218);
+    border-collapse: collapse;
+    text-align: center;
+    padding: 5px;
+}
+th{
+    color: gray;
+}
+.main1{
+    margin: 10px 5%;
+}
+.ch{
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+}
+.paid{
+    background-color: #C4F8E2;
+    padding: 2px 5px;
+    border: none;
+    color: #1EAF71;
+}
+.ready{
+    background-color: #F99600;
+    color: white;
+    border: none;
+    padding: 2px 7px;
+    border-radius: 5px;
 }

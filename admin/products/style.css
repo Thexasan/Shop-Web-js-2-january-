@@ -107,6 +107,11 @@
     padding: 10px 0px;
     cursor: pointer;
 }
+.asideBar li:hover
+{
+    background-color: #878787;
+    color: #1C2536;
+}
 .active
 {
     background-color: #878787;

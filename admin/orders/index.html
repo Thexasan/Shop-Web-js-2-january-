@@ -6,6 +6,7 @@
     <title>Orders</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <nav class="navbar">
@@ -31,7 +32,44 @@
             <li class=""><i class="bi bi-tag"></i><a href="" class="">Products</a></li>
             <li class=""><i class="bi bi-folder"></i><a href="" class="">other</a></li>
         </aside>
-        <aside class="div"></aside>
+        <div class="main1">
+            <div class="searchWith">
+                <h1 class="h1">Order</h1>   
+                <button class="AddOrderss">+ Add Orders</button>
+            </div>
+            <div class="uppp">
+                <form class="searchForm">
+                    <input type="search"name="search" class="search" placeholder="Search..."> 
+                    <img src="./images/Masc icon.png" alt="">
+                </form>
+                <div class="boxes">
+                    <img src="./images/Button with Icon Only.png" alt="">
+                    <img src="./images/Button with Icon Only (1).png" alt="">
+                </div>
+            </div>
+            <div class="emptyMSG" style="display: none;">
+            <img src="./images/illustration.png" alt="">
+            <h3 class="h3" >No Orders Yet</h3>
+            <p class="para">All the upcoming orders from your store will be visible in this page.
+                You can add orders by yourself if you sell offline. </p>
+                <button class="AddOrders">+ Add Orders</button>
+            </div>
+            <div class="tContainer" >
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="ch" ><input type="checkbox">Order</th>
+                            <th>Date</th>
+                            <th>Customer</th>
+                            <th>Payment status</th>
+                            <th>Order Status</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody"></tbody>
+                </table>
+            </div>
+        </div>
     </main>
     <script type="module" src="./js/main.js"></script>
 </body>
