@@ -26,9 +26,9 @@ const request = {
       return error;
     }
   },
-  async deleteData(params = "", id) {
+  async deleteData(params = "") {
     try {
-      await axios.delete(`${BASIC_API}${params}/${id}`);
+      await axios.delete(`${BASIC_API}${params}`);
     } catch (error) {
       console.error(error);
       return error;
