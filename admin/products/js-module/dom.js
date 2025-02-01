@@ -27,5 +27,7 @@ export function get(products) {
               </td>
         `;
         tbody.append(tr)
+        let deleteBut = tr.querySelector("#deleteBut")
+        deleteBut.onclick = () => deleteProduct(product.id)
   });
 }
