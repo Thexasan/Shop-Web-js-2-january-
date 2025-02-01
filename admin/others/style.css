@@ -1,24 +1,445 @@
-body {
+*{
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
-.tabs {
+.navbar
+{
     display: flex;
-    gap: 20px;
-    margin-bottom: 20px;
-}
-.tabs button {
+    align-items: center;
+    background-color: #1C2536;
+    justify-content: space-between;
     padding: 10px 20px;
-    border: none;
-    background-color: #ddd;
+    width: 97%;
+}
+.left
+{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+#searchIcon
+{
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+.right
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.circle
+{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #1FD286;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px;
+    font-size: 20px;
+}
+.name
+{
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
     cursor: pointer;
 }
-.tabs button.active {
-    background-color: #007bff;
+.notifications
+{
+    cursor: pointer;
+}
+.profileAdmin
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.searchInp
+{
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+}
+::placeholder
+{
+    color: #fff;
+}
+.searchBox
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.main 
+{
+    display: flex;
+}
+.asideBar {
+    width: 15%;
+    padding: 0px 20px; 
+    background-color: #1C2536;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+}
+
+.asideBar {
+    width: 250px; 
+    background-color: #1C2536;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 15px;
+    gap: 10px;
+}
+
+.asideBar li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.asideBar li:hover,
+.asideBar .active {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.asideBar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.asideBar i {
+    font-size: 22px;
+    color: #fff;
+}
+
+.asideBar .active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.orders-badge {
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 50%;
+    margin-left: auto;
+}
+
+.active
+{
+    background-color: #878787;
+    color: #1C2536;
+    border-radius: 10px;
+    padding: 5px;
+}
+a
+{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.container {
+    width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.navbar2 {
+    display: flex;
+    justify-content:center-left;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 15px;
+    border: none;
+    background: #f0f0f0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.tab.active {
+    background: #007bff;
     color: white;
 }
-.content {
-    display: none;
+
+.add-new {
+    margin-left: auto;
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
 }
-.content.active {
-    display: block;
+
+.search-bar input {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #1C2536;
+}
+
+.search-bar input::placeholder {
+    color: #888;
+    
+}
+.search-bar input:active {
+    color: #1FD286;
+    
+}
+.search-bar :focus{
+    color: blue;
+    
+}
+.search-bar input:focus {
+    border-color: #007bff; 
+    outline: none; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    /* text-align: center; */
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border: #bdbaba solid 1px;
+
+}
+
+.card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.card .edit, .card .delete {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: #007bff;
+}
+
+.card .delete {
+    right: 35px;
+    color: red;
+}
+
+/* ADDMODALL */
+.modal-overlay {
+    /* position: fixed; */
+    /* top: 0; */
+    /* left: 0; */
+    /* width: 100%;
+    height: 100%; */
+    background: rgba(0, 0, 0, 0.5);
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.modal {
+    padding: 20px;
+    width: 400px;
+}
+dialog {
+    padding: 40px;
+    border-radius: 10px;
+    width: 500px;
+    border: #888 solid 1px;
+   
+}
+
+.input-field input::placeholder {
+    color: #1C2536;
+    
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.input-field {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.upload-box {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.upload-icon {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.cancel, .create {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cancel {
+    background: #f0f0f0;
+}
+
+.create {
+    background: #007bff;
+    color: white;
+}
+
+
+/* brandddd */
+
+.container {
+    width: 1000px;
+    /* margin: auto; */
+    padding: 20px;
+    background: white;
+    margin-top: 30px;
+}
+
+.navbar {
+    display: flex;
+    border-bottom: 2px solid #1C2536;
+    padding-bottom: 10px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.nav-item.active {
+    background: #e7f0ff;
+    color: #0056b3;
+}
+
+.content {
+    display: flex;
+    margin-top: 20px;
+}
+
+.brands-list {
+    flex: 1;
+    margin-right: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.edit {
+    color: blue;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.delete {
+    color: red;
+    cursor: pointer;
+}
+
+.add-brand {
+    width: 40%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-brand input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.create-btn {
+    width: 100%;
+    background: blue;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#categoryModal {
+    margin: auto;
+    padding: auto ;
 }
