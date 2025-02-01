@@ -27,17 +27,54 @@
     </nav>
     <main class="main">
         <aside class="asideBar">
-            <li class=""><i class="bi bi-house-door"></i><a href="" class="">Dashboard</a></li>
-            <li class=""><i class="bi bi-list-ul"></i><a href="" class="">Orders</a></li>
-            <li ><i class="bi bi-tag"></i><a href="" class="">Products</a></li>
+            <li class=""><i class="bi bi-house-door"></i><a href="../dashboard/index.html" class="">Dashboard</a></li>
+            <li class=""><i class="bi bi-list-ul"></i><a href="../orders/index.html" class="">Orders</a></li>
+            <li ><i class="bi bi-tag"></i><a href="../products/index.html" class="">Products</a></li>
             <li class="active"><i class="bi bi-folder"></i><a href="" class="">other</a></li>
         </aside>
-        <aside class="div">
 
-           
-        
+<!-- ADDDMODAL -->
+
+
+   <div class="mad">
+    <dialog id="categoryModal">
+        <form class="modal" name="modal">
+            <span class="close" onclick="document.getElementById('categoryModal').close()">&times;</span>
+            <h2>Add category</h2>
+            <input type="text" placeholder="Category name" class="input-field" name="categoryInp">
+            <div class="upload-box">
+                <label for="file-upload" class="upload-label">
+                    <div class="upload-icon">⬆</div>
+                    <p><strong>Click to upload</strong> or drag and drop</p>
+                    <p class="file-info">(SVG, JPG, PNG, or GIF maximum 900×400)</p>
+                </label>
+                <input type="file" id="file-upload"  name="base" hidden>
+            </div>
+            <div class="modal-actions">
+                <button class="cancel" onclick="document.getElementById('categoryModal').close()">Cancel</button>
+                <button class="create" type="submit">Create</button>
+            </div>
+        </form>
+    </dialog>
+   </div>
+    <!-- CARDSSS -->
+
+        <aside class="div">
+            <div class="container">
+                <div class="navbar2">
+                    <button class="tab active">Categories</button>
+                    <button class="tab">Brands</button>
+                    <button class="tab">Banners</button>
+                    <button class="add-new">+ Add new</button>
+                </div>
+                <div class="search-bar">
+                    <input type="search" placeholder="Search...">
+                </div>
+                <div class="grid">
+                    
+            </div>
         </aside>
     </main>
-    <script type="module" src="main.js"></script>
+    <script type="module" src="JS/main.js"></script>
 </body>
 </html>
