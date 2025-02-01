@@ -24,54 +24,21 @@ body {
   background: linear-gradient(135deg, #1b214e, #20355b);
 }
 
-.initial-welcome {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  background: linear-gradient(135deg, #2d4b5a 0%, #1a112b 35%, #041938 100%);
-  background-size: 300% 300%;
-  animation: gradientAnimation 15s ease-in-out infinite;
-  color: white;
-  z-index: 1000;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.initial-welcome h1 {
-  font-size: 2.5em;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
 .container {
   position: relative;
   width: 100%;
   height: 100%;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.container.visible {
-  visibility: visible;
-  opacity: 1;
+  display: flex;
 }
 
 .split {
-  position: absolute;
-  width: 100%;
+  position: relative;
+  width: 50%;
   height: 100%;
-  overflow: hidden;
   transition: all 0.8s ease-in-out;
 }
 
 .split.left {
-  left: 0;
   background: linear-gradient(135deg, #08183b 0%, #1f113d 35%, #101b2b 100%);
   background-size: 300% 300%;
   animation: gradientAnimation 15s ease-in-out infinite;
@@ -80,24 +47,12 @@ body {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  transform: translateX(0);
-  width: 100%;
-}
-
-.split.right {
-  right: -100%;
-  background: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
 }
 
 .welcome-content {
   color: white;
   text-align: center;
   transition: all 0.8s ease-in-out;
-  opacity: 1;
   width: 100%;
   padding: 0 20px;
 }
@@ -108,11 +63,11 @@ body {
   white-space: nowrap;
 }
 
-.logo-text {
-  font-size: 2.5em;
-  font-weight: bold;
-  color: white;
-  white-space: nowrap;
+.split.right {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .login-form {
@@ -120,14 +75,20 @@ body {
   width: 100%;
   max-width: 400px;
   transition: all 0.8s ease-in-out;
-  opacity: 0;
-  transform: translateX(100px);
 }
 
 .login-form h2 {
   margin-bottom: 1.5rem;
   color: #333;
   text-align: left;
+}
+
+.navigate-back{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0px;
+    color: #333;
 }
 
 .input-group {
@@ -177,7 +138,6 @@ input:focus {
   background: #4285f4;
   color: white;
   border: none;
-  margin-top: 1rem;
   padding: 0.8rem 2rem;
   border-radius: 4px;
   cursor: pointer;
@@ -187,23 +147,4 @@ input:focus {
 
 .login-btn:hover {
   background: #3367d6;
-}
-
-.container.active .split.left {
-  width: 50%;
-  transform: translateX(0);
-}
-
-.container.active .split.right {
-  right: 0;
-  width: 50%;
-}
-
-.container.active .welcome-content {
-  opacity: 1;
-}
-
-.container.active .login-form {
-  opacity: 1;
-  transform: translateX(0);
 }
