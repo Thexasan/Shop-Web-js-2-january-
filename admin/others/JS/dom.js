@@ -1,5 +1,5 @@
 import { fileTobase64 } from "../../../config.js";
-import { deleteCategory, postCategory, putCategory } from "./api.js";
+import { deleteCategory, getCategory, postCategory, putCategory } from "./api.js";
 
 let categoryInputEdit = document.querySelector(".input-fieldEdit");
 let imageEdit = document.querySelector(".imageEdit");
@@ -7,14 +7,9 @@ let idx = null;
 let grid = document.querySelector(".grid");
 let modalFormEdit = document.querySelector(".modaleEdit");
 let modalEdit = document.querySelector("#categoryModalE");
+let myFiles = ""
 
-const handlOpenModalEdit = (category) => {
-    modalEdit.showModal();
-    if (modalFormEdit) {
-        modalFormEdit["categoryInpE"].value = category.name;
-        idx = category.id;
-    }
-};
+
 
 export function get(categories) {
     grid.innerHTML = "";
@@ -39,7 +34,9 @@ if (modalFormEdit) {
     modalFormEdit.onsubmit = async (event) => {
         event.preventDefault();
         let fileInput = document.querySelector("#file-uploadEdit");
+        console.log(fileInput)
         let file = fileInput && fileInput.files.length > 0 ? await fileTobase64(fileInput.files[0]) : null;
+        console.log(file)
         if (file) {
             imageEdit.src = file;
         }
@@ -47,7 +44,7 @@ if (modalFormEdit) {
         
         let editCategory = {
             name: categoryInputEdit ? categoryInputEdit.value : "",
-            avatar: file,
+            avatar: myFiles,
         };
         await putCategory(idx, editCategory);
         modalFormEdit.reset();
@@ -64,6 +61,16 @@ if (modalFormEdit) {
 }
 
 
+// ! edit
+const handlOpenModalEdit = (category) => {
+    modalEdit.showModal();
+    if (modalFormEdit) {
+        modalFormEdit["categoryInpE"].value = category.name;
+        idx = category.id;
+
+    }
+};
+
 // ! addd
 let categoryModal = document.querySelector("#categoryModal");
 let add_new = document.querySelector(".add-new");
@@ -78,7 +85,7 @@ let modalForm = document.querySelector(".modal");
 if (modalForm) {
     modalForm["base"].onchange = async (e) => {
         file = await fileTobase64(e.target.files[0]);
-        console.log(file);
+        myFiles=file
     };
     
     modalForm.onsubmit = async (event) => {
@@ -91,3 +98,19 @@ if (modalForm) {
         modalForm.reset();
     };
 }
+
+// ! search
+
+let searchForm = document.querySelector(".searchForm");
+searchForm.onsubmit = (e) => {
+    e.preventDefault();
+    let value = e.target["search"].value
+   
+  getCategory(value);
+};
+
+
+
+// 
+
+
