@@ -64,15 +64,15 @@ aside {
 .main1{
     width: 60%;
 }
-.categorylist, .brandlist{
+.categorylist, .brandlist, .featureslist{
     padding: 10px 0;
 }
-.brand{
+.brand1{
     display: flex;
     gap: 10px;
 }
 .titleB{
-    padding: 5px 0;
+    padding: 15px 0 0 0;
 }
 .see-all{
     border: none;

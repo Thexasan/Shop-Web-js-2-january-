@@ -1,9 +1,14 @@
 {
   "category": [
     {
-      "id": 1,
-      "avatar": "base64",
-      "name": "Woman’s Fashion"
+      "name": "Computer",
+      "avatar": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACohjseAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEcSURBVHgB7dnxDcFAFAbwj/ifEW4EIzCBboAJrMIEjMAEmIARbKAb8F5yEv/cVU+q9/T7JV9O0lb63OldrgAREVF39SqOO8lKMkKeSslGckMCJ7lLHplH73EcKiLWgxd/4U5yRp5mkkJykkxR0+sXypn+dZLv00KBKnqfffw5FmgdC7SOBVrHAq1jgdaxQOtYoHUs0Lq/L3DwwTkWti2C2IOo3hxuW3SEdfohU/rWIV/Ot2XohNgQPUjmkqPkGvuSFhW+3SOB7hrr9n3O7yU02gEuVMQnD5AJ6g3TrW+XqCfluqvPT6Vu+TfyqoBLNetYoHVci1bQubIIHFsgzeLtsy4udBq4oSVrND+Rb/GFb3twJxmiWRsQERFRkic/w5GxGJL1HwAAAABJRU5ErkJggg==",
+      "id": "d247"
+    },
+    {
+      "name": "HeadPhones",
+      "avatar": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACohjseAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKDSURBVHgB7ZrtcdswDIbf9vq/2cDYoO4EYSdINrC6QTaIOkHcCaxO0HqCqBO0maDuBEkmSIgjGUr+kEgLkqyEzx2OuRgWCQIEQcpAIpFIJBJvl3foF9KibDvb+uy/lr9aNradDErLjZZ/Wp4ChXVXMBMhiqQHlZZr2zoetJRa7mA8VYW0fNIyR90w1v+6R380zmA85rxxr2WJuqFtsG6Butd78WgsPPtuUGxYDmPwsZB9RjV0CSOxgDGKB3IrPBBCfeIWGJgF/Cwv0R95pZ/BjCR4z+Xonxzek3P0DMGHTo7hWMKvyS5rvJVVpaOhubV936AnCH49EIaH4JeGQg+4GcwxHjl81haFcAL7Esz6i/Lie4RxbdsS45ZQXPr9sH9fQhCXORXGR0E40c0xXuY8hAvTWZtiSIiSbe9wOpS2/dKmGGKgqx5O6VDqJpvaFGM8uMHpsLGtSIhOmldv4AfEwRttBnPVUIX3pzX84u+K0nKB3cKa194vCFPAl0cuPR+SFbpV+2fwJWGT/Kn010iMB5VteQbXez47h/EuISB9H4CN46zNEfEdu4lNwRx8Rc+FBfzMZQ16BF/xNOkdIkNYvZuhHjGdKSIepnB8te/CLgvQ/Rk6ppgs+jtAxxUDCvG4sAtJImsEIr1NPKA7Es94IW30UycZOHWSgVNH2kCJW2fRm+sQA93mfRGge7n1nRhK24bUmee2FblGqd5FNr3hIQxTiy4QccMe+gr7Cv6dQIHdsm1mdXgy2HufcRxcwyqYU0S5px+OIhcl3yB8y56j/ZzGA+x6Hixa+uBougp9YOyPEAhmBrdP9I8wRXIJGZTt5+PW/3nNFRCuVxOJRCKReK08AxtYzX8w9QT4AAAAAElFTkSuQmCC",
+      "id": "5b26"
     },
     {
       "id": 2,
@@ -11,19 +16,77 @@
       "name": "Man’s Fashion"
     },
     {
-      "id": 3,
-      "avatar": "base64",
-      "name": "Technical"
+      "id": "fd9b",
+      "name": "For Summer",
+      "avatar": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGrSURBVHgB7VTtcYJAEF0wBdhBLhUEtAClAzvQVBBTgbGDdKBWkFiB5D8QOgjpgAaAvNW9GTm+k7/uDAPs3b739uOO6GYdZvXZ5DjOfDQaLYuimFuWpcSd4onhO+R57sdxnAwmEOAdPhW1WwKifRRFW3PBboqYTCYbgJ80OABSqN9mWfYQhqFl27YL3xOWfN6DtdfpdPoOUWPqyoDBOYCazefSQPEegApCvuBj4APIV60EAF8BfCe/5xrTpd6s8lH6oFV+4HEkywo4253pQPBGfwPsCJVv1+tcApRngU/OciHuWnA221RP5YYmZgCmJeWpATh1gVcIEDQT5Ym4lBkgNdfNbwWvENClnkx0lLfzH/BGAoyirvtMj91fwOsIzian0sfDDV2b4BCwlplXNIRA19513Xs+VPyN97OpXE73gv1dJGaTY3l7QRD4OgsyyoIMXkSM6iIxM/gUgqUE6cBSzbmEGFWvD0npJHNDsflbVKfUcPyv9iv06CQ3bILMPPNWLWXAhwiq9I3YCt43k9rLDhPCTf3pO4pGJj7ivK6AMQ00JmFhfUb3ZiX7BQxo7Jc3Di0zAAAAAElFTkSuQmCC"
+    },
+    {
+      "id": "9008",
+      "name": "Cleaning ",
+      "avatar": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADwSURBVHgB7ZTRDYIwEIavxQFYwQ0a4F2dBEbQCYiT4AhuoAMAwQl0BBYg9a8QYojtNeGBxPAlpC3X+3t3HCVaYRC+G6MoyoUQx2F51Vo/sN5hVHVdb21+G5eoUio0g5QyhVj2Zcqw7iMU7hh/HhDHcWGEh2ek67pPpEEQPMkTaXnvXToOVihJkj3qnGGa2vZUVWXVsWUwUpblHaW5YNpOTA31H/vl8mcPMN2Dmt8wDScmBfHG1UEGwYibbimcAkIcTJY2u2ScU2JAFjktibNE+B80eTCri+ayHrA8i3dRy9hp1l0E55NLALYW99SZ/po3f5hRowFaItcAAAAASUVORK5CYII="
+    },
+    {
+      "id": "3016",
+      "name": "Sport",
+      "avatar": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHeSURBVHgBtVW9UsJAEL78PEAqGKA5n0AEGjt9A99AfAKwtCI8AfoGsbP0DYidzgDGzs7YQEtrQeK3YTMTNZe7MOPOZDb3s/vt7bd7J8Q/i2Oyqd/vj1qt1ulms3nu9XqTdrsdYiwwftLZWgb+CeADSu52uxPHcV7z+eVyqbW3dRu6EHKepmkcQSzLmmaRsdaJa7DHY4cx6cVi4UP5wlBMALasZXESabuEuuV1H+m6LzPWpojSwk4ksiULS77Yn04ykDgIgAT5z6IDwbPCtFdY36psjcq02Wy+27Y9xG+30+l4jUbjBZx80piBb9brdVRma1SmJKj/MZzmJ4gR9XS1WgU6OyMAyj2inItfRBMQeuMcNMUqWyMOkJ5RiXOSDBgBeCpbLQcUPQAeKrZ4SN0Xro2wbFF7AkQ4Ua2BhyvSABipTlEJAGKHUEPFcsAkh/g8nPKiNgAiK42e6h7kTvn/jadlLQC6osX+kvvTRIj2rqpytAB8JYx5eI1oj6AjjjjmCy8TnPKYdWQM4LouRU6/QaGZchJ/XNPYJ6EoZaGoK3llgOwZUpbim5ftGwwGZyof2k7mLqYXTVCqTHOfS50+COo6J6l8cPI+IGKTJDF6ImsBwOkjEY4K2YLsWBwg30kjt1OFDGwIAAAAAElFTkSuQmCC"
+    },
+    {
+      "id": "1b7a",
+      "name": "For Winter",
+      "avatar": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGtSURBVHgB5VU9UsJAFE42OYAdARqPkAEOgDfIDQyVLZZWxM6S1spY2nkDtHT4mbW0owJK7bQg8XtMltnEtyFxtHB8Mzu7efvyvd8vsax/Jd1uN6VV5x3XdOH7/pHrupM0Tcfz+fzW4PAU23C73Z5IKV85G2FyIIQIAO7jGGdAHHhMscA2NOE4pov1ei3b7baNYx8raLVaS9rpLjvHdLZt+xIZXlVyQGUB6BnAn+h5tVo96E4000CBz2azSCk7nU7YaDSWm83mXelyJaKaYxvDcKR0BEBAVkEY8BF0N47jTIwZeJ73AaMAq99sNqlMj0wmJvDdM/pxAXu5D6QYGaVJkdAZTY4Wi8U+ejWiqLltAB9Mp9NYx/syRQCMATzIIo30cjHBlILnMqhLoEOishTWL4vNKTUS5Rpa7EGv14tQTlXCkGO8qArOSWGEWcY7VcGzhvbpXDLCO8bj7pl1gEsC98rmPHNexpNj6K9ZB6D5HV5+QS3HJvADTt7wZT3XPxVskzlwmvMkSRQBByYyFkWUgA9NJGLIGNZ2gGhjbNLEUM2JhO299RPynV/m35dPF2wBXJL38yUAAAAASUVORK5CYII="
+    },
+    {
+      "id": "96c5",
+      "name": "Toy",
+      "avatar": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIUSURBVHgB3VXLccJADF0vcKcEU0HM5x6nAkgFgQqACoAKgApwBzEdOHcgLoF0QAGA856j9RhsYyaTHBLNrLW7lvQkWZKV+utk3XrpOE5da923LOsxiiIH3JZXIdYed+vdbud9C6DdbvfAVlh1dZsINCsC0nmXrVZrDvYqxgMYGNdqtUaipHUTdwOsPY42IltBZ6LuiYCCUJhC+QBDs81ms0hFFZFvt1srJT+C/Dw2ZlkLyI8LI4Aw8z0V4f3xePRUCSE1C8jymyg4NZLU5gNAcCKCBzCnWq1OygCYThaA6JBWLI4MAL0Hs5nX8/ncxP5AjzqdjltkHIaY/xH3ohNgxZWXAYBgV7azMAxZGUtR7BUBVCoVE6EnOmux5WYA6L0YjPMJL4Ir4Nwg+DidTsYZX+4fEsfNxlTIT5GpNK1+mRIAaRqGaRMdYTflVchzuvbN2eggjU/XOhkAU8vgz+T4gMNr4Rxai1NubExrR+4/8iJ4E4Auyw/bPs/walZkHQZ90RlKyZo+8jMA8MIDY7O48P5drpcsvyIAjIWAMlh10Yn7KD34EgAYovGBHNmJzP1IlRAinKqvNJruvYj4oopg0BePSA4HmSoheP6ipB+QoszYzv0fYDxwmpoujec9G9CkDl43kP+eNKErcsu8iAt/ODKbJqm/WC5xyEFmINGruwHSQOKprSQV/JAsa1Yei0O+3z+lT5SRHExzbH7LAAAAAElFTkSuQmCC"
+    },
+    {
+      "id": "5394",
+      "name": "Business ",
+      "avatar": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADmSURBVHgB7ZXREYMgDIaDOICvvnUGXaCbdAYnKN2gG/Q6SgfQGXzz1Q1osK1HUzhCKX3yu8upEELgJwKwEUBwnJqmOQohlN2mtVbDMJxCY2XIwRV8yUyIfV3XME3TDVJo21Yb47ZTCsjMqgFmc8DHGa2CNEY01ff91XzYK1A/CG7YwSPRhZJ0AM7MOlk+nrqsiWbXoOQ4+U4LZ7XZVxA1gck4ViN7i2a0ilM8L3y++BsZPybAxg7L/wJfBKRgnG59dwWg28AV2TWedYpSauPvdRAtNMUW2FCQzo46RAafpZTBS2jjjTu5Alcx8y/ZPwAAAABJRU5ErkJggg=="
+    },
+    {
+      "id": "f7da",
+      "name": "Women's Fashion",
+      "avatar": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFtSURBVHgB7VQ9UoNAGN2FRjtsYAYacgOEC5jOMpaWnkBvYKhstbQyuYE3SO0MIDeQkk5KG8D34ZLBCNk1YSZNvpmd/f3e2337dhk7xqGDqyzyPM/Vdf2FmigGyqIsyzBN00yWq0QQBMEHKndjOAPJOUiKbbkak4PPCLyuawKcUKE2jWmaNpPlSwk45wUAQ4DdkCRClqWYdqX57J8h7mMlwK/iOH4djaB7FyRTkiQTWY5Uoo1wRb2oqmqqkqB8AkhjQJpPauOiz2TuaUPpBEL397ZPbRpTyVWx6a0Ab6zaWpTGfN+/k+XrQxMkiW3bD7DpHN0TlCfofg2CZ1j2FP0LzF06jmOYpvmW5/lXHw4fAF9bEYAFAMMoih67a2j3ILhnP18HPcJp39fxh4AkQTWnRJKD3DL059BGQL4CkYtu8yBh3V8b0WWSADxnAwFZCsuyltsk452d931ou0aGF948wrWLcDw2VoyJdYz94xsx+KoqOa+ArAAAAABJRU5ErkJggg=="
     }
   ],
   "brands": [
     {
-      "id": 1,
-      "brandName": "Samsung"
+      "brandName": "Puma",
+      "id": "e820"
     },
     {
-      "id": "1db0",
-      "brandName": "Lg"
+      "id": "3736",
+      "brandName": "Chanel"
+    },
+    {
+      "id": "0f72",
+      "brandName": "Burberry"
+    },
+    {
+      "id": "3754",
+      "brandName": "Dior"
+    },
+    {
+      "id": "35fd",
+      "brandName": "Addidas"
+    },
+    {
+      "id": "956c",
+      "brandName": "Skeachers"
+    },
+    {
+      "id": "f861",
+      "brandName": "Zara"
+    },
+    {
+      "id": "e51f",
+      "brandName": "H&M"
+    },
+    {
+      "brandName": "Tommy Hilfiger",
+      "id": "1177"
     }
   ],
   "products": [

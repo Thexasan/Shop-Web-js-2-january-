@@ -23,8 +23,9 @@ export async function fetchOrders(type, id = null) {
         } else if (type === "brand") {
             fetchBrands(data);
         } else if (type === "product") {
-            fetchProduct(data);  // Added function to handle products
+            fetchProduct(data);  
         }
+        return data
         
     } catch (error) {
         console.error(`Error fetching ${type}:`, error);
