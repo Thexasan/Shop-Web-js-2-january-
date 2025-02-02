@@ -1,24 +1,24 @@
 {
   "category": [
     {
-      "id": "1",
+      "id": 1,
       "avatar": "base64",
       "name": "Woman’s Fashion"
     },
     {
-      "id": "2",
+      "id": 2,
       "avatar": "base64",
       "name": "Man’s Fashion"
     },
     {
-      "id": "3",
+      "id": 3,
       "avatar": "base64",
       "name": "Technical"
     }
   ],
   "brands": [
     {
-      "id": "1",
+      "id": 1,
       "brandName": "Samsung"
     }
   ],
@@ -113,8 +113,7 @@
             }
           ]
         }
-      ],
-      "id": "ca5d"
+      ]
     }
   ]
   
