@@ -443,3 +443,8 @@ th, td {
     margin: auto;
     padding: auto ;
 }
+
+.brand::placeholder{
+  color: #0056b3;
+  font-weight: 600;
+}
