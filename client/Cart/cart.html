@@ -28,9 +28,74 @@
             </div>
         </nav>
     </header>
-    <main>
+
+    <main class="mainPage">
+       <aside class="navigate">
+        <p>Home</p>
+        <p>/</p>
+        <p>Cart</p>
+       </aside>
+
+       <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="prod-hover">
+                <td>
+                    <div class="product-descript">
+                        <img src="./img/Monitor-Cart-Small.png" alt="">
+                        <p>LCD Monitor</p>
+                    </div>
+                </td>
+                <td>$650</td>
+                <td>
+                    <input class="inpCnt" type="number">
+                </td>
+                <td>$650</td>
+                <td><img src="./img/icon-cancel.png" alt=""></td>
+            </tr>
+        </tbody>
+       </table>
+
+       <div class="bnts-tool">
+        <button class="btnReturn">Return to shop</button>
+        <button class="btnRemove">Remove all</button>
+       </div>
+
+       <div class="tool-update">
+        <div class="cupon">
+            <input type="number" placeholder="Coupon Code">
+            <button>Apply</button>
+        </div>
+            <div class="processCheck">
+                <form action=""><!--в action нужно добавить путь к Checkout-->
+                    <h2>Cart Total</h2>
+                    <div class="subtotal-price">
+                        <p>Subtotal:</p>
+                        <p>1750$</p>
+                    </div>
+                    <div class="subtotal-price divv">
+                        <p>Shipping:</p>
+                        <p>Free</p>
+                    </div>
+                    <divc class="subtotal-prices">
+                        <p>Total:</p>
+                        <p>$1750</p>
+                    </divc>
+                    <button type="submit" class="btnProcees">Procees to checkout</button> 
+                </form>
+            </div>
+       </div>
 
     </main>
+
     <footer class="footer-component">
         <div class="components">
             <div class="boxes">
@@ -82,5 +147,6 @@
             <p>&copy; Copyright Rimel 2022. All right reserved</p>
         </div>
     </footer>
+
 </body>
 </html>

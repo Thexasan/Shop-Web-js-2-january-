@@ -123,3 +123,154 @@
     color: gray;
     text-align: center;
 }
+.mainPage{
+    width: 85%;
+    margin: auto;
+}
+.navigate{
+    display: flex;
+    gap: 15px;
+    margin: 30px 0px;
+}
+.product-descript{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+table{
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+th{
+    text-align: left;
+    padding: 15px;
+}
+td{
+    text-align: left;
+    padding: 10px 10px;
+}
+.prod-hover{
+    box-shadow: 0px 0px 8px rgb(190, 187, 187);
+    border-radius: 10px;
+}    
+.inpCnt{
+    width: 15%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 7px 6px;
+    font-size: 16px;
+}
+.bnts-tool{
+    width: 95%;
+    display: flex;
+    justify-content: end;
+    gap: 15px;
+}
+.btnReturn{
+    padding: 10px 25px;
+    background-color: black;
+    color: white;
+    font-size: 17px;
+    margin-bottom: 35px;
+    border-radius: 5px;
+    border: none;
+}
+.btnReturn:hover{
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+.btnRemove{
+    background-color: red;
+    padding: 10px 25px;
+    color: white;
+    font-size: 17px;
+    margin-bottom: 35px;
+    border-radius: 5px;
+    border: none;
+}
+.btnRemove:hover{
+    border: 1px solid red;
+    color: red;
+    background-color: white;
+    cursor: pointer;
+}
+.tool-update{
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.cupon{
+    width: 30%;
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+.cupon input{
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 10px 10px;
+    font-size: 16px;
+}
+.cupon button{
+    padding: 13px 30px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+.cupon button:hover{
+    border: 1px solid red;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+.processCheck{
+    width: 35%;
+    height: 280px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgb(196, 196, 196);
+    padding: 25px 20px 0px 20px;
+}
+.subtotal-price{
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0px;
+    padding: 10px 0px;
+}
+.divv{
+    border-bottom: 1px solid rgb(174, 169, 169);
+}
+.subtotal-prices{
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0px;
+    padding: 10px 0px;
+}
+.subtotal-prices p{
+    font-size: 25px;
+    font-weight: bold;
+}
+.btnProcees{
+    width: 60%;
+    padding: 13px 30px;
+    background-color: red;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+.btnProcees:hover{
+    background-color: white;
+    color: red;
+    border: 1px solid red;
+    cursor: pointer;
+}
