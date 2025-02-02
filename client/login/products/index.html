@@ -12,10 +12,10 @@
     <nav>
         <img src="./images/Group 1116606595.png" alt="">
         <ul>
-            <li class="hover">Home</li>
-            <li>Contact</li>
-            <li>About</li>
-            <li>Sign Up</li>
+            <a href="./index.html"> <li class="hover">Home</li></a>
+            <a href=""><li>Contact</li></a>
+            <a href=""><li>About</li></a>
+            <a href=""><li>Sign Up</li></a>
         </ul>
         <div class="div">
             <div class="searchh">
@@ -41,13 +41,35 @@
             <div class="group">
                 <h4 class="title">Category</h4>
                 <div class="categorylist"></div>
+                <button class="see-all see-more">See More</button>
+                <button class="see-all see-less" style="display: none;">See Less</button>
             </div>
             <div class="group">
-                <h4 class="title">Brands</h4>
+                <h4 class="titleB">Brands</h4>
                 <div class="brandlist"></div>
+                <button class="see-all see-moreB">See More</button>
+                <button class="see-all see-lessB" style="display: none;">See Less</button>
+            </div>
+            <div class="Features">
+                <h4 class="titleB">Features</h4>
+                <div class="featureslist"></div>
+                <form>
+                    <button class="see-all">See all</button>
+                </form>
+            </div>
+            <div class="price-filter">
+                <h3>Price range</h3>
+                <div class="flex">
+                    <input type="text" class="min-price" placeholder="0">
+                    <input type="text" class="max-price" placeholder="99999">
+                </div>
+                <button class="applyFilter">Apply</button>
+                <div class="filteredProducts"></div>
             </div>
         </aside>
-        <div class="main1"></div>
+        <div class="main1">
+            <div class="productsContainer"></div>
+        </div>
     </main>
     <script type="module" src="./js/main.js"></script>
 </body>

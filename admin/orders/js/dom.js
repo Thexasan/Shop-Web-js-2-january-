@@ -87,6 +87,5 @@ let searchForm = document.querySelector(".searchForm");
 searchForm.onsubmit = (e) => {
     e.preventDefault();
     let value = e.target["search"].value
-   
   fetchOrders(value);
 };
