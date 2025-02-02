@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  .navbar {
+    display: flex;
+    align-items: center;
+    background-color: #1c2536;
+    justify-content: space-between;
+    padding: 10px 0px;
+    width: 100%;
+  }
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  #searchIcon {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+  }
+  .right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #1fd286;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px;
+    font-size: 20px;
+  }
+  .name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+  }
+  .notifications {
+    cursor: pointer;
+  }
+  .profileAdmin {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+  .searchInp {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+  }
+  .searchInp ::placeholder {
+    color: #fff;
+  }
+  .searchBox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .main {
+    display: flex;
+    height: 100vh;
+    align-items: stretch;
+    flex: 1;
+  }
+  .asideBar {
+    width: 15%;
+    padding: 50px 20px;
+    background-color: #1c2536;
+    height: 100%;
+  }
+  .asideBar i {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+  }
+  .asideBar li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0px;
+    cursor: pointer;
+  }
+  .asideBar li:hover {
+    background-color: #878787;
+    color: #1c2536;
+  }
+  .active {
+    background-color: #878787;
+    color: #1c2536;
+    border-radius: 10px;
+  }
+  a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .head {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+    width: 95%;
+    /* background-color: #1FD286; */
+  }
+  .add {
+    padding: 5px 10px;
+    border: none;
+    background-color: #2563eb;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .head h1 {
+    font-size: 30px;
+  }
+  .jsBox {
+    width: 78.7%;
+    flex: 1;
+  }
+  .selectsNavigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    margin: auto;
+  }
+  .searchForm {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .searchForm input,
+  select {
+    padding: 5px 15px;
+    border: 2px solid gray;
+    font-weight: bold;
+  }
+  #deleteAllBut {
+    color: red;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .table {
+    border-collapse: collapse;
+    border-bottom: 1px solid gray;
+    padding: 10px 0px;
+    text-align: center;
+    width: 95%;
+    margin: 20px auto;
+  }
+  th {
+    padding: 10px 0px;
+    color: rgb(56, 56, 56);
+    border-bottom: 1px solid gray;
+  }
+  td {
+    padding: 10px 0px;
+    border-bottom: 1px solid gray;
+  }
+  .checkTd {
+    width: 50px;
+  }
+  .productTd {
+    width: 200px;
+  }
+  .product img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+  }
+  .product {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .product p {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .actionsDiv {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* background-color: red; */
+    width: 70px;
+  }
+  .actionsTd {
+    width: 70px;
+  }
+  .actionsDiv i {
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  #editBut {
+    color: #2563eb;
+  }
+  #deleteBut {
+    color: red;
+  }
+  .pagination {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 95%;
+    margin: auto;
+  }
+  .pagination button {
+    padding: 5px 10px;
+    border: none;
+    color: gray;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .pagination button:active {
+    background-color: gray;
+    color: #fff;
+  }
+  .number {
+    padding: 10px;
+    color: black;
+    cursor: pointer;
+  }
+  .activePag {
+    padding: 10px 15px;
+    background-color: rgba(0, 76, 255, 0.612);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .emptyBox {
+    width: 800px;
+    height: 300px;
+    /* background-color: red; */
+    text-align: center;
+    margin: auto;
+  }
+  .emptyBox img {
+    width: 130px;
+    height: 150px;
+  }
+  .h3 {
+    font-size: 35px;
+  }
+  .para {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .emptyBox button {
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #2563eb;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px 0px;
+  }
+  .all
+  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  .resultPag
+  {
+    /* background-color: #2563eb; */
+    width: 100px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  

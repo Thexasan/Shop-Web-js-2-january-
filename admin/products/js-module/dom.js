@@ -1,4 +1,5 @@
 import { deleteProduct } from "./api.js";
+import { fetchData } from "./api.js";
 let tbody = document.querySelector(".tbody");
 let isCheckAll = false;
 let deleteAllBut = document.querySelector("#deleteAllBut");
@@ -18,10 +19,26 @@ let currentPage = 1;
 let limit = 5;
 let totalData = 0;
 let totalPages = 1;
+let resultPag = document.querySelector(".resultPag");
 let jsBox = document.querySelector(".jsBox");
 let emptyBox = document.querySelector(".emptyBox");
 //render
 export function get(products) {
+  let searchForm = document.querySelector(".searchForm");
+  searchForm.onsubmit = (e) => {
+    e.preventDefault();
+    let value = searchForm["searchInp"].value.trim().toLowerCase();
+    console.log(value);
+    let filterData = products.filter((product) => product.productName.toLowerCase() == value)
+    if(filterData.length >= 1)
+    {
+      get(filterData)
+    }
+    else if (filterData.length < 1)
+    {
+      get(products)
+    }
+  };
   if (products.length === 0) {
     emptyBox.style.display = "block";
     jsBox.style.display = "none";
@@ -43,6 +60,7 @@ export function get(products) {
   };
   totalData = products.length;
   totalPages = Math.ceil(totalData / limit);
+  resultPag.innerHTML = `${totalData} Results`;
   let start = (currentPage - 1) * limit;
   let end = start + limit;
   let paginationProducts = products.slice(start, end);
@@ -86,7 +104,6 @@ export function get(products) {
       }
       console.log(deleteItems);
     };
-
     updateControl(products);
   });
 }

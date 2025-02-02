@@ -280,3 +280,17 @@ td {
   cursor: pointer;
   margin: 10px 0px;
 }
+.all
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.resultPag
+{
+  /* background-color: #2563eb; */
+  width: 100px;
+  font-size: 20px;
+  font-weight: bold;
+}
