@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
-<body>
+<body> 
     <nav class="navbar">
         <aside class="left">
             <img src="./img/r1.png" alt="">
@@ -17,11 +17,12 @@
                 <input type="search" class="searchInp" placeholder="search...">
             </div>
         </aside>
+      
         <aside class="right">
             <img src="./img/r2.png" alt="" class="notifications">
             <div class="profileAdmin">
                 <div class="circle">R</div>
-                <p class="name">rahdin kumar </p>
+                <p class="name">rahdin kumar</p>
             </div>
         </aside>
     </nav>
@@ -57,18 +58,46 @@
         </form>
     </dialog>
    </div>
+
+
+   <!-- editmodal -->
+   <div class="mad">
+    <dialog id="categoryModalE">
+        <form class="modaleEdit" name="modalE">
+            <span class="close" onclick="document.getElementById('categoryModalE').close()">&times;</span>
+            <h2>Edit category</h2>
+            <input type="text" placeholder="Category name" class="input-field input-fieldEdit" name="categoryInpE">
+            <div class="upload-box">
+                <img class="    " src="" alt="">
+                <label for="file-upload" class="upload-label">
+                    <div class="upload-icon">⬆</div>
+                    <p><strong>Click to upload</strong> or drag and drop</p>
+                    <p class="file-info">(SVG, JPG, PNG, or GIF maximum 900×400)</p>
+                </label>
+                <input type="file" id="file-uploadEdit"  name="baseE" hidden>
+            </div>
+            <div class="modal-actions">
+                <button class="cancel" onclick="document.getElementById('categoryModalE').close()">Cancel</button>
+                <button class="saveEdit create"   type="submit">Save </button>
+            </div>
+        </form>
+    </dialog>
+   </div>
     <!-- CARDSSS -->
 
         <aside class="div">
             <div class="container">
                 <div class="navbar2">
                     <button class="tab active">Categories</button>
-                    <button class="tab">Brands</button>
+                    <a href="./brand/brand.html"><button class="tab">Brands</button></a>
                     <button class="tab">Banners</button>
                     <button class="add-new">+ Add new</button>
                 </div>
                 <div class="search-bar">
-                    <input type="search" placeholder="Search...">
+                    <form class="searchForm">
+                        <input type="search"name="search" class="search" placeholder="Search..."> 
+                    </form>
+
                 </div>
                 <div class="grid">
                     
