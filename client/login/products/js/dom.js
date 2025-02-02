@@ -68,10 +68,96 @@ function createBrandElement(brand, containerDiv) {
     let brandName = document.createElement("span");
     brandName.innerText = brand.brandName;
 
-    brandElement.appendChild(checkbox);
-    brandElement.appendChild(brandName);
+    brandElement.append(checkbox,brandName);
 
     containerDiv.appendChild(brandElement);
 
     brandElement.onclick = () => fetchOrders("brand", brand.id);
+}
+
+// features
+const features = [
+    "Metallic",
+    "Plastic cover",
+    "8GB Ram",
+    "Super power",
+    "Large Memory"
+];
+const featureListDiv = document.querySelector(".featureslist");
+const seeAllBtn = document.querySelector(".see-all");
+let visibleFeatures = features.slice(0, 3);
+
+function displayFeatures(featuresArray) {
+    featureListDiv.innerHTML = ""; 
+    featuresArray.forEach(feature => {
+        let checkboxDiv = document.createElement("div");
+        checkboxDiv.innerHTML = `<input type="checkbox"> ${feature}`;
+        featureListDiv.appendChild(checkboxDiv);
+    });
+}
+displayFeatures(visibleFeatures);
+
+seeAllBtn.onclick = function (e) {
+    e.preventDefault();
+    displayFeatures(features); 
+    seeAllBtn.style.display = "none"; 
+};
+
+
+// range
+let applyFilter = document.querySelector(".applyFilter");  
+applyFilter.onclick = async () => {
+    let minPrice = document.querySelector(".min-price").value;
+    let maxPrice = document.querySelector(".max-price").value;
+    minPrice = minPrice ? Number(minPrice) : 0;
+    maxPrice = maxPrice ? Number(maxPrice) : Infinity;
+
+    try {
+        let products = await fetchOrders("/products");
+        let filteredProducts = products.filter(product => product.price.cost >= minPrice && product.price.cost <= maxPrice);
+        displayProducts(filteredProducts);
+    } catch (error) {
+        console.error("Error fetching products:", error);
+    }
+}
+function displayProducts(products) {
+    let container = document.querySelector(".filteredProducts"); 
+    container.innerHTML = ""; 
+    if (products.length === 0) {
+        container.innerHTML = "<p>No products found in this range.</p>";
+    }
+    products.forEach(product => {
+        let productDiv = document.createElement("div");
+        productDiv.classList.add("product");
+        productDiv.innerHTML = `<p>${product.productName} - ${product.price.cost}</p>`;
+        container.appendChild(productDiv);
+    });
+}
+
+
+// PRODUCTS
+const productsContainer = document.querySelector(".productsContainer");
+export function fetchProduct(products) {
+    /* productsContainer.innerHTML = ""; */
+    console.log(products)
+
+    products.forEach(product => {
+        let productCard = document.createElement("div");
+        productCard.classList.add("product-card");
+   /*      let p = document.createElement("p")
+        p.innerHTML = product.productName
+        productCard.appendChild(p)
+ */
+        productCard.innerHTML = `
+        <img src="${product.images[0].src}">
+        <div class="product-info">
+            <h4>${product.productName}</h4>
+            <div class="product-price">
+                ${product.price.cost} 
+            </div>
+        </div>
+    `;
+    
+        productsContainer.append(productCard);
+    });
 }
