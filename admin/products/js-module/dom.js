@@ -24,21 +24,6 @@ let jsBox = document.querySelector(".jsBox");
 let emptyBox = document.querySelector(".emptyBox");
 //render
 export function get(products) {
-  let searchForm = document.querySelector(".searchForm");
-  searchForm.onsubmit = (e) => {
-    e.preventDefault();
-    let value = searchForm["searchInp"].value.trim().toLowerCase();
-    console.log(value);
-    let filterData = products.filter((product) => product.productName.toLowerCase() == value)
-    if(filterData.length >= 1)
-    {
-      get(filterData)
-    }
-    else if (filterData.length < 1)
-    {
-      get(products)
-    }
-  };
   if (products.length === 0) {
     emptyBox.style.display = "block";
     jsBox.style.display = "none";
@@ -55,6 +40,20 @@ export function get(products) {
     } else {
       deleteItems = [];
       isCheckAll = false;
+      get(products);
+    }
+  };
+  let searchForm = document.querySelector(".searchForm");
+  searchForm.onsubmit = (e) => {
+    e.preventDefault();
+    let value = searchForm["searchInp"].value.trim().toLowerCase();
+    console.log(value);
+    let filterData = products.filter(
+      (product) => product.productName.toLowerCase() == value
+    );
+    if (filterData.length >= 1) {
+      get(filterData);
+    } else if (filterData.length < 1) {
       get(products);
     }
   };
