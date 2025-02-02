@@ -160,6 +160,7 @@ nav {
     justify-content: space-around;
     background: #f1f1f1;
     padding: 40px 0;
+    /* border: black solid 1px; */
 }
 
 .stat-item {
@@ -180,6 +181,7 @@ nav {
     color: white;
     padding: 10px;
     border-radius: 10px;
+    /* border: black solid 3px; */
 }
 
 .team {
