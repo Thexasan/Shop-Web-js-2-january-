@@ -17,6 +17,7 @@
                 <input type="search" class="searchInp" placeholder="search...">
             </div>
         </aside>
+      
         <aside class="right">
             <img src="./img/r2.png" alt="" class="notifications">
             <div class="profileAdmin">
@@ -73,11 +74,11 @@
                     <p><strong>Click to upload</strong> or drag and drop</p>
                     <p class="file-info">(SVG, JPG, PNG, or GIF maximum 900×400)</p>
                 </label>
-                <input type="file" id="file-upload file-uploadEdit"  name="baseE" hidden>
+                <input type="file" id="file-uploadEdit"  name="baseE" hidden>
             </div>
             <div class="modal-actions">
                 <button class="cancel" onclick="document.getElementById('categoryModalE').close()">Cancel</button>
-                <button class="saveEdit" type="submit">Save </button>
+                <button class="saveEdit create"   type="submit">Save </button>
             </div>
         </form>
     </dialog>
@@ -93,7 +94,10 @@
                     <button class="add-new">+ Add new</button>
                 </div>
                 <div class="search-bar">
-                    <input type="search" placeholder="Search...">
+                    <form class="searchForm">
+                        <input type="search"name="search" class="search" placeholder="Search..."> 
+                    </form>
+
                 </div>
                 <div class="grid">
                     
