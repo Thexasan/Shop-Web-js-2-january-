@@ -2,17 +2,17 @@
   margin: 0;
   padding: 0;
 }
-html , body
-{
+html,
+body {
   height: 100%;
-  box-sizing: border-box;
-  overflow: hidden;
 }
 .navbar {
   display: flex;
   align-items: center;
   background-color: #1c2536;
   justify-content: space-between;
+  padding: 10px 0px;
+  width: 100%;
 }
 .left {
   display: flex;
@@ -244,11 +244,53 @@ td {
   color: black;
   cursor: pointer;
 }
-.activePag
-{
+.activePag {
   padding: 10px 15px;
   background-color: rgba(0, 76, 255, 0.612);
   color: #fff;
   font-weight: bold;
   cursor: pointer;
+}
+.emptyBox {
+  width: 800px;
+  height: 300px;
+  /* background-color: red; */
+  text-align: center;
+  margin: auto;
+}
+.emptyBox img {
+  width: 130px;
+  height: 150px;
+}
+.h3 {
+  font-size: 35px;
+}
+.para {
+  font-size: 20px;
+  font-weight: 600;
+}
+.emptyBox button {
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #2563eb;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px 0px;
+}
+.all
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.resultPag
+{
+  /* background-color: #2563eb; */
+  width: 100px;
+  font-size: 20px;
+  font-weight: bold;
 }

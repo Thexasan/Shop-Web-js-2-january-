@@ -1,6 +1,5 @@
 import { getData , deleteData } from "../../../requests/request.js";
 import { get } from "./dom.js";
-import { updateControl } from "./dom.js";
 export async function fetchData() {
   try {
     let products = await getData(`/products`);
