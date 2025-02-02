@@ -19,15 +19,15 @@ let limit = 5;
 let totalData = 0;
 let totalPages = 1;
 let jsBox = document.querySelector(".jsBox");
-let emptyMSG = document.querySelector(".emptyMSG");
+let emptyBox = document.querySelector(".emptyBox");
 //render
 export function get(products) {
   if (products.length === 0) {
-    emptyMSG.style.display = "block";
+    emptyBox.style.display = "block";
     jsBox.style.display = "none";
   } else {
     jsBox.style.display = "block";
-    emptyMSG.style.display = "none";
+    emptyBox.style.display = "none";
   }
   tbody.innerHTML = "";
   checkboxAll.onclick = () => {
