@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <nav>
+        <img src="./images/Group 1116606595.png" alt="">
+        <ul>
+            <a href="./index.html"> <li class="hover">Home</li></a>
+            <a href=""><li>Contact</li></a>
+            <a href=""><li>About</li></a>
+            <a href=""><li>Sign Up</li></a>
+        </ul>
+        <div class="div">
+            <div class="searchh">
+                <input type="search" class="search" placeholder="What are you looking for?">
+                <img src="./images/Component 2.png" alt="">
+            </div>
+            <img src="./images/Wishlist.png" alt="">
+            <img src="./images/Cart1.png" alt="">
+            <img src="./images/user.png" alt="">
+        </div>
+    </nav>
+    <div class="undernav">
+        <div class="link">
+            <p class="link"></p>
+        </div>
+        <select>
+            <option value="Populary">Populary</option>
+        </select>
+    </div>
+    
+    <main>
+        <aside>
+            <div class="group">
+                <h4 class="title">Category</h4>
+                <div class="categorylist"></div>
+                <button class="see-all see-more">See More</button>
+                <button class="see-all see-less" style="display: none;">See Less</button>
+            </div>
+            <div class="group">
+                <h4 class="titleB">Brands</h4>
+                <div class="brandlist"></div>
+                <button class="see-all see-moreB">See More</button>
+                <button class="see-all see-lessB" style="display: none;">See Less</button>
+            </div>
+            <div class="Features">
+                <h4 class="titleB">Features</h4>
+                <div class="featureslist"></div>
+                <form>
+                    <button class="see-all">See all</button>
+                </form>
+            </div>
+            <div class="price-filter">
+                <h3>Price range</h3>
+                <div class="flex">
+                    <input type="text" class="min-price" placeholder="0">
+                    <input type="text" class="max-price" placeholder="99999">
+                </div>
+                <button class="applyFilter">Apply</button>
+                <div class="filteredProducts"></div>
+            </div>
+        </aside>
+        <div class="main1">
+            <div class="productsContainer"></div>
+        </div>
+    </main>
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>

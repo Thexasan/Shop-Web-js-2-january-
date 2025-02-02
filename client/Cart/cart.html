@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar-elem">
+        <img src="./img/logo.png" alt="" />
+
+        <ul class="navigation">
+          <li>Home</li>
+          <li>Contact</li>
+          <li>About</li>
+          <li>Sign Up</li>
+        </ul>
+
+        <div class="tools-toOption">
+          <form class="searchForm">
+            <input
+              class="search-product"
+              type="search"
+              placeholder="What are you looking for?"
+            />
+            <button type="submit" class="btnSearch">
+              <img src="./img/Component 2.png" alt="" srcset="" />
+            </button>   
+          </form>
+          <img src="./img/Vector.png" alt="" />
+          <img src="./img/Cart.png" alt="" />
+          <img src="./img/user.png" alt="" />
+        </div>
+      </nav>
+    </header>
+
+    <main class="mainPage">
+      <aside class="navigate">
+        <p>Home</p>
+        <p>/</p>
+        <p>Cart</p>
+      </aside>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="prod-hover">
+            <td>
+              <div class="product-descript">
+                <img src="./img/Monitor-Cart-Small.png" alt="" />
+                <p>LCD Monitor</p>
+              </div>
+            </td>
+            <td>$650</td>
+            <td>
+              <input class="inpCnt" type="number" />
+            </td>
+            <td>$650</td>
+            <td><img src="./img/icon-cancel.png" alt="" /></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="bnts-tool">
+        <button class="btnReturn">Return to shop</button>
+        <button class="btnRemove">Remove all</button>
+      </div>
+
+      <div class="tool-update">
+        <div class="cupon">
+          <input type="text" placeholder="Coupon Code" />
+          <button>Apply</button>
+        </div>
+        <div class="processCheck">
+          <form action="">
+            <!--в action нужно добавить путь к Checkout-->
+            <h2>Cart Total</h2>
+            <div class="subtotal-price">
+              <p>Subtotal:</p>
+              <p>1750$</p>
+            </div>
+            <div class="subtotal-price divv">
+              <p>Shipping:</p>
+              <p>Free</p>
+            </div>
+            <divc class="subtotal-prices">
+              <p>Total:</p>
+              <p>$1750</p>
+            </divc>
+            <button type="submit" class="btnProcees">
+              Procees to checkout
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer-component">
+      <div class="components">
+        <div class="boxes">
+          <h2>Exclusive</h2>
+          <h3>Subscribe</h3>
+          <p>Get 10% off your first order</p>
+          <form class="searchEmailForm">
+            <input
+              class="emailEnter"
+              type="search"
+              placeholder="Enter your Email"
+            />
+            <button class="btnEmail">
+              <img src="./img/icon-send.png" alt="" srcset="" />
+            </button>
+          </form>
+        </div>
+        <div class="lists">
+          <h2>Support</h2>
+          <ul class="list-info">
+            <li class="info">111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</li>
+            <li class="info">exclusive@gmail.com</li>
+            <li class="info">+88015-88888-9999</li>
+          </ul>
+        </div>
+        <div class="lists">
+          <h2>Account</h2>
+          <ul class="list-info">
+            <li class="info">My Account</li>
+            <li class="info">Cart</li>
+            <li class="info">Wishlist</li>
+            <li class="info">Shop</li>
+          </ul>
+        </div>
+        <div class="lists">
+          <h2>Quick Link</h2>
+          <ul class="list-info">
+            <li class="info">Privacy Policy</li>
+            <li class="info">Terms Of Use</li>
+            <li class="info">FAQ</li>
+            <li class="info">Contact</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Social</h2>
+          <div class="social-net">
+            <img src="./img/Icon-Facebook.png" alt="" />
+            <img src="./img/Icon-Twitter.png" alt="" />
+            <img src="./img/icon-instagram.png" alt="" />
+            <img src="./img/Icon-Linkedin.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="descript">
+        <p>&copy; Copyright Rimel 2022. All right reserved</p>
+      </div>
+    </footer>
+
+  </body>
+</html>

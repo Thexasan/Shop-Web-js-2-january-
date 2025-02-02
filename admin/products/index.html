@@ -14,14 +14,14 @@
   <body>
     <nav class="navbar">
       <aside class="left">
-        <img src="./images/Group 1116606595.png" alt="" />
+        <img src="./imagesS/chartIMageSho.png" alt="" />
         <div class="searchBox">
           <i class="bi bi-search" id="searchIcon"></i>
           <input type="search" class="searchInp" placeholder="search..." />
         </div>
       </aside>
       <aside class="right">
-        <img src="./images/notifications.png" alt="" class="notifications" />
+        <img src="./imagesS/shoh.png" alt="" class="notifications" />
         <div class="profileAdmin">
           <div class="circle">R</div>
           <p class="name">rahdin kumar</p>
@@ -43,6 +43,13 @@
           <i class="bi bi-folder"></i><a href="" class="">other</a>
         </li>
       </aside>
+      <div class="emptyBox" style="display: none;">
+        <img src="./imagesS/basketSS (1).png" alt="">
+        <h3 class="h3" >No Orders Yet</h3>
+        <p class="para">All the upcoming orders from your store will be <br> visible in this page.
+            You can add orders by yourself if you sell offline. </p>
+            <button class="AddOrders">+ Add Orders</button>
+        </div>
       <aside class="jsBox">
         <div class="head">
           <h1 class="">Products</h1>
@@ -55,13 +62,13 @@
               <option value="never">never</option>
             </select>
           </form>
-          <i class="bi bi-trash-fill" id="deleteAllBut"></i>
+          <i class="bi bi-trash-fill" id="deleteAllBut">deleteAll</i>
         </div>
         <table class="table">
           <thead>
             <tr>
               <th class="checkTd">
-                <input type="checkbox" name="" id="" />
+                <input type="checkbox" name="" id="" class="checkboxAll" />
               </th>
               <th>Product</th>
               <th>Inventory</th>
@@ -99,6 +106,14 @@
             </tr> -->
           </tbody>
         </table>
+        <div class="all">
+          <div class="pagination">
+            <button class="prevBut"><</button>
+            <span class="numbers"></span>
+            <button class="nextBut">></button>
+          </div>
+          <p class="resultPag">274 result</p>
+        </div>
       </aside>
     </main>
     <script type="module" src="./js-module/main.js"></script>
