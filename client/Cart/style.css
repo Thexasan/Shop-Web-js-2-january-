@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.navbar-elem{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0px;
+    border: 1px solid rgb(222, 218, 218);
+}
+.navigation{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+.navigation li:hover{
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+.tools-toOption{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.tools-toOption img:hover{
+    cursor: pointer;
+}
+.searchForm{
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 0px 10px;
+    background-color: #F5F5F5;
+}
+.search-product{
+    width: 100%;
+    padding: 10px 10px;
+    background-color: #F5F5F5;
+    outline: none;
+    border: none;
+}
+.btnSearch{
+    border: none;
+    background-color: #F5F5F5;
+    cursor: pointer;
+}
+.footer-component{
+    width: 100%;
+    height: 300px;
+    padding: 20px 0px;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.components{
+    width: 85%;
+    margin: auto;
+    height: 230px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+.searchEmailForm{
+    width: 230px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 0px 10px;
+    border: 1px solid white;
+    background-color: black;
+    border-radius: 5px;
+    margin: 10px 0px;
+}
+.emailEnter{
+    width: 100%;
+    padding: 13px 10px;
+    background-color: black;
+    outline: none;
+    border: none;
+    color: white;
+}
+.btnEmail{
+    border: none;
+    background-color: black;
+    cursor: pointer;
+}
+.boxes p{
+    padding: 10px 0px;
+}
+.list-info{
+    list-style: none;
+    padding: 10px 0px;
+}
+.list-info li:hover{
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+.info{
+    padding: 10px 0px;
+}
+.lists{
+    width: 200px;
+}
+.social-net{
+    display: flex;
+    gap: 20px;
+    padding: 20px 0px;
+}
+.descript{
+    width: 100%;
+    border-top: 1px solid rgb(36, 34, 34);
+    background-color: black;
+    padding: 15px 0px;
+    color: gray;
+    text-align: center;
+}
