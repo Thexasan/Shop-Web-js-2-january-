@@ -4,7 +4,7 @@ let tbody = document.querySelector(".tbody");
 let isCheckAll = false;
 let deleteAllBut = document.querySelector("#deleteAllBut");
 console.log(deleteAllBut);
-
+let originalProducts = [];
 let deleteItems = [];
 
 let checkboxAll = document.querySelector(".checkboxAll");
@@ -43,20 +43,9 @@ export function get(products) {
       get(products);
     }
   };
-  let searchForm = document.querySelector(".searchForm");
-  searchForm.onsubmit = (e) => {
-    e.preventDefault();
-    let value = searchForm["searchInp"].value.trim().toLowerCase();
-    console.log(value);
-    let filterData = products.filter(
-      (product) => product.productName.toLowerCase() == value
-    );
-    if (filterData.length >= 1) {
-      get(filterData);
-    } else if (filterData.length < 1) {
-      get(products);
-    }
-  };
+  if (originalProducts.length == 0) {
+    originalProducts = [...products];
+  }
   totalData = products.length;
   totalPages = Math.ceil(totalData / limit);
   resultPag.innerHTML = `${totalData} Results`;
@@ -143,3 +132,24 @@ export async function updateControl(products) {
   };
 }
 updateControl();
+
+//search
+let searchForm = document.querySelector(".searchForm");
+searchForm.onsubmit = (e) => {
+  e.preventDefault();
+  let value = searchForm["searchInp"].value.trim().toLowerCase();
+  console.log(value);
+  if (value === "") {
+    get(originalProducts);
+    return;
+  }
+  let filterData = originalProducts.filter((product) =>
+    product.productName.toLowerCase().includes(value)
+  );
+  get(filterData);
+};
+
+let addBut = document.querySelector(".add")
+addBut.onclick = () => {
+  window.location = "./addPage/index.html"
+}
