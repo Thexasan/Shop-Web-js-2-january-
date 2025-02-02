@@ -34,8 +34,30 @@ product.color.forEach(e => {
     let color = document.createElement('span')
     color.classList.add("color")
     color.style.backgroundColor = e.rgb
+    console.log(e.rgb);
     color1.append(color)
 
 })
+
+//! clicking img
+
+let thumbnailsPhoto = document.querySelector(".thumbnails");
+product.images.forEach(e => {
+    let image = document.createElement('img');
+    image.src = e.src;
+    image.addEventListener("click", function() {
+        swapImages(image);
+    });
+
+    thumbnailsPhoto.append(image);
+});
+
+//! Clicking img function
+function swapImages(clickedImg) {
+    let mainImg = document.getElementById('mainImg');
+    let tempSrc = mainImg.src;
+    mainImg.src = clickedImg.src;
+    clickedImg.src = tempSrc;
+}
 
 
