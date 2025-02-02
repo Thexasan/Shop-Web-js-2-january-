@@ -9,15 +9,15 @@
   <body>
     <header>
       <nav class="navbar-elem">
-        <img src="./img/logo.png" alt="" />
-
+        <img src="./img/logo.png" alt="Logo" />
+    
         <ul class="navigation">
           <li>Home</li>
           <li>Contact</li>
           <li>About</li>
           <li>Sign Up</li>
         </ul>
-
+    
         <div class="tools-toOption">
           <form class="searchForm">
             <input
@@ -26,14 +26,29 @@
               placeholder="What are you looking for?"
             />
             <button type="submit" class="btnSearch">
-              <img src="./img/Component 2.png" alt="" srcset="" />
-            </button>   
+              <img src="./img/Component 2.png" alt="Search" />
+            </button>
           </form>
-          <img src="./img/Vector.png" alt="" />
-          <img src="./img/Cart.png" alt="" />
-          <img src="./img/user.png" alt="" />
+          <img src="./img/Vector.png" alt="Wishlist" />
+          <img src="./img/Cart.png" alt="Cart" />
+          <img src="./img/user.png" alt="User" />
+        </div>
+  
+        <div class="burger-menu" id="burgerMenu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
         </div>
       </nav>
+    
+      <div class="mobile-nav" id="mobileNav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Sign Up</a></li>
+        </ul>
+      </div>
     </header>
 
     <main class="mainPage">
@@ -163,5 +178,6 @@
       </div>
     </footer>
 
+    <script src="./JS/script.js"></script>
   </body>
 </html>
