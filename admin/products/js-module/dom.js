@@ -1,11 +1,25 @@
-let tbody = document.querySelector(".tbody");
 import { deleteProduct } from "./api.js";
+let tbody = document.querySelector(".tbody");
+let isCheckAll = false;
+let deleteAllBut = document.querySelector("#deleteAllBut");
+console.log(deleteAllBut);
+
+let deleteItems = [];
+
+let checkboxAll = document.querySelector(".checkboxAll");
+
+deleteAllBut.onclick = () => {
+  deleteItems.forEach((id) => {
+    deleteProduct(id);
+  });
+  deleteItems = [];
+};
 let currentPage = 1;
 let limit = 5;
 let totalData = 0;
 let totalPages = 1;
-let jsBox = document.querySelector(".jsBox")
-let emptyMSG = document.querySelector(".emptyMSG")
+let jsBox = document.querySelector(".jsBox");
+let emptyMSG = document.querySelector(".emptyMSG");
 //render
 export function get(products) {
   if (products.length === 0) {
@@ -16,6 +30,17 @@ export function get(products) {
     emptyMSG.style.display = "none";
   }
   tbody.innerHTML = "";
+  checkboxAll.onclick = () => {
+    if (checkboxAll.checked) {
+      deleteItems = products.map((user) => user.id);
+      isCheckAll = true;
+      get(products);
+    } else {
+      deleteItems = [];
+      isCheckAll = false;
+      get(products);
+    }
+  };
   totalData = products.length;
   totalPages = Math.ceil(totalData / limit);
   let start = (currentPage - 1) * limit;
@@ -25,7 +50,7 @@ export function get(products) {
     let tr = document.createElement("tr");
     tr.innerHTML = `
         <td class="checkbox">
-                    <input type="checkbox" name="" id="">
+                    <input type="checkbox" name="" id="" class="checkBox">
                 </td>
               <td class="productTd">
                 <div class="product">
@@ -50,6 +75,18 @@ export function get(products) {
     tbody.append(tr);
     let deleteBut = tr.querySelector("#deleteBut");
     deleteBut.onclick = () => deleteProduct(product.id);
+    let checkBox = tr.querySelector(".checkBox");
+    checkBox.checked = isCheckAll;
+
+    checkBox.onclick = () => {
+      if (checkBox.checked) {
+        deleteItems.push(product.id);
+      } else {
+        deleteItems = deleteItems.filter((id) => id != product.id);
+      }
+      console.log(deleteItems);
+    };
+
     updateControl(products);
   });
 }
