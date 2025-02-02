@@ -7,13 +7,13 @@ let productName = document.querySelector(".product-name")
 productName.textContent = product.productName
 
 
-let thumbnails = document.querySelector(".thumbnails")
-product.images.forEach(e => {
-    let image = document.createElement('img')
-    image.src = e.src
+// let thumbnails = document.querySelector(".thumbnails")
+// product.images.forEach(e => {
+//     let image = document.createElement('img')
+//     image.src = e.src
 
-    thumbnails.append(image)
-})
+//     thumbnails.append(image)
+// })
 
 
 document.querySelector(".mainImage").src= product.images[0].src
@@ -59,5 +59,23 @@ function swapImages(clickedImg) {
     mainImg.src = clickedImg.src;
     clickedImg.src = tempSrc;
 }
+
+// ! burger
+
+document.addEventListener("DOMContentLoaded", () => {
+    const burgerMenu = document.getElementById("burgerMenu");
+    const mobileNav = document.getElementById("mobileNav");
+  
+    burgerMenu.addEventListener("click", () => {
+      mobileNav.classList.toggle("active");
+    });
+  
+    // Закрытие меню при клике вне его
+    document.addEventListener("click", (event) => {
+      if (!mobileNav.contains(event.target) && !burgerMenu.contains(event.target)) {
+        mobileNav.classList.remove("active");
+      }
+    });
+  });
 
 
