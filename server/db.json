@@ -1,25 +1,29 @@
 {
   "category": [
     {
-      "id": "1",
+      "id": 1,
       "avatar": "base64",
       "name": "Woman’s Fashion"
     },
     {
-      "id": "2",
+      "id": 2,
       "avatar": "base64",
       "name": "Man’s Fashion"
     },
     {
-      "id": "3",
+      "id": 3,
       "avatar": "base64",
       "name": "Technical"
     }
   ],
   "brands": [
     {
-      "id": "1",
+      "id": 1,
       "brandName": "Samsung"
+    },
+    {
+      "id": "1db0",
+      "brandName": "Lg"
     }
   ],
   "products": [
@@ -34,6 +38,75 @@
         "discount": 20,
         "count": 10
       },
+<<<<<<< HEAD
+=======
+      "options": {},
+      "color": [
+        {
+          "name": "black",
+          "rgb": "#00000"
+        }
+      ],
+      "images": [
+        {
+          "id": 1,
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/800px-BMW.svg.png"
+        },
+        {
+          "id": 2,
+          "src": "base64"
+        },
+        {
+          "id": 3,
+          "src": "base64"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "productName": "Sofa Set",
+      "description": "Lorem ipsum dolor sit amet, consect",
+      "category": "Man’s Fashion",
+      "brand": "Puma",
+      "price": {
+        "cost": 200.99,
+        "discount": 20,
+        "count": 10
+      },
+      "options": {},
+      "color": [
+        {
+          "name": "black",
+          "rgb": "#00000"
+        }
+      ],
+      "images": [
+        {
+          "id": 1,
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/800px-BMW.svg.png"
+        },
+        {
+          "id": 2,
+          "src": "base64"
+        },
+        {
+          "id": 3,
+          "src": "base64"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "productName": "Sofa Set",
+      "description": "Lorem ipsum dolor sit amet, consect",
+      "category": "Man’s Fashion",
+      "brand": "Puma",
+      "price": {
+        "cost": 200.99,
+        "discount": 20,
+        "count": 10
+      },
+>>>>>>> f7d90cff191591a3b1e5868cf4ae8433d6e7e32d
       "options": {},
       "color": [
         {
@@ -199,6 +272,7 @@
         "discount": 20,
         "count": 10
       },
+<<<<<<< HEAD
       "options": {},
       "color": [
         {
@@ -232,6 +306,8 @@
         "discount": 20,
         "count": 10
       },
+=======
+>>>>>>> f7d90cff191591a3b1e5868cf4ae8433d6e7e32d
       "options": {},
       "color": [
         {
@@ -312,7 +388,11 @@
           ]
         }
       ],
+<<<<<<< HEAD
       "id": "8f28"
+=======
+      "id": "ca5d"
+>>>>>>> f7d90cff191591a3b1e5868cf4ae8433d6e7e32d
     }
   ]
 }
