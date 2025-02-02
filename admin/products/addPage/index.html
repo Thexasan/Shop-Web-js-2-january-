@@ -44,38 +44,103 @@
         </li>
       </aside>
       <aside class="jsBox">
-       <form action="" class="mainForm">
-        <div class="formLeft">
-          <div class="head">
-            <button class="exit"><a href="../index.html"><</a></button>
-            <a href="../index.html">Products</a><span>/</span><a href="">Add New</a>
-          </div>
-          <p class="info">Information</p>
-          <input type="text" name="productNameInp"> <br> <br>
-          <textarea name="description" id=""></textarea>
-          <div class="selects">
-            <select name="categories" id="">
-              <option value="Categories">Categories</option>
-            </select>
-            <select name="brands" id="">
-              <option value="Brands">Brands</option>
-            </select>
-          </div>
-          <div class="priceBox">
-            <p class="priceP">Price</p>
-            <input type="number" name="productPrice">
-            <input type="number" name="discount">
-            <input type="number" name="count">
-          </div>
-        </div>
-        <div class="formRight">
-          <div class="colors">
-            <div class="up">
-              <p class="colorN">color</p>
+        <form action="" class="mainForm">
+          <div class="formLeft">
+            <div class="alls">
+              <div class="head">
+                <button class="exit"><a href="../index.html"><</a></button>
+                <a href="../index.html">Products</a><span>/</span
+                ><a href="">Add New</a>
+              </div>
+            </div>
+            <p class="info">Information</p>
+            <input
+              type="text"
+              name="productNameInp"
+              class="productNameInp"
+              placeholder="product Name"
+            />
+            <br />
+            <br />
+            <textarea
+              name="description"
+              class="description"
+              placeholder="Description"
+              id=""
+            ></textarea>
+            <div class="selects">
+              <select name="categories" id="">
+                <option value="Categories">Categories</option>
+              </select>
+              <select name="brands" id="">
+                <option value="Brands">Brands</option>
+              </select>
+            </div>
+            <div class="priceBox">
+              <p class="priceP">Price</p>
+              <input type="number" name="productPrice" placeholder="Price" />
+              <input type="number" name="discount" placeholder="discount" />
+              <input type="number" name="count" placeholder="count" />
+            </div>
+            <div class="optionsDiv">
+              <div class="chap">
+                <h3>Different Options</h3>
+                <p>This product has multiple options</p>
+              </div>
+              <!-- From Uiverse.io by zanina-yassine -->
+              <div class="container">
+                <input type="checkbox" class="checkbox" id="checkbox" />
+                <label class="switch" for="checkbox">
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </div>
+            <div class="otherOptions" style="display: none;">
+              <p class="optionss">Options</p>
+              <input type="text" name="option1" placeholder="option1" value="Size">
+              <input type="text" name="valueOption" placeholder="value1">
+              <input type="text" name="option2" placeholder="option2" value="Weight">
+              <input type="text" name="valueOption" placeholder="value2">
+              <button class="addMoreBut">+ Add More</button>
             </div>
           </div>
-        </div>
-       </form>
+          <div class="formRight">
+            <div class="buttons">
+              <button class="cancelBut" type="button">cancel</button>
+              <button class="SaveBut" type="submit">save</button>
+            </div>
+            <div class="colors">
+              <div class="up">
+                <p class="colorN">Colour:</p>
+                <button class="addNewColor">✔️Create new</button>
+              </div>
+              <div class="prewieColor"></div>
+            </div>
+            <h2 style="margin-right: 150px">Images</h2>
+            <div class="upload-container" id="uploadBox">
+              <img src="../imagesS/addphotoss.png" alt="" />
+              <input
+                type="file"
+                id="fileInput"
+                multiple
+                style="display: none"
+              />
+              <p><strong>Click to upload</strong> or drag and drop</p>
+              <p>(SVG, JPG, PNG, or GIF, max 900×400)</p>
+            </div>
+
+            <table class="file-list">
+              <thead>
+                <tr>
+                  <th>Image</th>
+                  <th>File name</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="fileList" class="filelist"></tbody>
+            </table>
+          </div>
+        </form>
       </aside>
     </main>
     <script type="module" src="./main.js"></script>

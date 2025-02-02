@@ -83,7 +83,7 @@ body {
   width: 15%;
   padding: 50px 20px;
   background-color: #1c2536;
-  height: 100%;
+  height: 120%;
 }
 .asideBar i {
   font-size: 30px;
@@ -292,13 +292,17 @@ td {
   font-size: 20px;
   font-weight: bold;
 }
-.formLeft a, span
-{
+.formLeft a,
+span {
   color: black;
   font-weight: bold;
 }
-.exit
+.formLeft
 {
+  /* border: 2px solid black; */
+  width: 500px;
+}
+.exit {
   color: black;
   background-color: transparent;
   cursor: pointer;
@@ -306,9 +310,273 @@ td {
   font-size: 20px;
   font-weight: bold;
 }
-.head
-{
+.head {
   display: flex;
   align-items: center;
   width: 190px;
+}
+.mainForm {
+  display: flex;
+  align-items: start;
+  width: 95%;
+  justify-content: space-between;
+  margin: auto;
+  /* padding: 10px 10px; */
+  /* background-color: red; */
+}
+.formRight
+{
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 500px;
+  /* border: 2px solid black; */
+}
+.alls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  width: 100%;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 300px;
+}
+.buttons button {
+  padding: 5px 20px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.cancelBut
+{
+  background-color: transparent;
+  border: none;
+  color: #2563eb;
+}
+
+.SaveBut
+{
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 0px;
+}
+.colors
+{
+  margin: 20px 0px;
+  width: 300px;
+  /* box-shadow: 0px 0px 10px; */
+}
+.up 
+{
+  display: flex;
+  justify-content: space-between;
+}
+.addNewColor
+{
+  background-color: transparent;
+  border: none;
+  color: #2563eb;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.colorN{
+  font-size: 20px;
+  font-weight: bold;
+}
+.priceBox
+{
+  padding: 10px;
+}
+.priceBox input
+{
+  width: 100px;
+  margin: 10px 1px;
+  padding: 10px 10px;
+}
+.productNameInp
+{
+  padding: 10px 20px;
+  margin: 10px 0px;
+  width: 300px;
+}
+.description
+{
+  width: 450px;
+  height: 150px;
+  margin: 10px 0px;
+  padding: 10px;
+}
+.selects
+{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.selects select
+{
+  padding: 10px 40px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.upload-container {
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  padding: 30px 50px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #f9f9f9;
+}
+.upload-container:hover {
+  background-color: #f1f1f1;
+  border-color: #2563eb;
+}
+.file-list {
+  margin-top: 20px;
+  border-collapse: collapse;
+  width: 65%;
+}
+.file-list th, .file-list td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.file-list th {
+  text-align: left;
+}
+.file-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.file-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.delete-btn {
+  cursor: pointer;
+  color: red;
+  font-size: 18px;
+  border: none;
+  background: none;
+}
+/* From Uiverse.io by zanina-yassine */ 
+/* Remove this container when use*/
+.component-title {
+  width: 100%;
+  position: absolute;
+  z-index: 999;
+  top: 30px;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #888;
+  text-align: center;
+}
+
+/* The switch - the box around the slider */
+.container {
+  width: 51px;
+  height: 31px;
+  position: relative;
+}
+
+/* Hide default HTML checkbox */
+.checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.switch {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: #e9e9eb;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+/* The slider */
+.slider {
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  left: calc(50% - 27px/2 - 10px);
+  top: calc(50% - 27px/2);
+  border-radius: 50%;
+  background: #FFFFFF;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15), 0px 3px 1px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+}
+
+.checkbox:checked + .switch {
+  background-color: #34C759;
+}
+
+.checkbox:checked + .switch .slider {
+  left: calc(50% - 27px/2 + 10px);
+  top: calc(50% - 27px/2);
+}
+.optionsDiv
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.otherOptions input
+{
+  padding: 10px 20px;
+  margin: 5px 10px;
+}
+.otherOptions p
+{
+  margin: 5px 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.otherOptions
+{
+  padding: 20px 0px;
+}
+.addMoreBut
+{
+  background-color: transparent;
+  border: none;
+  color: #2563eb;
+  font-weight: bold;
+  font-size: 18px; 
+  margin: 5px 0px;
+  padding: 10px 20px;
+}
+.colorsC
+{
+  width: 50px;
+  height: 55px;
+  border-radius: 50%;
+}
+.prewieColor
+{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 0px;
+}
+.selected
+{
+  border: 2px solid black;
+  padding: 1px;
 }
