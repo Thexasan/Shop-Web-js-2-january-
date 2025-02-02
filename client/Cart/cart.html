@@ -3,14 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Details</title>
+    <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <header>
       <nav class="navbar-elem">
-        <img src="./img/Group 1116606595.png" alt="" />
+        <img src="./img/logo.png" alt="" />
 
         <ul class="navigation">
           <li>Home</li>
@@ -27,72 +26,81 @@
               placeholder="What are you looking for?"
             />
             <button type="submit" class="btnSearch">
-              <img src="img/Component 2.png" alt="" srcset="" />
-            </button>
+              <img src="./img/Component 2.png" alt="" srcset="" />
+            </button>   
           </form>
-          <img src="./img/Vector (1).png" alt="" />
-          <img src="./img/Cart1.png" alt="" />
-          <img src="img/user.png" alt="" />
+          <img src="./img/Vector.png" alt="" />
+          <img src="./img/Cart.png" alt="" />
+          <img src="./img/user.png" alt="" />
         </div>
       </nav>
     </header>
 
     <main class="mainPage">
-      <div class="container">
-        <div class="BOX">
-          <div class="thumbnails">
-            <!-- <img src="img/Frame 894.png" alt="Thumbnail 1" />
-            <img src="img/Frame 895.png" alt="Thumbnail 2" />
-            <img src="img/Frame 896.png" alt="Thumbnail 3" />
-            <img src="img/Frame 896.png" alt="Thumbnail 4" /> -->
-          </div>
-          <div  class="main-image">
-            <img  src="img/Frame 919.png" class="mainImage" alt="Main Product Image" />
-          </div>
-        </div>
+      <aside class="navigate">
+        <p>Home</p>
+        <p>/</p>
+        <p>Cart</p>
+      </aside>
 
-        <div class="product-details">
-          <h1 class="product-name"> Havic HV G-92 Gamepad</h1>
-          <div class="ratings">
-            <img src="./img/Four Star.png" alt="" /> (150 Reviews) |
-            <span class="active"> In Stock</span>
-          </div>
-          <p class="price">$192.00</p>
-          <p class="description">
-            <!-- PlayStation 5 Controller Skin High quality vinyl with air channel
-            adhesive for easy bubble free install & mess free removal Pressure
-            sensitive. -->
-          </p>
-          <div class="options">
-            <div class="colors">
-              <!-- <span class="color color1"></span>
-              <span class="color color2"></span> -->
+      <table>
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="prod-hover">
+            <td>
+              <div class="product-descript">
+                <img src="./img/Monitor-Cart-Small.png" alt="" />
+                <p>LCD Monitor</p>
+              </div>
+            </td>
+            <td>$650</td>
+            <td>
+              <input class="inpCnt" type="number" />
+            </td>
+            <td>$650</td>
+            <td><img src="./img/icon-cancel.png" alt="" /></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="bnts-tool">
+        <button class="btnReturn">Return to shop</button>
+        <button class="btnRemove">Remove all</button>
+      </div>
+
+      <div class="tool-update">
+        <div class="cupon">
+          <input type="text" placeholder="Coupon Code" />
+          <button>Apply</button>
+        </div>
+        <div class="processCheck">
+          <form action="">
+            <!--в action нужно добавить путь к Checkout-->
+            <h2>Cart Total</h2>
+            <div class="subtotal-price">
+              <p>Subtotal:</p>
+              <p>1750$</p>
             </div>
-            <div class="sizes">
-              <button>XS</button>
-              <button>S</button>
-              <button>M</button>
-              <button>L</button>
-              <button>XL</button>
+            <div class="subtotal-price divv">
+              <p>Shipping:</p>
+              <p>Free</p>
             </div>
-          </div>
-          <div class="purchase">
-            <input type="number" value="2" min="1" />
-            <button class="buy">Buy Now</button>
-            <button class="like">
-              <img src="./img/Vector (1).png" alt="" />
+            <divc class="subtotal-prices">
+              <p>Total:</p>
+              <p>$1750</p>
+            </divc>
+            <button type="submit" class="btnProcees">
+              Procees to checkout
             </button>
-          </div>
-          <div class="delivery-info">
-            <div class="box1">
-              <img src="./img/icon-delivery.png" alt="" />
-              <p>Free Delivery - <a href="#">Enter postal code</a></p>
-            </div>
-            <div class="box2">
-              <img src="./img/Icon-return (1).png" alt="" />
-              <p>Return Delivery - <a href="#">30 Days Return</a></p>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
     </main>
@@ -145,7 +153,7 @@
           <div class="social-net">
             <img src="./img/Icon-Facebook.png" alt="" />
             <img src="./img/Icon-Twitter.png" alt="" />
-            <img src="./img/icon-instagram (1).png" alt="" />
+            <img src="./img/icon-instagram.png" alt="" />
             <img src="./img/Icon-Linkedin.png" alt="" />
           </div>
         </div>
@@ -154,6 +162,6 @@
         <p>&copy; Copyright Rimel 2022. All right reserved</p>
       </div>
     </footer>
-    <script type="module" src="main.js"></script>
+
   </body>
 </html>

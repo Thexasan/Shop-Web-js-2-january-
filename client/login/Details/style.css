@@ -341,6 +341,7 @@ delivery-info a {
     .purchase {
         flex-direction: column;
     }
+    
     .buy {
         width: 100%;
         text-align: center;
