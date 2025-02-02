@@ -1,276 +1,276 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.navbar-elem{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 10px 0px;
-    border: 1px solid rgb(222, 218, 218);
+.navbar-elem {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 0px;
+  border: 1px solid rgb(222, 218, 218);
 }
-.navigation{
-    display: flex;
-    gap: 30px;
-    list-style: none;
+.navigation {
+  display: flex;
+  gap: 30px;
+  list-style: none;
 }
-.navigation li:hover{
-    cursor: pointer;
-    color: blue;
-    text-decoration: underline;
+.navigation li:hover {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
 }
-.tools-toOption{
-    display: flex;
-    align-items: center;
-    gap: 15px;
+.tools-toOption {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
-.tools-toOption img:hover{
-    cursor: pointer;
+.tools-toOption img:hover {
+  cursor: pointer;
 }
-.searchForm{
-    width: 250px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    padding: 0px 10px;
-    background-color: #F5F5F5;
+.searchForm {
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 0px 10px;
+  background-color: #f5f5f5;
 }
-.search-product{
-    width: 100%;
-    padding: 10px 10px;
-    background-color: #F5F5F5;
-    outline: none;
-    border: none;
+.search-product {
+  width: 100%;
+  padding: 10px 10px;
+  background-color: #f5f5f5;
+  outline: none;
+  border: none;
 }
-.btnSearch{
-    border: none;
-    background-color: #F5F5F5;
-    cursor: pointer;
+.btnSearch {
+  border: none;
+  background-color: #f5f5f5;
+  cursor: pointer;
 }
-.footer-component{
-    width: 100%;
-    height: 300px;
-    padding: 20px 0px;
-    background-color: black;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.footer-component {
+  width: 100%;
+  height: 300px;
+  padding: 20px 0px;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.components{
-    width: 85%;
-    margin: auto;
-    height: 230px;
-    background-color: black;
-    display: flex;
-    justify-content: space-between;
+.components {
+  width: 85%;
+  margin: auto;
+  height: 230px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
 }
-.searchEmailForm{
-    width: 230px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    padding: 0px 10px;
-    border: 1px solid white;
-    background-color: black;
-    border-radius: 5px;
-    margin: 10px 0px;
+.searchEmailForm {
+  width: 230px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 0px 10px;
+  border: 1px solid white;
+  background-color: black;
+  border-radius: 5px;
+  margin: 10px 0px;
 }
-.emailEnter{
-    width: 100%;
-    padding: 13px 10px;
-    background-color: black;
-    outline: none;
-    border: none;
-    color: white;
+.emailEnter {
+  width: 100%;
+  padding: 13px 10px;
+  background-color: black;
+  outline: none;
+  border: none;
+  color: white;
 }
-.btnEmail{
-    border: none;
-    background-color: black;
-    cursor: pointer;
+.btnEmail {
+  border: none;
+  background-color: black;
+  cursor: pointer;
 }
-.boxes p{
-    padding: 10px 0px;
+.boxes p {
+  padding: 10px 0px;
 }
-.list-info{
-    list-style: none;
-    padding: 10px 0px;
+.list-info {
+  list-style: none;
+  padding: 10px 0px;
 }
-.list-info li:hover{
-    cursor: pointer;
-    color: blue;
-    text-decoration: underline;
+.list-info li:hover {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
 }
-.info{
-    padding: 10px 0px;
+.info {
+  padding: 10px 0px;
 }
-.lists{
-    width: 200px;
+.lists {
+  width: 200px;
 }
-.social-net{
-    display: flex;
-    gap: 20px;
-    padding: 20px 0px;
+.social-net {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0px;
 }
-.descript{
-    width: 100%;
-    border-top: 1px solid rgb(36, 34, 34);
-    background-color: black;
-    padding: 15px 0px;
-    color: gray;
-    text-align: center;
+.descript {
+  width: 100%;
+  border-top: 1px solid rgb(36, 34, 34);
+  background-color: black;
+  padding: 15px 0px;
+  color: gray;
+  text-align: center;
 }
-.mainPage{
-    width: 85%;
-    margin: auto;
+.mainPage {
+  width: 85%;
+  margin: auto;
 }
-.navigate{
-    display: flex;
-    gap: 15px;
-    margin: 30px 0px;
+.navigate {
+  display: flex;
+  gap: 15px;
+  margin: 30px 0px;
 }
-.product-descript{
-    display: flex;
-    align-items: center;
-    gap: 20px;
+.product-descript {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
-table{
-    width: 90%;
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 40px;
+table {
+  width: 90%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 40px;
 }
-th{
-    text-align: left;
-    padding: 15px;
+th {
+  text-align: left;
+  padding: 15px;
 }
-td{
-    text-align: left;
-    padding: 10px 10px;
+td {
+  text-align: left;
+  padding: 10px 10px;
 }
-.prod-hover{
-    box-shadow: 0px 0px 8px rgb(190, 187, 187);
-    border-radius: 10px;
-}    
-.inpCnt{
-    width: 15%;
-    border: 1px solid gray;
-    border-radius: 5px;
-    padding: 7px 6px;
-    font-size: 16px;
+.prod-hover {
+  box-shadow: 0px 0px 8px rgb(190, 187, 187);
+  border-radius: 10px;
 }
-.bnts-tool{
-    width: 95%;
-    display: flex;
-    justify-content: end;
-    gap: 15px;
+.inpCnt {
+  width: 15%;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 7px 6px;
+  font-size: 16px;
 }
-.btnReturn{
-    padding: 10px 25px;
-    background-color: black;
-    color: white;
-    font-size: 17px;
-    margin-bottom: 35px;
-    border-radius: 5px;
-    border: none;
+.bnts-tool {
+  width: 95%;
+  display: flex;
+  justify-content: end;
+  gap: 15px;
 }
-.btnReturn:hover{
-    border: 1px solid black;
-    color: black;
-    background-color: white;
-    cursor: pointer;
+.btnReturn {
+  padding: 10px 25px;
+  background-color: black;
+  color: white;
+  font-size: 17px;
+  margin-bottom: 35px;
+  border-radius: 5px;
+  border: none;
 }
-.btnRemove{
-    background-color: red;
-    padding: 10px 25px;
-    color: white;
-    font-size: 17px;
-    margin-bottom: 35px;
-    border-radius: 5px;
-    border: none;
+.btnReturn:hover {
+  border: 1px solid black;
+  color: black;
+  background-color: white;
+  cursor: pointer;
 }
-.btnRemove:hover{
-    border: 1px solid red;
-    color: red;
-    background-color: white;
-    cursor: pointer;
+.btnRemove {
+  background-color: red;
+  padding: 10px 25px;
+  color: white;
+  font-size: 17px;
+  margin-bottom: 35px;
+  border-radius: 5px;
+  border: none;
 }
-.tool-update{
-    width: 90%;
-    margin: auto;
-    margin-top: 40px;
-    margin-bottom: 100px;
-    display: flex;
-    justify-content: space-between;
+.btnRemove:hover {
+  border: 1px solid red;
+  color: red;
+  background-color: white;
+  cursor: pointer;
 }
-.cupon{
-    width: 30%;
-    display: flex;
-    align-items: start;
-    gap: 20px;
+.tool-update {
+  width: 90%;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
 }
-.cupon input{
-    width: 100%;
-    border-radius: 5px;
-    border: 1px solid gray;
-    padding: 10px 10px;
-    font-size: 16px;
+.cupon {
+  width: 30%;
+  display: flex;
+  align-items: start;
+  gap: 20px;
 }
-.cupon button{
-    padding: 13px 30px;
-    background-color: red;
-    color: white;
-    border-radius: 5px;
-    border: none;
+.cupon input {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 10px 10px;
+  font-size: 16px;
 }
-.cupon button:hover{
-    border: 1px solid red;
-    background-color: white;
-    color: black;
-    cursor: pointer;
+.cupon button {
+  padding: 13px 30px;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  border: none;
 }
-.processCheck{
-    width: 35%;
-    height: 280px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgb(196, 196, 196);
-    padding: 25px 20px 0px 20px;
+.cupon button:hover {
+  border: 1px solid red;
+  background-color: white;
+  color: black;
+  cursor: pointer;
 }
-.subtotal-price{
-    display: flex;
-    justify-content: space-between;
-    margin: 8px 0px;
-    padding: 10px 0px;
+.processCheck {
+  width: 35%;
+  height: 280px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgb(196, 196, 196);
+  padding: 25px 20px 0px 20px;
 }
-.divv{
-    border-bottom: 1px solid rgb(174, 169, 169);
+.subtotal-price {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0px;
+  padding: 10px 0px;
 }
-.subtotal-prices{
-    display: flex;
-    justify-content: space-between;
-    margin: 8px 0px;
-    padding: 10px 0px;
+.divv {
+  border-bottom: 1px solid rgb(174, 169, 169);
 }
-.subtotal-prices p{
-    font-size: 25px;
-    font-weight: bold;
+.subtotal-prices {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0px;
+  padding: 10px 0px;
 }
-.btnProcees{
-    width: 60%;
-    padding: 13px 30px;
-    background-color: red;
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
+.subtotal-prices p {
+  font-size: 25px;
+  font-weight: bold;
 }
-.btnProcees:hover{
-    background-color: white;
-    color: red;
-    border: 1px solid red;
-    cursor: pointer;
+.btnProcees {
+  width: 60%;
+  padding: 13px 30px;
+  background-color: red;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+}
+.btnProcees:hover {
+  background-color: white;
+  color: red;
+  border: 1px solid red;
+  cursor: pointer;
 }
