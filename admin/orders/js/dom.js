@@ -8,9 +8,10 @@ let trash = document.querySelector(".trash");
 let checkAll = document.querySelector(".checkAll");
 let isCheckAll = false;
 let deleteItems = [];
+let resultsCount = document.querySelector(".resultsCount"); // Select the element for results count
 
 export function showOrdersTable(orders) {
-    console.log(orders);
+    resultsCount.textContent = `${orders.length} Results`;
   if (orders.length === 0) {
     emptyMSG.style.display = "block";
     tContainer.style.display = "none";
@@ -85,7 +86,7 @@ export function showOrdersTable(orders) {
 let searchForm = document.querySelector(".searchForm");
 searchForm.onsubmit = (e) => {
     e.preventDefault();
-    let value = e.target["search"].value;
+    let value = e.target["search"].value
    
   fetchOrders(value);
 };
