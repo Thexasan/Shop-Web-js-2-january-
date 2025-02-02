@@ -1,5 +1,6 @@
 import { fileTobase64 } from "../../../config.js";
 import { getData } from "../../../requests/request.js";
+import { postData } from "../../../requests/request.js";
 let checkbox = document.querySelector(".checkbox");
 let otherOptions = document.querySelector(".otherOptions");
 let prewieColor = document.querySelector(".prewieColor");
@@ -17,15 +18,7 @@ async function getCategory() {
   let brands = await getData(`/brands`);
   formData(category, brands);
 }
-//post-product
-async function postProduct(newProduct) {
-  try {
-    await postData("/product", newProduct);
-    fetchData();
-  } catch (error) {
-    console.error(error);
-  }
-}
+
 let colors = [
   { name: "red", rgb: "#ff1100" },
   { name: "blue", rgb: "#1100ff" },
@@ -106,11 +99,50 @@ fileInput.onchange = async () => {
   });
   console.log(images);
 };
-
+let brands = document.querySelector(".brands");
+let categories = document.querySelector(".categories");
 function formData(category, brand) {
-  mainForm.onsubmit = (e) => {
+  category.forEach((elem) => {
+    let option = document.createElement("option");
+    option.value = elem.name;
+    option.innerHTML = elem.name;
+    categories.append(option);
+  });
+  brand.forEach((el) => {
+    let option = document.createElement("option");
+    option.value = el.brandName;
+    option.innerHTML = el.brandName;
+    brands.append(option);
+  });
+  mainForm.onsubmit = async (e) => {
     e.preventDefault();
-  };
+    let price = {
+      cost: Number(mainForm["productPrice"].value),
+      discount: mainForm["discount"].value ? mainForm["discount"].value : null,
+      count: mainForm["count"].value,
+    };
+    let newProduct = {
+      productName: mainForm["productNameInp"].value,
+      description: mainForm["description"].value,
+      category: mainForm["categories"].value,
+      brand: mainForm["brands"].value,
+      price: price,
+      options: {},
+      color: userColor,
+      images: images,
+    };
+    await postProduct(newProduct);
+    alert("sucsessFully added product");
+    console.log(newProduct);
+};
+}
+//post-product
+async function postProduct(newProduct) {
+  try {
+    await postData("/product", newProduct);
+  } catch (error) {
+    console.error(error);
+  }
 }
 //     "id": "1",
 //     "productName": "Sofa Set",
@@ -144,4 +176,4 @@ function formData(category, brand) {
 //       }
 //     ]
 //   },
-getCategory()
+getCategory();
