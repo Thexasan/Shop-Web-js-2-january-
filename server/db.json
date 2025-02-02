@@ -20,6 +20,10 @@
     {
       "id": 1,
       "brandName": "Samsung"
+    },
+    {
+      "id": "1db0",
+      "brandName": "Lg"
     }
   ],
   "products": [

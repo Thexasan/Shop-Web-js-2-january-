@@ -5,14 +5,14 @@
 html , body
 {
   height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 .navbar {
   display: flex;
   align-items: center;
   background-color: #1c2536;
   justify-content: space-between;
-  padding: 10px 20px;
-  width: 96.%;
 }
 .left {
   display: flex;
