@@ -9,8 +9,8 @@
     align-items: center;
     background-color: #1C2536;
     justify-content: space-between;
-    padding: 10px 20px;
-    width: 97%;
+    width: 100%;
+    padding: 10px 0px;
 }
 .left
 {
@@ -442,4 +442,9 @@ th, td {
 #categoryModal {
     margin: auto;
     padding: auto ;
+}
+
+.brand::placeholder{
+  color: #0056b3;
+  font-weight: 600;
 }

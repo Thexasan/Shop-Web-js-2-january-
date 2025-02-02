@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FastCart Admin Panel</title>
     <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="initial-welcome" id="initialWelcome">
@@ -22,22 +23,23 @@
       <div class="split right">
         <div class="login-form">
           <h2>Log in</h2>
-          <form>
+          <form class="form">
             <div class="input-group">
-              <input type="email" placeholder="Email" required />
+              <input name="inpEmail" type="email" placeholder="Email" required />
             </div>
             <div class="input-group">
-              <input type="password" placeholder="Password" required />
+              <input name="inpPassword" type="password" placeholder="Password" required />
               <span class="password-toggle">👁</span>
             </div>
             <div class="form-footer">
               <a href="../Forgot/forgotEmail.html" class="forgot-link">Forgot password?</a>
+              <p class="error-userData"></p>
               <button type="submit" class="login-btn">Log in</button>
             </div>
           </form>
         </div>
       </div>
     </div>
-    <script src="../JS/dom.js"></script>
+    <script type="module" src="../JS/main.js"></script>
   </body>
 </html>
