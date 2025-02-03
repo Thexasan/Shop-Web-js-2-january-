@@ -31,60 +31,29 @@
     <main class="main">
       <aside class="asideBar">
         <li class="">
-          <i class="bi bi-house-door"></i><a href="" class="">Dashboard</a>
+          <i class="bi bi-house-door"></i><a href="../../dashboard/index.html" class="">Dashboard</a>
         </li>
         <li class="">
-          <i class="bi bi-list-ul"></i><a href="" class="">Orders</a>
+          <i class="bi bi-list-ul"></i><a href="../../orders/index.html" class="">Orders</a>
         </li>
-        <li><i class="bi bi-tag"></i><a href="" class="">Products</a></li>
+        <li><i class="bi bi-tag"></i><a href="../../products/index.html" class="">Products</a></li>
         <li class="active">
-          <i class="bi bi-folder"></i><a href="" class="">other</a>
+          <i class="bi bi-folder"></i><a href="../../others/index.html" class="">other</a>
         </li>
       </aside>
-
-      <!-- ADDDMODAL -->
-
-      <dialog id="categoryModal">
-        <form method="dialog" class="modal">
-          <span
-            class="close"
-            onclick="document.getElementById('categoryModal').close()"
-            >&times;</span
-          >
-          <h2>Add category</h2>
-          <input type="text" placeholder="Category name" class="input-field" />
-          <div class="upload-box">
-            <label for="file-upload" class="upload-label">
-              <div class="upload-icon">⬆</div>
-              <p><strong>Click to upload</strong> or drag and drop</p>
-              <p class="file-info">(SVG, JPG, PNG, or GIF maximum 900×400)</p>
-            </label>
-            <input type="file" id="file-upload" hidden />
-          </div>
-          <div class="modal-actions">
-            <button
-              class="cancel"
-              onclick="document.getElementById('categoryModal').close()"
-            >
-              Cancel
-            </button>
-            <button class="create" type="submit">Create</button>
-          </div>
-        </form>
-      </dialog>
       <!-- CARDSSS -->
 
       <aside class="div">
         <div class="container">
           <div class="navbar2">
-            <button class="tab active">Categories</button>
-            <button class="tab">Brands</button>
+          <a href="../index.html">  <button class="tab"  >Categories</button></a>
+            <button class="tab active">Brands</button>
             <button class="tab">Banners</button>
           </div>
           <div class="grid1">
             <div class="content">
                 <div class="brands-list">
-                    <!-- <h3>Brands</h3> -->
+
                     <table>
                         <thead>
                             <tr>
@@ -92,50 +61,14 @@
                                 <th>Action</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>Samsung</td>
-                                <td>
-                                    <span class="edit">✏️</span>
-                                    <span class="delete">🗑️</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Xiaomi</td>
-                                <td>
-                                    <span class="edit">✏️</span>
-                                    <span class="delete">🗑️</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>LG</td>
-                                <td>
-                                    <span class="edit">✏️</span>
-                                    <span class="delete">🗑️</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Nokia</td>
-                                <td>
-                                    <span class="edit">✏️</span>
-                                    <span class="delete">🗑️</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Panasonic</td>
-                                <td>
-                                    <span class="edit">✏️</span>
-                                    <span class="delete">🗑️</span>
-                                </td>
-                            </tr>
-                        </tbody>
+                        <tbody class="tbody"></tbody>
                     </table>
                 </div>
     
                 <div class="add-brand">
                     <h3>Add new brand</h3>
-                    <input type="text" placeholder="Brand name">
-                    <button class="create-btn">Create</button>
+                    <input type="text" class="brand" value="" name="brand" placeholder="Brand name">
+                    <button class="create-btn create">Create</button>
                 </div>
             </div>
         </div> 

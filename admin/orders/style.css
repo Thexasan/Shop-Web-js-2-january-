@@ -121,15 +121,18 @@ a{
     justify-content: center;
     align-items: center;
     margin: auto;
+    text-align: center;
 }
 .h3{
     margin: 20px 0 0 0;
+    text-align: center;
 }
 .para{
     color: gray;
-    width: 60%;
+    width: 100%;
     text-align: center;
     margin: 5px 0 20px 0;
+    text-align: center;
 }
 .AddOrders{
     background-color: #2563EB;
@@ -182,7 +185,16 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 630px;
+    gap: 600px;
+}
+.useless{
+    display: flex;
+    gap: 10px;
+}
+.useless select{
+    padding: 10px 15px;
+    border: 1px solid rgb(172, 170, 170);
+    border-radius: 5px;
 }
 .boxes{
     display: flex;
@@ -190,15 +202,23 @@ a{
 }
 
 table{
-    border: 1px solid rgb(241, 234, 234);
+    /* border: 1px solid rgb(241, 234, 234); */
     margin: auto;
     width: 100%;
     margin-top: 30px;
     border-collapse: collapse;
     border-radius: 10px;
 }
-th,td{
-    border: 1px solid rgb(223, 218, 218);
+td{
+    border-top: 1px solid rgb(223, 218, 218);
+    border-bottom: 1px solid rgb(223, 218, 218);
+    border-collapse: collapse;
+    text-align: center;
+    padding: 7px;
+    background-color: #FAFAFA;
+}
+th{
+    border-bottom: 1px solid rgb(243, 238, 238);
     border-collapse: collapse;
     text-align: center;
     padding: 5px;
@@ -227,3 +247,45 @@ th{
     padding: 2px 7px;
     border-radius: 5px;
 }
+.resultsCount {
+    text-align: end; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-end; 
+    align-items: flex-end; 
+    height: 70vh; 
+}
+
+
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 95%;
+    margin: auto;
+  }
+  .pagination button {
+    padding: 5px 10px;
+    border: none;
+    color: gray;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .pagination button:active {
+    background-color: gray;
+    color: #fff;
+  }
+  .number {
+    padding: 10px;
+    color: black;
+    cursor: pointer;
+  }
+  .activePag
+  {
+    padding: 10px 15px;
+    background-color: rgba(0, 76, 255, 0.612);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+  }
