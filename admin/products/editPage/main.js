@@ -192,10 +192,10 @@ function formData(category, brand) {
 }
 //post-product
 async function postProduct(updateProduct) {
-  try {
+  try {   
     await putData(`/products/${updateProduct.id}` , updateProduct);
-  } catch (error) {
-    console.error(error);
+  } catch (error) {    
+    console.error(error);   
   }
 }
 //     "id": "1",
