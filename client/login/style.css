@@ -21,6 +21,17 @@ header{
     align-items: center;
     gap: 20px;
 }
+.imgs button{
+    border: 0;
+    padding: 5px;
+    background-color: transparent;
+}
+.imgs button:hover{
+    background-color: rgb(227, 216, 216);
+    color: white;
+    border-radius: 10px;
+
+}
 .head ul{
     display: flex;
     list-style: none;
@@ -33,6 +44,35 @@ text-align: center;
 text-underline-position: from-font;
 text-decoration-skip-ink: none;
 color: #000000;
+}
+.infoClick{
+    background-color: #000000B8;
+    color: white;
+    border: 0;
+    position: absolute;
+    top: -480px;
+    border-radius: 20px ;
+    right: -1050px;
+}
+.dialogflex{
+    width: 130px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.infoClick button{
+    border: 0;
+    background-color: transparent;
+    color: white;
+}
+.dialogbox{
+    display: flex; 
+    align-items: center;
+    gap: 5px;
+}
+a{
+    text-decoration: none;
+    color: black;
 }
 .head ul li:hover{
     text-decoration: underline;
@@ -69,6 +109,7 @@ color: #000000;
     width: 80%;
     margin: auto;
     display: flex;
+    justify-content: space-between;
     margin-top: 20px;
 }
 .categories{
@@ -85,11 +126,27 @@ color: #000000;
     gap: 20px;
 }
 .banners{
-    width: 80%;
+    width: 70%;
     display: flex;
     align-items: center;
     justify-content: end;
     padding-top: 20px;
+    height: 370px;
+}
+
+.slider {
+    width: 100%;
+    height: 370px;
+}
+.slide{
+    display: flex;
+    gap: 40px;
+    overflow: auto;
+    align-items: center;
+}
+.slider img{
+    height: 370px;
+    width: 100%;
 }
 .zagolovok{
     display: flex;
@@ -174,6 +231,20 @@ color: #000000;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.timerr{
+    font-size: 16px;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+.timerr p, .timerr h3{
+    margin: 0;
+    text-align: center;
+    line-height: 30px;
+}
+.timerr h3{
+    font-size: 30px;
 }
 .text{
     display: flex;
@@ -507,8 +578,8 @@ text-decoration-skip-ink: none;
 .allForm{
     width: 25%;
     margin: auto;
-    margin-top: 180px;
-    margin-bottom: 200px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 .inputs{
     display: flex;
