@@ -197,17 +197,23 @@ text-decoration-skip-ink: none;
     padding: 50px 10px;
     border-radius: 5px;
     flex-direction: column;
-    overflow: hidden;
     align-items: center;
     justify-content: center;
 }
 
-.topOfCard:hover{
-    margin-left: 0;
+.topOfCard .topp{
+    width: 200px;
 }
 .cards{
     display: grid;
-    grid-template-columns: repeat(6, 270px) ;
+    grid-template-columns: repeat(7, 270px) ;
+    grid-template-rows: 1;
+    gap: 40px;
+    overflow: auto;
+}
+.cardds{
+    display: grid;
+    grid-template-columns: repeat(7, 270px) ;
     grid-template-rows: 1;
     gap: 40px;
     overflow: hidden;
