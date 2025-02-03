@@ -70,9 +70,9 @@ export function showOrdersTable(orders) {
       tdId.innerHTML = order.orderId
       checkbox.onclick = () => {
         if (checkbox.checked) {
-          deleteItems.push(order.orderId);
+          deleteItems.push(order.id);
         } else {
-          deleteItems = deleteItems.filter((id) => id !== order.orderId);
+          deleteItems = deleteItems.filter((id) => id !== order.id);
         }
       };
       box.append(checkbox, tdId);
