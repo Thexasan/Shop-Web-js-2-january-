@@ -44,13 +44,13 @@ function displayCart() {
     tbody.appendChild(tr);
   });
 
-  updateTotal(); // Пересчитываем итог при загрузке
+  updateTotal();
 
   document.querySelectorAll(".inpCnt").forEach((input) => {
     input.addEventListener("input", function () {
       let index = this.dataset.index;
       let quantity = parseInt(this.value);
-      if (quantity < 1) quantity = 1; // Защита от отрицательных значений
+      if (quantity < 1) quantity = 1;
 
       let price = cart[index].price.cost;
       let subtotal = quantity * price;
@@ -88,5 +88,11 @@ function removeFromCart(index) {
 
 document.addEventListener("DOMContentLoaded", () => {
   Cart();
+  displayCart();
+});
+
+document.querySelector(".btnRemove").addEventListener("click", function () {
+  cart = [];
+  localStorage.setItem("cartSend", JSON.stringify(cart));
   displayCart();
 });
