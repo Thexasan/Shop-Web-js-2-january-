@@ -208,7 +208,7 @@ function formData(category, brand) {
     window.location = "../index.html"
     await putProduct(updateProduct);
     alert("sucsessFully editing product");
-    console.log(updateProduct);
+    console.log(updateProduct);   
   };
 }
 
