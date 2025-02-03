@@ -15,6 +15,10 @@ let hexCode = document.querySelector(".hexCode");
 let exitButModal = document.querySelector(".exitButModal");
 let cancel = document.querySelector(".cancel");
 let mainDiv = document.querySelector(".mainDiv");
+let option1 = document.querySelector(".o1");
+let option2 = document.querySelector(".o2");
+let value1 = document.querySelector(".v1");
+let value2 = document.querySelector(".v2");
 
 async function getCategory() {
   let category = await getData(`/category`);
@@ -83,40 +87,45 @@ addNewColorBut.onclick = () => {
   };
 };
 
-let images = [];
+let images = ProductInfo.images ? [...ProductInfo.images] : [];
 let fileInput = document.querySelector("#fileInput");
 let filelist = document.querySelector(".filelist");
+
 fileInput.onchange = async () => {
   let files = Array.from(fileInput.files);
   files.forEach(async (file) => {
     let base64 = await fileTobase64(file);
-    let item = document.createElement("tr");
-    // item.classList.add("item-imgDiv");
-    item.innerHTML = `
-    <td>
-    <img class="item-img" src="${base64}" alt="preview">
-    </td>
-    <td>
-    <span>${file.name}</span>
-    </td>
-    <td>
-    <span class="delete-btn">🗑️</span>
-    </td>
-        `;
-
-    let deleteBut = item.querySelector(".delete-btn");
-    deleteBut.onclick = () => {
-      images = images.filter((img) => img !== base64);
-      item.remove();
-      console.log("Updated images array:", images);
-    };
-    images.push(base64);
-    filelist.append(item);
+    addImageToList(base64, file.name);
   });
   console.log("Final images array:", images);
 };
+
+function addImageToList(base64, name) {
+  let item = document.createElement("tr");
+  item.innerHTML = `
+    <td>
+      <img class="item-img" src="${base64}" alt="preview">
+    </td>
+    <td>
+      <span>${name}</span>
+    </td>
+    <td>
+      <span class="delete-btn">🗑️</span>
+    </td>
+  `;
+  let deleteBut = item.querySelector(".delete-btn");
+  deleteBut.onclick = () => {
+    images = images.filter((img) => img !== base64);
+    item.remove();
+    console.log("Updated images array:", images);
+  };
+  images.push(base64);
+  filelist.append(item);
+};
+
 let brands = document.querySelector(".brands");
 let categories = document.querySelector(".categories");
+
 function formData(category, brand) {
   category.forEach((elem) => {
     let option = document.createElement("option");
@@ -130,7 +139,8 @@ function formData(category, brand) {
     option.innerHTML = el.brandName;
     brands.append(option);
   });
-  //edit
+
+  // edit
   mainForm["productNameInp"].value = ProductInfo.productName;
   mainForm["description"].value = ProductInfo.description;
   mainForm["categories"].value = ProductInfo.category;
@@ -138,6 +148,11 @@ function formData(category, brand) {
   mainForm["productPrice"].value = ProductInfo.price.cost;
   mainForm["discount"].value = ProductInfo.price.discount;
   mainForm["count"].value = ProductInfo.price.count;
+  option1.value = Object.keys(ProductInfo.options)[0];
+  option2.value = Object.keys(ProductInfo.options)[1];
+  value1.value = Object.values(ProductInfo.options)[0];
+  value2.value = Object.values(ProductInfo.options)[1];
+
   ProductInfo.color.forEach((productColor) => {
     let existingColor = colors.find((c) => c.rgb === productColor.rgb);
     if (!existingColor) {
@@ -146,27 +161,32 @@ function formData(category, brand) {
   });
   getColor(colors);
 
-  images = ProductInfo.images || [];
+  function renderImages() {
+    filelist.innerHTML = ""; // Очищаем перед рендерингом
 
-  images.forEach((img) => {
-    let item = document.createElement("tr");
-    // item.classList.add("item-imgDiv")
-    item.innerHTML = `
-    <td>
-    <img class="item-img" src="${img.src}" alt="preview">
-    <td>${img.name}</td>
-    </td>
-    <td>
-    <span class="delete-btn">🗑️</span>
-    </td>
+    images.forEach((img, index) => {
+      let imageSrc = typeof img === "string" ? img : img.src; // Проверяем, это строка base64 или объект
+      let item = document.createElement("tr");
+      item.innerHTML = `
+        <td>
+          <img class="item-img" src="${imageSrc}" alt="preview">
+        </td>
+        <td>${img.name || `Image ${index + 1}`}</td>
+        <td>
+          <span class="delete-btn">🗑️</span>
+        </td>
       `;
-    let deleteBut = item.querySelector(".delete-btn");
-    deleteBut.onclick = () => {
-      images = images.filter((image) => image.src !== img.src);
-      item.remove();
-    };
-    filelist.append(item);
-  });
+      let deleteBut = item.querySelector(".delete-btn");
+      deleteBut.onclick = () => {
+        images.splice(index, 1); // Удаляем изображение из массива
+        renderImages(); // Перерисовываем список
+      };
+
+      filelist.append(item);
+    });
+  }
+  renderImages();
+
   mainForm.onsubmit = async (e) => {
     e.preventDefault();
     let price = {
@@ -185,49 +205,24 @@ function formData(category, brand) {
       color: userColor,
       images: images,
     };
-    await postProduct(updateProduct);
+    window.location = "../index.html"
+    await putProduct(updateProduct);
     alert("sucsessFully editing product");
     console.log(updateProduct);
   };
 }
-//post-product
-async function postProduct(updateProduct) {
-  try {   
-    await putData(`/products/${updateProduct.id}` , updateProduct);
-  } catch (error) {    
-    console.error(error);   
+
+// post-product
+async function putProduct(updateProduct) {
+  try {
+    updateProduct.images = images.map((img) => ({
+      src: img.src || img,
+      name: img.name || "",
+    }));
+    await putData(`/products/${updateProduct.id}`, updateProduct);
+  } catch (error) {
+    console.error(error);
   }
 }
-//     "id": "1",
-//     "productName": "Sofa Set",
-//     "description": "Lorem ipsum dolor sit amet, consect",
-//     "category": "Man’s Fashion",
-//     "brand": "Puma",
-//     "price": {
-//       "cost": 200.99,
-//       "discount": 20,
-//       "count": 10
-//     },
-//     "options": {},
-//     "color": [
-//       {
-//         "name": "black",
-//         "rgb": "#00000"
-//       }
-//     ],
-//     "images": [
-//       {
-//         "id": 1,
-//         "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/800px-BMW.svg.png"
-//       },
-//       {
-//         "id": 2,
-//         "src": "base64"
-//       },
-//       {
-//         "id": 3,
-//         "src": "base64"
-//       }
-//     ]
-//   },
+
 getCategory();
