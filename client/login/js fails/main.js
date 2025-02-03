@@ -46,7 +46,7 @@ let getFromProducts=(data)=>{
                     <img src="./images/Fill Eye.png" alt="" style="position: absolute; top: 10px; right: 10px;">
                 </div>
                 <p>${el.productName}</p>
-                <span style="  color: #DB4444;">${el.price.cost - el.price.discount}</span>  <span style="text-decoration: line-through;">${el.price.cost}</span>`
+                <span style="  color: #DB4444;">$ ${el.price.cost - el.price.discount}</span>  <span style="text-decoration: line-through;">${el.price.cost}</span>`
 
          cards.appendChild(card)     
     })
@@ -64,7 +64,7 @@ let getProductsWithoutSale= (data)=>{
                     <img src="./images/Fill Eye.png" alt="" style="position: absolute; top: 10px; right: 10px;">
                 </div>
                 <p>${el.productName}</p>
-                <span style="  color: #DB4444;">${el.price.cost}</span> `
+                <span style="  color: #DB4444;">$ ${el.price.cost}</span> `
 
                 cardss.appendChild(card)
     })

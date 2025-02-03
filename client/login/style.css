@@ -141,6 +141,7 @@ a{
 .slide{
     display: flex;
     gap: 40px;
+    padding-bottom: 20px;
     overflow: auto;
     align-items: center;
 }
@@ -209,8 +210,7 @@ a{
         width: 90%;
     }
     .banners{
-        width: 90%;
-        margin-left: 50px;
+        width: 100%;
     }
 }
 .sales{
@@ -278,7 +278,8 @@ text-decoration-skip-ink: none;
 .cards{
     display: grid;
     grid-template-columns: repeat(7, 270px) ;
-    grid-template-rows: 1;
+    grid-template-rows: 2;
+    padding-bottom: 40px;
     gap: 40px;
     overflow: auto;
 }
