@@ -1,0 +1,323 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.navbar-elem{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0px;
+    border: 1px solid rgb(222, 218, 218);
+}
+.navigation{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+.navigation li:hover{
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+.tools-toOption{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.tools-toOption img:hover{
+    cursor: pointer;
+}
+.searchForm{
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 0px 10px;
+    background-color: #F5F5F5;
+}
+.search-product{
+    width: 100%;
+    padding: 10px 10px;
+    background-color: #F5F5F5;
+    outline: none;
+    border: none;
+}
+.btnSearch{
+    border: none;
+    background-color: #F5F5F5;
+    cursor: pointer;
+}
+.footer-component{
+    width: 100%;
+    height: 300px;
+    padding: 20px 0px;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 13%;
+}
+.components{
+    width: 85%;
+    margin: auto;
+    height: 230px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+.searchEmailForm{
+    width: 230px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 0px 10px;
+    border: 1px solid white;
+    background-color: black;
+    border-radius: 5px;
+    margin: 10px 0px;
+}
+.emailEnter{
+    width: 100%;
+    padding: 13px 10px;
+    background-color: black;
+    outline: none;
+    border: none;
+    color: white;
+}
+.btnEmail{
+    border: none;
+    background-color: black;
+    cursor: pointer;
+}
+.boxes p{
+    padding: 10px 0px;
+}
+.list-info{
+    list-style: none;
+    padding: 10px 0px;
+}
+.list-info li:hover{
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+.info{
+    padding: 10px 0px;
+}
+.lists{
+    width: 200px;
+}
+.social-net{
+    display: flex;
+    gap: 20px;
+    padding: 20px 0px;
+}
+.descript{
+    width: 100%;
+    border-top: 1px solid rgb(36, 34, 34);
+    background-color: black;
+    padding: 15px 0px;
+    color: gray;
+    text-align: center;
+}
+.mainPage{
+    width: 85%;
+    margin: auto;
+}
+
+
+nav {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.story {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    width: 50%;
+}
+
+.image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    background: #f1f1f1;
+    padding: 40px 0;
+    /* border: black solid 1px; */
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item img {
+    width: 80px;
+    height: auto;
+}
+
+.stat-item h3 {
+    margin-top: 10px;
+}
+
+.highlight {
+    background: #e74c3c;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    /* border: black solid 3px; */
+}
+
+.team {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    /* width: 150px; */
+    height: auto;
+    border-radius: 10px;
+}
+.div{
+background-color: black;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+padding: 19px;
+margin-top: 10px;
+border-radius: 50px;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+main{
+    margin: 80px;
+}
+
+.feature {
+    text-align: center;
+    display: inline-block;
+    width: 30%;
+    padding: 20px;
+    
+}
+
+.feature img {
+    /* width: 50px;  */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Мобильное меню */
+.mobile-nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: white;
+    width: 200px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 15px 0;
+  }
+  
+  .mobile-nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .mobile-nav ul li {
+    padding: 10px 15px;
+  }
+  
+  .mobile-nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+  }
+  .burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+  
+  .bar {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    transition: 0.3s;
+  }
+  
+  
+  /* Показываем бургер на маленьких экранах */
+  @media screen and (max-width: 768px) {
+    .navigation, .searchForm {
+      display: none;
+    }
+  
+    .burger-menu {
+      display: flex;
+    }
+  
+    .mobile-nav {
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(100%);
+      transition: 0.3s ease-in-out;
+    }
+  
+    .mobile-nav.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+    section .story img {
+        display: none;
+    }
+
+    .content,
+    .image {
+        width: 100%;
+    }
+
+    .stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        width: 100%;
+    }
+  }
+  
