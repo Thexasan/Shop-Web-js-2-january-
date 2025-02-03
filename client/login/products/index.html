@@ -37,39 +37,50 @@
     </div>
     
     <main>
-        <aside>
-            <div class="group">
-                <h4 class="title">Category</h4>
-                <div class="categorylist"></div>
-                <button class="see-all see-more">See More</button>
-                <button class="see-all see-less" style="display: none;">See Less</button>
-            </div>
-            <div class="group">
-                <h4 class="titleB">Brands</h4>
-                <div class="brandlist"></div>
-                <button class="see-all see-moreB">See More</button>
-                <button class="see-all see-lessB" style="display: none;">See Less</button>
-            </div>
-            <div class="Features">
-                <h4 class="titleB">Features</h4>
-                <div class="featureslist"></div>
-                <form>
-                    <button class="see-all">See all</button>
-                </form>
-            </div>
-            <div class="price-filter">
-                <h3>Price range</h3>
-                <div class="flex">
-                    <input type="text" class="min-price" placeholder="0">
-                    <input type="text" class="max-price" placeholder="99999">
+            <aside>
+                <div class="group">
+                    <h3 class="title titleC">Category</h3>
+                    <p class="all-products-btn" style="color: red;">All Products</p>
+                    <div class="categorylist"></div>
+                    <button class="see-all see-more">See All</button>
+                    <button class="see-all see-less" style="display: none;">See Less</button>
                 </div>
-                <button class="applyFilter">Apply</button>
-                <div class="filteredProducts"></div>
-            </div>
-        </aside>
+                <div class="group">
+                    <h3 class="title titleB">Brands</h3>
+                    <div class="brandlist"></div>
+                    <button class="see-all see-moreB">See More</button>
+                    <button class="see-all see-lessB" style="display: none;">See Less</button>
+                </div>
+                <div class="group title Features">
+                    <h3 class="titleB">Features</h3>
+                    <div class="featureslist"></div>
+                        <button class="see-allF">See all</button>
+                        <button class="see-lessF">See less</button>
+                </div>
+                <div class="group title price-filter">
+                    <h3 class="price">Price range</h3>
+                    <div class="flex">
+                        <input type="text" class="min-price" placeholder="0">
+                        <input type="text" class="max-price" placeholder="99999">
+                    </div>
+                    <button class="applyFilter">Apply</button>
+                    <div class="filteredProducts"></div>
+                </div>
+                <div class="group title groupC">
+                    <h3 class="condition">Condition</h3>
+                    <div class="conditionlist"></div>
+                </div>
+                <div class="group title groupR">
+                    <h3 class="ratings">Ratings</h3>
+                    <div class="ratingslist"></div>
+                </div>
+            </aside>
         <div class="main1">
             <div class="productsContainer"></div>
+            <button class="see-moreP" style="display: none;">More Products</button>
+            <button class="see-lessP" style="display:none">Less Products</button>
         </div>
+        
     </main>
     <script type="module" src="./js/main.js"></script>
 </body>
