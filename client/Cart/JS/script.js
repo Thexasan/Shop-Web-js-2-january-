@@ -1,3 +1,6 @@
+import { updateCartCount } from "./cartsUtils.js";
+
+
 let cart = JSON.parse(localStorage.getItem("cartSend")) || [];
 console.log(cart);
 
@@ -59,6 +62,7 @@ function displayCart() {
       subtotalCell.textContent = `$${subtotal}`;
 
       updateTotal();
+      updateCartCount();
     });
   });
 
@@ -84,11 +88,13 @@ function removeFromCart(index) {
   cart.splice(index, 1);
   localStorage.setItem("cartSend", JSON.stringify(cart));
   displayCart();
+  updateCartCount();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   Cart();
   displayCart();
+   updateCartCount();
 });
 
 document.querySelector(".btnRemove").addEventListener("click", function () {
