@@ -88,16 +88,23 @@ fileInput.onchange = async () => {
   let files = Array.from(fileInput.files);
   files.forEach(async (file) => {
     let base64 = await fileTobase64(file);
-    let item = document.createElement("tr");
+    let item = document.createElement("div");
     item.innerHTML = `
-        <td><img class="item-img" src="${base64}" alt="preview"></td>
-        <td><span>${file.name}</span></td>
-        <td><span class="delete-btn" onclick="this.parentElement.remove()">🗑️</span></td>
+        <img class="item-img" src="${base64}" alt="preview">
+        <span>${file.name}</span>
+        <span class="delete-btn">🗑️</span>
         `;
-    images.push({src : base64});
+
+    let deleteBut = item.querySelector(".delete-btn");
+    deleteBut.onclick = () => { 
+      images = images.filter((img) => img !== base64);
+      item.remove();
+      console.log("Updated images array:", images);
+    };
+    images.push(base64);
     filelist.append(item);
   });
-  console.log(images);
+  console.log("Final images array:", images);
 };
 let brands = document.querySelector(".brands");
 let categories = document.querySelector(".categories");
