@@ -230,6 +230,31 @@ aside {
     width: 20%;
     height: auto;
 }
+.structure-cartAdd {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .structure-cartAdd img {
+    width: 30px;
+    height: 30px;
+  }
+  .cntCartAdd {
+    position: absolute; 
+    top: -5px;
+    right: -5px;
+    background-color: #db4444;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 100%;
+    min-width: 22px;
+    min-height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  }
 .product-images .eye {
 position: absolute;
 width: 30px;
