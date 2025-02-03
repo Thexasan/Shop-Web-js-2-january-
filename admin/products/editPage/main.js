@@ -1,6 +1,9 @@
 import { fileTobase64 } from "../../../config.js";
 import { getData } from "../../../requests/request.js";
-import { postData } from "../../../requests/request.js";
+import { putData } from "../../../requests/request.js";
+let ProductInfo = JSON.parse(localStorage.getItem("product"));
+console.log(ProductInfo);
+
 let checkbox = document.querySelector(".checkbox");
 let otherOptions = document.querySelector(".otherOptions");
 let prewieColor = document.querySelector(".prewieColor");
@@ -28,7 +31,6 @@ let colors = [
   { name: "grey", rgb: "#41434D" },
   { name: "purple", rgb: "#d900ff" },
 ];
-let colorObj = null;
 let userColor = [];
 function getColor(colors) {
   prewieColor.innerHTML = "";
@@ -88,15 +90,22 @@ fileInput.onchange = async () => {
   let files = Array.from(fileInput.files);
   files.forEach(async (file) => {
     let base64 = await fileTobase64(file);
-    let item = document.createElement("div");
+    let item = document.createElement("tr");
+    // item.classList.add("item-imgDiv");
     item.innerHTML = `
-        <img class="item-img" src="${base64}" alt="preview">
-        <span>${file.name}</span>
-        <span class="delete-btn">🗑️</span>
+    <td>
+    <img class="item-img" src="${base64}" alt="preview">
+    </td>
+    <td>
+    <span>${file.name}</span>
+    </td>
+    <td>
+    <span class="delete-btn">🗑️</span>
+    </td>
         `;
 
     let deleteBut = item.querySelector(".delete-btn");
-    deleteBut.onclick = () => { 
+    deleteBut.onclick = () => {
       images = images.filter((img) => img !== base64);
       item.remove();
       console.log("Updated images array:", images);
@@ -121,6 +130,43 @@ function formData(category, brand) {
     option.innerHTML = el.brandName;
     brands.append(option);
   });
+  //edit
+  mainForm["productNameInp"].value = ProductInfo.productName;
+  mainForm["description"].value = ProductInfo.description;
+  mainForm["categories"].value = ProductInfo.category;
+  mainForm["brands"].value = ProductInfo.brand;
+  mainForm["productPrice"].value = ProductInfo.price.cost;
+  mainForm["discount"].value = ProductInfo.price.discount;
+  mainForm["count"].value = ProductInfo.price.count;
+  ProductInfo.color.forEach((productColor) => {
+    let existingColor = colors.find((c) => c.rgb === productColor.rgb);
+    if (!existingColor) {
+      colors.push(productColor);
+    }
+  });
+  getColor(colors);
+
+  images = ProductInfo.images || [];
+
+  images.forEach((img) => {
+    let item = document.createElement("tr");
+    // item.classList.add("item-imgDiv")
+    item.innerHTML = `
+    <td>
+    <img class="item-img" src="${img.src}" alt="preview">
+    <td>${img.name}</td>
+    </td>
+    <td>
+    <span class="delete-btn">🗑️</span>
+    </td>
+      `;
+    let deleteBut = item.querySelector(".delete-btn");
+    deleteBut.onclick = () => {
+      images = images.filter((image) => image.src !== img.src);
+      item.remove();
+    };
+    filelist.append(item);
+  });
   mainForm.onsubmit = async (e) => {
     e.preventDefault();
     let price = {
@@ -128,7 +174,8 @@ function formData(category, brand) {
       discount: mainForm["discount"].value ? mainForm["discount"].value : null,
       count: mainForm["count"].value,
     };
-    let newProduct = {
+    let updateProduct = {
+      ...ProductInfo,
       productName: mainForm["productNameInp"].value,
       description: mainForm["description"].value,
       category: mainForm["categories"].value,
@@ -138,15 +185,15 @@ function formData(category, brand) {
       color: userColor,
       images: images,
     };
-    await postProduct(newProduct);
-    alert("sucsessFully added product");
-    console.log(newProduct);
+    await postProduct(updateProduct);
+    alert("sucsessFully editing product");
+    console.log(updateProduct);
   };
 }
 //post-product
-async function postProduct(newProduct) {
+async function postProduct(updateProduct) {
   try {
-    await postData("/products", newProduct);
+    await putData(`/products/${updateProduct.id}` , updateProduct);
   } catch (error) {
     console.error(error);
   }

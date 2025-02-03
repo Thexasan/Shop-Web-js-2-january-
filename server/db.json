@@ -199,22 +199,17 @@
     },
     {
       "id": "4",
-      "productName": "Maks",
+      "productName": "rterreht",
       "description": "Lorem ipsum dolor sit amet, consect",
       "category": "Man’s Fashion",
       "brand": "Puma",
       "price": {
-        "cost": 200.99,
-        "discount": 20,
-        "count": 10
+        "cost": 100,
+        "discount": "20",
+        "count": "10"
       },
       "options": {},
-      "color": [
-        {
-          "name": "black",
-          "rgb": "#00000"
-        }
-      ],
+      "color": [],
       "images": [
         {
           "id": 1,
