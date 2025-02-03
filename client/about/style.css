@@ -1,4 +1,5 @@
 *{
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -272,10 +273,17 @@ main{
     background-color: black;
     transition: 0.3s;
   }
-  
+  .h1{
+    font-size: 50px; 
+    font-weight: 500;
+  }
   
   /* Показываем бургер на маленьких экранах */
   @media screen and (max-width: 768px) {
+    body{
+        margin: 0;
+        padding: 0;
+    }
     .navigation, .searchForm {
       display: none;
     }
@@ -291,19 +299,24 @@ main{
       transform: translateX(100%);
       transition: 0.3s ease-in-out;
     }
-  
+    .h1{
+      font-size: 20px; 
+      font-weight: 500;
+    }
     .mobile-nav.active {
       opacity: 1;
       visibility: visible;
       transform: translateX(0);
     }
-    section .story img {
+     .story img {
         display: none;
     }
 
-    .content,
-    .image {
+    .content
+     {
         width: 100%;
+        padding: 0;
+        margin: 0;
     }
 
     .stats {
@@ -318,6 +331,10 @@ main{
 
     .feature {
         width: 100%;
+    }
+    .lists
+    {
+     display: none;
     }
   }
   
