@@ -297,5 +297,27 @@ main{
       visibility: visible;
       transform: translateX(0);
     }
+    section .story img {
+        display: none;
+    }
+
+    .content,
+    .image {
+        width: 100%;
+    }
+
+    .stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        width: 100%;
+    }
   }
   
