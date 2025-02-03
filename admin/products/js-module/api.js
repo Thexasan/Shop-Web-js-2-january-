@@ -1,6 +1,5 @@
-import { getData , deleteData } from "../../../requests/request.js";
+import { getData, deleteData, postData } from "../../../requests/request.js";
 import { get } from "./dom.js";
-import { updateControl } from "./dom.js";
 export async function fetchData() {
   try {
     let products = await getData(`/products`);
@@ -12,8 +11,7 @@ export async function fetchData() {
   }
 }
 
-export async function deleteProduct(params = "")
-{
-    await deleteData(`/products/${params}`)
-    fetchData()
+export async function deleteProduct(params = "") {
+  await deleteData(`/products/${params}`);
+  fetchData();
 }

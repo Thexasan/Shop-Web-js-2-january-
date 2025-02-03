@@ -1,23 +1,54 @@
-let tbody = document.querySelector(".tbody");
 import { deleteProduct } from "./api.js";
+import { fetchData } from "./api.js";
+let tbody = document.querySelector(".tbody");
+let isCheckAll = false;
+let deleteAllBut = document.querySelector("#deleteAllBut");
+console.log(deleteAllBut);
+let originalProducts = [];
+let deleteItems = [];
+
+let checkboxAll = document.querySelector(".checkboxAll");
+
+deleteAllBut.onclick = () => {
+  deleteItems.forEach((id) => {
+    deleteProduct(id);
+  });
+  deleteItems = [];
+};
 let currentPage = 1;
 let limit = 5;
 let totalData = 0;
 let totalPages = 1;
-let jsBox = document.querySelector(".jsBox")
-let emptyMSG = document.querySelector(".emptyMSG")
+let resultPag = document.querySelector(".resultPag");
+let jsBox = document.querySelector(".jsBox");
+let emptyBox = document.querySelector(".emptyBox");
 //render
 export function get(products) {
   if (products.length === 0) {
-    emptyMSG.style.display = "block";
+    emptyBox.style.display = "block";
     jsBox.style.display = "none";
   } else {
     jsBox.style.display = "block";
-    emptyMSG.style.display = "none";
+    emptyBox.style.display = "none";
   }
   tbody.innerHTML = "";
+  checkboxAll.onclick = () => {
+    if (checkboxAll.checked) {
+      deleteItems = products.map((user) => user.id);
+      isCheckAll = true;
+      get(products);
+    } else {
+      deleteItems = [];
+      isCheckAll = false;
+      get(products);
+    }
+  };
+  if (originalProducts.length == 0) {
+    originalProducts = [...products];
+  }
   totalData = products.length;
   totalPages = Math.ceil(totalData / limit);
+  resultPag.innerHTML = `${totalData} Results`;
   let start = (currentPage - 1) * limit;
   let end = start + limit;
   let paginationProducts = products.slice(start, end);
@@ -25,7 +56,7 @@ export function get(products) {
     let tr = document.createElement("tr");
     tr.innerHTML = `
         <td class="checkbox">
-                    <input type="checkbox" name="" id="">
+                    <input type="checkbox" name="" id="" class="checkBox">
                 </td>
               <td class="productTd">
                 <div class="product">
@@ -50,6 +81,17 @@ export function get(products) {
     tbody.append(tr);
     let deleteBut = tr.querySelector("#deleteBut");
     deleteBut.onclick = () => deleteProduct(product.id);
+    let checkBox = tr.querySelector(".checkBox");
+    checkBox.checked = isCheckAll;
+
+    checkBox.onclick = () => {
+      if (checkBox.checked) {
+        deleteItems.push(product.id);
+      } else {
+        deleteItems = deleteItems.filter((id) => id != product.id);
+      }
+      console.log(deleteItems);
+    };
     updateControl(products);
   });
 }
@@ -90,3 +132,24 @@ export async function updateControl(products) {
   };
 }
 updateControl();
+
+//search
+let searchForm = document.querySelector(".searchForm");
+searchForm.onsubmit = (e) => {
+  e.preventDefault();
+  let value = searchForm["searchInp"].value.trim().toLowerCase();
+  console.log(value);
+  if (value === "") {
+    get(originalProducts);
+    return;
+  }
+  let filterData = originalProducts.filter((product) =>
+    product.productName.toLowerCase().includes(value)
+  );
+  get(filterData);
+};
+
+let addBut = document.querySelector(".add")
+addBut.onclick = () => {
+  window.location = "./addPage/index.html"
+}
