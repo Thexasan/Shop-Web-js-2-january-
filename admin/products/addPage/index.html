@@ -112,18 +112,18 @@
             <div class="colors">
               <div class="up">
                 <p class="colorN">Colour:</p>
-                <button class="addNewColor">✔️Create new</button>
+                <button class="addNewColor" type="button">✔️Create new</button>
               </div>
               <div class="prewieColor"></div>
             </div>
             <h2 style="margin-right: 150px">Images</h2>
-            <div class="upload-container" id="uploadBox">
+            <div class="upload-container" id="uploadBox" onclick="document.getElementById('fileInput').click()">
               <img src="../imagesS/addphotoss.png" alt="" />
               <input
                 type="file"
                 id="fileInput"
-                multiple
-                style="display: none"
+                multiple 
+                hidden
               />
               <p><strong>Click to upload</strong> or drag and drop</p>
               <p>(SVG, JPG, PNG, or GIF, max 900×400)</p>
@@ -143,6 +143,25 @@
         </form>
       </aside>
     </main>
+    <dialog class="colorModal">
+      <form class="mainDiv">
+        <div class="header">
+          <h3>New color</h3>
+          <button class="exitButModal" type="button">X</button>
+        </div>
+        <div class="inputs">
+          <input type="text" class="colorNameInp" name="colorNameInp" placeholder="Color Name">
+          <div class="border">
+            <input type="color" name="selectColor" id="" class="selectColor">
+            <span class="hexCode"></span>
+          </div>
+        </div>
+        <div class="buts">
+          <button class="cancel" type="button">Cancel</button>
+          <button class="createBut" type="submit">Create</button>
+        </div>
+      </form>
+    </dialog>
     <script type="module" src="./main.js"></script>
   </body>
 </html>
