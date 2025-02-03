@@ -2,6 +2,17 @@
     margin: 0;
     padding: 0;
 }
+.logo{
+    display: block;
+}
+.logo1{
+    display: none;
+}
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
 nav{
     display: flex;
     justify-content: space-between;
@@ -45,8 +56,9 @@ a{
 .hover{
     border-bottom: 1px solid #C6C6C6;
 }
-
-
+.hide{
+    display: none;
+}
 
 .undernav{
     margin: 30px 10%;
@@ -69,6 +81,7 @@ main {
 }
 aside {
     margin: 10px 1%;
+    cursor: pointer;
 }
 .main1{
     width: 60%;
@@ -118,8 +131,6 @@ aside {
     border-radius: 5px;
     background-color: transparent;
 }
-
-
 .productsContainer {
     display: flex;
     flex-wrap: wrap;
@@ -127,7 +138,6 @@ aside {
     gap: 10px;
     padding: 20px;
 }
-
 .product-card {
     width: 190px;
     height: 230px;
@@ -137,13 +147,11 @@ aside {
     display: flex;
     flex-direction: column;
 }
-
 .product-card img {
     width: 100%;
     height: 150px;
     object-fit: contain;
 }
-
 .product-info {
     flex-grow: 1;
     padding-top: 20px;
@@ -155,7 +163,6 @@ aside {
     font-weight: bold;
     margin-top: 5px;
 }
-
 .product-card {
     position: relative;
     overflow: hidden;
@@ -216,7 +223,6 @@ aside {
 .group{
     border-top: 1px solid rgb(238, 235, 235);
 }
-
 .product-images {
     position: relative;
 }
@@ -245,85 +251,163 @@ cursor: pointer;
     flex-direction: column;
     align-items: center;
 }
-
-
-
-
-.footer-component{
-    width: 100%;
-    height: 300px;
-    padding: 20px 0px;
-    background-color: black;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+@media (max-width:540px) {
+    .logo{
+        display: none;
+    }
+    .logo1{
+        display: block;
+        display: flex;
+        gap: 10px;
+    }
+    ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background: #444;
+        text-align: center;
+    }
+    ul.active {
+        display: flex;
+    }
+    .burger {
+        display: flex;
+    }
+    .nav-links {
+        display: none;
+    }
+    
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+    }
+    .wish{
+        display: none;
+    }
+    .hide{
+        display: block;
+        text-align: center;
+    }
+    .searchh{
+        display: none;
+    }
+    .undernav{
+        flex-direction: column;
+    }
+    .undernav select{
+        display: none;
+    }
+    aside{
+        display: none;
+    }
+    .product-images{
+        width: 100%;
+    }
+    .product-card{
+        margin: auto;
+        width: 80%;
+    }
+    .product-card img{
+        width: 100%;
+        height: 150px;
+        object-fit: contain;
+        margin: 10px 0;
+    }
+    .main1{
+        width: 100%;
+        margin: auto;
+    }
 }
-.components{
-    width: 85%;
+
+
+ /* footer */
+footer h3{
+color: #FAFAFA;
+font-size: 24px;
+font-weight: 700;
+line-height: 24px;
+letter-spacing: 0.03em;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+}
+footer p{
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+color: #FAFAFA;
+}
+footer {
+    background-color: #000000;
+    padding-top: 50px;
+    margin-top: 100px ;
+}
+footer section{
+    width: 80%;
     margin: auto;
-    height: 230px;
-    background-color: black;
-    display: flex;
     justify-content: space-between;
+    display: flex;
 }
-.searchEmailForm{
-    width: 230px;
+.boxFooter{
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 10px 20px ;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     gap: 10px;
-    padding: 0px 10px;
-    border: 1px solid white;
-    background-color: black;
-    border-radius: 5px;
-    margin: 10px 0px;
+    align-items: center;
+    border-radius: 10px;
 }
-.emailEnter{
-    width: 100%;
-    padding: 13px 10px;
-    background-color: black;
+.boxFooter input{
     outline: none;
-    border: none;
+    background-color: transparent;
     color: white;
+    border: 0;
 }
-.btnEmail{
-    border: none;
-    background-color: black;
-    cursor: pointer;
+.boxFooter button{
+    background-color: transparent;
+    border: 0;
 }
-.boxes p{
-    padding: 10px 0px;
+.footBoxes{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-.list-info{
-    list-style: none;
-    padding: 10px 0px;
+.footBoxes p, .footBoxes h3{
+    margin: 0;
 }
-.list-info li:hover{
-    cursor: pointer;
-    color: blue;
-    text-decoration: underline;
+.footBoxes h3{
+    margin-bottom: 20px;
 }
-.info{
-    padding: 10px 0px;
+.lasttxt p{
+padding: 30px 0px ;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+text-align: center;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: rgb(190, 184, 184);
 }
-.lists{
-    width: 200px;
-}
-.social-net{
-    display: flex;
-    gap: 20px;
-    padding: 20px 0px;
-}
-.descript{
-    width: 100%;
-    border-top: 1px solid rgb(36, 34, 34);
-    background-color: black;
-    padding: 15px 0px;
-    color: gray;
-    text-align: center;
-}
-.mainPage{
-    width: 85%;
-    margin: auto;
+@media (max-width:540px) {
+    .last{
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px;
+        gap: 30px;
+    }
+    footer section{
+        display: block;
+    }
+    .footBoxes {
+        margin-bottom: 60px;
+    }
+    .boxFooter{
+        width: 240px;
+    }
+    .mm img{
+        width: 200px;
+    }
 }
