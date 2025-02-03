@@ -1,5 +1,4 @@
 import { fetchOrders } from "./api.js";
-
 // CATEGORY LIST
 let categoryListDiv = document.querySelector(".categorylist");
 let seeMoreBtn = document.querySelector(".see-more");
@@ -27,6 +26,29 @@ export function fetchCategories(categories) {
         seeMoreBtn.style.display = "block";
     };
 }
+function createCategoryElement(category, containerDiv) {
+    let categoryElement = document.createElement("div");
+    categoryElement.classList.add("category1");
+    categoryElement.innerText = category.name;
+
+    categoryElement.onclick = async () => {
+        document.querySelectorAll(".category1").forEach(el => el.style.color = "black"); 
+        allProductsBtn.style.color ="black"
+        categoryElement.style.color = "red"; 
+        let products = await fetchOrders("product", category.name); 
+        console.log(products);
+        
+        displayProducts(products);
+    };
+    containerDiv.appendChild(categoryElement);
+}
+allProductsBtn.onclick = async () => {
+    document.querySelectorAll(".category1").forEach(el => el.style.color = "black"); 
+    allProductsBtn.style.color = "red";
+    let allProducts = await fetchOrders("product");
+    displayProducts(allProducts);
+};
+
 // BRANDS LIST
 let brandListDiv = document.querySelector(".brandlist");
 let seeMoreBtnB = document.querySelector(".see-moreB");
@@ -55,31 +77,6 @@ export function fetchBrands(brands) {
         seeMoreBtnB.style.display = "block";
     };
 }
-
-function createCategoryElement(category, containerDiv) {
-    let categoryElement = document.createElement("div");
-    categoryElement.classList.add("category1");
-    categoryElement.innerText = category.name;
-
-    categoryElement.onclick = async () => {
-        document.querySelectorAll(".category1").forEach(el => el.style.color = "black"); 
-        allProductsBtn.style.color ="black"
-        categoryElement.style.color = "red"; 
-        console.log(category.id);
-        let products = await fetchOrders("product", category.id); 
-        console.log(products);
-        
-        displayProducts(products);
-    };
-    containerDiv.appendChild(categoryElement);
-}
-
-allProductsBtn.onclick = async () => {
-    document.querySelectorAll(".category1").forEach(el => el.style.color = "black"); 
-    allProductsBtn.style.color = "red";
-    let allProducts = await fetchOrders("product");
-    displayProducts(allProducts);
-};
 
 function createBrandElement(brand, containerDiv) {
     let brandElement = document.createElement("div");
@@ -173,15 +170,12 @@ applyFilter.onclick = async() => {
     }
 }
 
+//product show
 export function displayProducts(products) {
     let container = document.querySelector(".productsContainer");
     container.innerHTML = ""; 
-    if (products.length === 0) {
-        container.innerHTML = `<p class="center">No products found.</p>`;
-        return;
-    }
-    let visibleProducts = products.slice(0, 9); 
-    let hiddenProducts = products.slice(8)
+    let visibleProducts = products.slice(0, 4); 
+    let hiddenProducts = products.slice(4);
 
     visibleProducts.forEach(product => {
         let productCard = document.createElement("div");
@@ -192,13 +186,14 @@ export function displayProducts(products) {
         for (let i = 0; i < 5; i++) {
             stars += i < rating ? "⭐" : ``; 
         }
-
         productCard.innerHTML = `
-        <div class="product-images">
-        <img src="${product.images[0].src}" alt="${product.productName}" class="product-main-image">
-        <div class="column"><img src="./images/heart -small.png" class="eyee">
-        <img src="./images/eye-icon.png" class="eye"></div>
-         </div>
+            <div class="product-images">
+                <img src="${product.images[0].src}" alt="${product.productName}" class="product-main-image">
+                <div class="column">
+                    <img src="./images/heart -small.png" class="eyee">
+                    <img src="./images/eye-icon.png" class="eye">
+                </div>
+            </div>
             <div class="product-info">
                 <h4>${product.productName}</h4>
                 <div class="flexx">
@@ -209,65 +204,60 @@ export function displayProducts(products) {
             <button class="add-to-cart-btn">Add to Cart</button>
         `;
 
-        // eyeIcon
-       let eyeIcon = productCard.querySelector(".eye");
+        let eyeIcon = productCard.querySelector(".eye");
         eyeIcon.onclick = () => {
-            window.location.href = `/product-page.html?id=${product.id}`;
-        }; 
-
-        container.appendChild(productCard);
+            localStorage.setItem("productById", JSON.stringify(product));
+        };
 
         let addToCartBtn = productCard.querySelector(".add-to-cart-btn");
         addToCartBtn.onclick = () => {
             addToCart(product);
         };
+        container.appendChild(productCard);
     });
-    
-    let seeMoreBtn = document.querySelector(".see-moreP");
-    let seeLessBtn = document.querySelector(".see-lessP");
 
+    let toggleBtn = document.querySelector(".toggleBtn");
     if (hiddenProducts.length > 0) {
-        seeMoreBtn.style.display = "block"; 
+        toggleBtn.style.display = "block"; 
+        toggleBtn.textContent = "See More Products";
     } else {
-        seeMoreBtn.style.display = "none"; 
+        toggleBtn.style.display = "none"; 
     }
-    seeMoreBtn.onclick = () => {
-        hiddenProducts.forEach(product => {
-            let productCard = document.createElement("div");
-            productCard.classList.add("product-card");
+    toggleBtn.onclick = () => {
+        if (toggleBtn.textContent === "See More Products") {
+            hiddenProducts.forEach(product => {
+                let productCard = document.createElement("div");
+                productCard.classList.add("product-card");
 
-            productCard.innerHTML = `
-                <div class="product-images">
-                    <img src="${product.images[0].src}" alt="${product.productName}" class="product-main-image">
-                   <div class="column"><img src="./images/heart -small.png" class="eyee">
-                    <img src="./images/eye-icon.png" class="eye"></div>
-                </div>
-                <div class="product-info">
-                    <h4>${product.productName}</h4>
-                    <div class="product-price">${product.price.cost}</div>
-                </div>
-                <button class="add-to-cart-btn">Add to Cart</button>
-            `;
-            container.appendChild(productCard);
+                productCard.innerHTML = `
+                    <div class="product-images">
+                        <img src="${product.images[0].src}" alt="${product.productName}" class="product-main-image">
+                        <div class="column">
+                            <img src="./images/heart -small.png" class="eyee">
+                            <img src="./images/eye-icon.png" class="eye">
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>${product.productName}</h4>
+                        <div class="product-price">${product.price.cost}</div>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                `;
+                container.appendChild(productCard);
 
-            let addToCartBtn = productCard.querySelector(".add-to-cart-btn");
-            addToCartBtn.onclick = () => {
-                addToCart(product);
-            };
-        });
-
-        seeMoreBtn.style.display = "none"; 
-        seeLessBtn.style.display = "block"; 
-    };
-
-    seeLessBtn.onclick = () => {
-        container.innerHTML = ""; 
-        displayProducts(products); 
-        seeMoreBtn.style.display = "block"; 
-        seeLessBtn.style.display = "none"; 
+                let addToCartBtn = productCard.querySelector(".add-to-cart-btn");
+                addToCartBtn.onclick = () => {
+                    addToCart(product);
+                };
+            });
+            toggleBtn.textContent = "See Less Products"; 
+        } else {
+            container.innerHTML = ""; 
+            displayProducts(products); 
+            toggleBtn.textContent = "See More Products"; 
+        }
     };
 }
-
 let cart = [];
 function addToCart(product) {
     cart.push(product);
