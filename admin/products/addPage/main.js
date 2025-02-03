@@ -111,7 +111,10 @@ function imagesGet(files) {
   });
 }
 
-
+let option1 = document.querySelector(".o1")
+let option2 = document.querySelector(".o2")
+let value1 = document.querySelector(".v1")
+let value2 = document.querySelector(".v2")
 let brands = document.querySelector(".brands");
 let categories = document.querySelector(".categories");
 function formData(category, brand) {
@@ -140,7 +143,9 @@ function formData(category, brand) {
       category: mainForm["categories"].value,
       brand: mainForm["brands"].value,
       price: price,
-      options: {},
+      options: {
+        [option1.value] : value1.value,
+      },
       color: userColor,
       images: images,
     };
