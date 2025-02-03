@@ -1,4 +1,5 @@
 import { fetchOrders } from "./api.js";
+
 // CATEGORY LIST
 let categoryListDiv = document.querySelector(".categorylist");
 let seeMoreBtn = document.querySelector(".see-more");
@@ -7,6 +8,8 @@ let allProductsBtn = document.querySelector(".all-products-btn");
 allProductsBtn.style.color = "red";
 export function fetchCategories(categories) {
     categoryListDiv.innerHTML = ""; 
+
+    
     let visibleCategories = categories.slice(0, 5);
     let hiddenCategories = categories.slice(5);
     visibleCategories.forEach(category => createCategoryElement(category, categoryListDiv));
@@ -174,6 +177,12 @@ applyFilter.onclick = async() => {
 export function displayProducts(products) {
     let container = document.querySelector(".productsContainer");
     container.innerHTML = ""; 
+    if (products.length === 0) {
+        let noProductsMessage = document.createElement("div");
+        noProductsMessage.innerText = "No products found.";
+        container.append(noProductsMessage);
+        return; 
+    }
     let visibleProducts = products.slice(0, 4); 
     let hiddenProducts = products.slice(4);
 
