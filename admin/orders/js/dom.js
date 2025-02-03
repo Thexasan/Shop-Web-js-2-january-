@@ -8,7 +8,7 @@ let trash = document.querySelector(".trash");
 let checkAll = document.querySelector(".checkAll");
 let isCheckAll = false;
 let deleteItems = [];
-let resultsCount = document.querySelector(".resultsCount"); // Select the element for results count
+let resultsCount = document.querySelector(".resultsCount"); 
 
 export function showOrdersTable(orders) {
     resultsCount.textContent = `${orders.length} Results`;

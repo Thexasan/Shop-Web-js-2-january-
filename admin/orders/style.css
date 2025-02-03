@@ -1,5 +1,4 @@
-*
-{
+*{
     margin: 0;
     padding: 0;
 }
@@ -247,23 +246,21 @@ th{
     padding: 2px 7px;
     border-radius: 5px;
 }
-.resultsCount {
-    text-align: end; 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: flex-end; 
-    align-items: flex-end; 
-    height: 70vh; 
-}
 
-
-.pagination {
+/* pagination */
+.all{
     display: flex;
-    align-items: center;
-    gap: 10px;
-    width: 95%;
-    margin: auto;
-  }
+    align-items: flex-end;
+    height: 70vh;
+    justify-content: space-between;
+}
+/* .pagination { */
+    /* display: flex; */
+    /* align-items: center; */
+    /* gap: 10px; */
+    /* width: 95%; */
+    /* margin: auto; */
+  /* } */
   .pagination button {
     padding: 5px 10px;
     border: none;
@@ -289,3 +286,4 @@ th{
     font-weight: bold;
     cursor: pointer;
   }
+
