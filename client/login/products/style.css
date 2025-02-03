@@ -64,7 +64,10 @@ aside {
 .main1{
     width: 60%;
 }
-.categorylist, .brandlist, .featureslist{
+.titleC{
+    padding: 10px 0;
+}
+ .brandlist, .featureslist{
     padding: 10px 0;
 }
 .brand1{
@@ -72,13 +75,14 @@ aside {
     gap: 10px;
 }
 .titleB{
-    padding: 15px 0 0 0;
+    padding: 35px 0 0 0;
 }
-.see-all{
+.see-all,.see-allF,.see-lessF{
     border: none;
     color: rgb(240, 67, 67);
     padding: 5px 0;
     cursor: pointer;
+    background-color: transparent;
 }
 .price-filter{
     padding: 10px 0;
@@ -92,16 +96,18 @@ aside {
     width: 110px;
     height: 30px;    
     border: 1px solid rgb(230, 224, 224);
-    padding: 2px;
+    padding: 6px;
     border-radius: 5px;
+    outline: none;
 }
 .applyFilter{
     width: 240px;
     margin: 4px 0;
-    padding: 5px;
+    padding: 7px;
     border: 1px solid #DB4444;
     color: #DB4444;
     border-radius: 5px;
+    background-color: transparent;
 }
 
 
@@ -109,15 +115,16 @@ aside {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px;
+    gap: 10px;
     padding: 20px;
 }
 
 .product-card {
-    width: 160px; 
-    padding: 15px;
+    width: 190px;
+    height: 230px;
+    padding: 21px;
     border-radius: 10px;
-    background: white;
+    background-color: #F5F5F5;
     display: flex;
     flex-direction: column;
 }
@@ -130,6 +137,7 @@ aside {
 
 .product-info {
     flex-grow: 1;
+    padding-top: 20px;
 }
 
 .product-price {
@@ -137,4 +145,94 @@ aside {
     color: #DB4444;
     font-weight: bold;
     margin-top: 5px;
+}
+
+.product-card {
+    position: relative;
+    overflow: hidden;
+}
+.product-card:hover .add-to-cart-btn {
+    display: block;
+}
+.add-to-cart-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    display: none;
+    font-size: 16px;
+}
+.product-card:hover {
+    border-top: 3px solid #fcf9f9;
+}
+.see-moreP, .see-lessP{
+    background-color: #DB4444;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 16px;
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flexx{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+ padding-top: 5px;
+}
+.filled-star {
+    color: #FF9017;
+    font-size: large;
+}
+.empty-star {
+    color: gray;
+}
+.groupC,.groupR{
+    padding: 15px 0;
+}
+.price, .conditionlist div , .ratingslist div, .categorylist .category1, .brandlist .brand1,.featureslist .feature1 {
+    margin: 8px 0;
+    line-height: 1.2; 
+}
+.group{
+    border-top: 1px solid rgb(238, 235, 235);
+}
+
+.product-images {
+    position: relative;
+}
+.product-main-image {
+    width: 20%;
+    height: auto;
+}
+.product-images .eye {
+position: absolute;
+width: 30px;
+height: 30px;
+top: 0px;
+right: 0px;
+cursor: pointer;
+}
+.product-images .eyee {
+position: absolute;
+width: 25px;
+height: 40px;
+top: 24px;
+right: 0px;
+cursor: pointer;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
