@@ -7,6 +7,7 @@ let productName = document.querySelector(".product-name")
 productName.textContent = product.productName
 
 
+
 // let thumbnails = document.querySelector(".thumbnails")
 // product.images.forEach(e => {
 //     let image = document.createElement('img')
