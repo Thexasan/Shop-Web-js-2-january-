@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -17,6 +18,12 @@ ul{
 a{
     color: black;
     text-decoration: none;
+}
+.link1 {
+    color: #808080;
+}
+.link2 {
+    color: black;
 }
 .div{
     display: flex;
@@ -169,9 +176,9 @@ aside {
 .product-card:hover {
     border-top: 3px solid #fcf9f9;
 }
-.see-moreP, .see-lessP{
+.toggleBtn{
     background-color: #DB4444;
-    color: white;
+    color: rgb(252, 246, 246);
     border: none;
     padding: 15px 25px;
     font-size: 16px;
@@ -235,4 +242,86 @@ cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+
+
+
+.footer-component{
+    width: 100%;
+    height: 300px;
+    padding: 20px 0px;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.components{
+    width: 85%;
+    margin: auto;
+    height: 230px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+.searchEmailForm{
+    width: 230px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 0px 10px;
+    border: 1px solid white;
+    background-color: black;
+    border-radius: 5px;
+    margin: 10px 0px;
+}
+.emailEnter{
+    width: 100%;
+    padding: 13px 10px;
+    background-color: black;
+    outline: none;
+    border: none;
+    color: white;
+}
+.btnEmail{
+    border: none;
+    background-color: black;
+    cursor: pointer;
+}
+.boxes p{
+    padding: 10px 0px;
+}
+.list-info{
+    list-style: none;
+    padding: 10px 0px;
+}
+.list-info li:hover{
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+.info{
+    padding: 10px 0px;
+}
+.lists{
+    width: 200px;
+}
+.social-net{
+    display: flex;
+    gap: 20px;
+    padding: 20px 0px;
+}
+.descript{
+    width: 100%;
+    border-top: 1px solid rgb(36, 34, 34);
+    background-color: black;
+    padding: 15px 0px;
+    color: gray;
+    text-align: center;
+}
+.mainPage{
+    width: 85%;
+    margin: auto;
 }
