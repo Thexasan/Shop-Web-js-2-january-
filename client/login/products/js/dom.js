@@ -258,9 +258,10 @@ export function displayProducts(products) {
         }
     };
 }
-let cart = [];
+let cart = JSON.parse(localStorage.getItem("cartSend")) || [];
 function addToCart(product) {
     cart.push(product);
+    localStorage.setItem("cartSend", JSON.stringify(cart)); 
     alert(`${product.productName} added to cart!`);
 }
 
@@ -326,4 +327,8 @@ for (let i = 5; i >= 2; i--) {
     ratingsListDiv.appendChild(ratingElement);
 }
 
-
+let cartClick = document.querySelector(".cartClick");
+cartClick.style.cursor = "pointer";
+cartClick.onclick = () => {
+    window.location = "/client/Cart/cart.html";
+}
