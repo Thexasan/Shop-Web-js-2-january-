@@ -3,7 +3,7 @@
   padding: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-body{
+body {
   overflow-x: hidden;
 }
 .navbar-elem {
@@ -65,7 +65,7 @@ body{
 .components {
   width: 85%;
   margin: auto;
-  min-height: 230px; 
+  min-height: 230px;
   background-color: black;
   display: flex;
   flex-wrap: wrap;
@@ -115,7 +115,7 @@ body{
 }
 .lists {
   width: 100%;
-  max-width: 200px; 
+  max-width: 200px;
 }
 .social-net {
   display: flex;
@@ -142,10 +142,10 @@ body{
 .product-descript {
   display: flex;
   align-items: center;
-  gap: 10px; 
+  gap: 10px;
 }
 .product-descript img {
-  width: 50px; 
+  width: 50px;
   height: 50px;
 }
 table {
@@ -153,20 +153,21 @@ table {
   margin: auto;
   margin-top: 50px;
   margin-bottom: 40px;
-  border-collapse: collapse; 
+  border-collapse: collapse;
 }
-th, td {
+th,
+td {
   text-align: left;
   padding: 15px;
-  border-bottom: 1px solid #ddd; 
+  border-bottom: 1px solid #ddd;
 }
 .prod-hover {
   box-shadow: 0px 0px 8px rgb(190, 187, 187);
   border-radius: 10px;
 }
 .inpCnt {
-  width: 100%; 
-  max-width: 80px; 
+  width: 100%;
+  max-width: 80px;
   border: 1px solid gray;
   border-radius: 5px;
   padding: 7px 6px;
@@ -334,14 +335,14 @@ th, td {
   align-items: center;
 }
 .structure-cartAdd img {
-  width: 30px; 
+  width: 30px;
   height: 30px;
 }
 .cntCartAdd {
   position: absolute;
   top: -5px;
   right: -5px;
-  background-color: #DB4444;
+  background-color: #db4444;
   color: white;
   font-size: 10px;
   font-weight: bold;
@@ -355,7 +356,8 @@ th, td {
 }
 
 @media screen and (max-width: 768px) {
-  .navigation, .searchForm {
+  .navigation,
+  .searchForm {
     display: none;
   }
 
@@ -371,10 +373,9 @@ th, td {
     transition: 0.3s ease-in-out;
   }
 
-  .mobile-nav .box-burger:hover{
+  .mobile-nav .box-burger:hover {
     background-color: rgb(205, 202, 202);
   }
-
 
   .mobile-nav.active {
     opacity: 1;
@@ -382,7 +383,7 @@ th, td {
     transform: translateX(0);
   }
 
-  .footer-component{
+  .footer-component {
     overflow: hidden;
   }
   .components {
@@ -391,9 +392,10 @@ th, td {
     text-align: center;
   }
 
-  .boxes, .lists {
-    width: 100%; 
-    max-width: 300px; 
+  .boxes,
+  .lists {
+    width: 100%;
+    max-width: 300px;
   }
 
   .searchEmailForm {
@@ -404,11 +406,12 @@ th, td {
     justify-content: center;
   }
   table {
-    width: 100%; 
+    width: 100%;
     overflow: hidden;
   }
 
-  th, td {
+  th,
+  td {
     padding: 10px;
   }
 
@@ -452,10 +455,9 @@ th, td {
   }
 }
 
-
 @media (max-width: 480px) {
   .footer-component {
-    padding: 10px 0px; 
+    padding: 10px 0px;
     overflow: hidden;
   }
 
@@ -468,17 +470,18 @@ th, td {
   }
 
   .social-net img {
-    width: 20px; 
+    width: 20px;
     height: 20px;
   }
-  th, td {
+  th,
+  td {
     padding: 8px;
     font-size: 14px;
   }
 
   .inpCnt {
-    max-width: 50px; 
-    font-size: 14px; 
+    max-width: 50px;
+    font-size: 14px;
   }
 
   .product-descript img {
@@ -489,47 +492,47 @@ th, td {
   thead {
     display: none;
 
-  tr {
-    display: block;
-    margin-bottom: 10px; 
-  }
+    tr {
+      display: block;
+      margin-bottom: 10px;
+    }
 
-  td {
-    display: block;
-    text-align: right; 
-    padding-left: 50%;
-    position: relative;
-  }
+    td {
+      display: block;
+      text-align: right;
+      padding-left: 50%;
+      position: relative;
+    }
 
-  td::before {
-    position: absolute;
-    left: 10px;
-    width: 45%;
-    text-align: left;
-    font-weight: bold;
-  }
+    td::before {
+      position: absolute;
+      left: 10px;
+      width: 45%;
+      text-align: left;
+      font-weight: bold;
+    }
 
-  .btnReturn,
-  .btnRemove {
-    font-size: 15px;
-    padding: 10px;
-  }
-  .cupon {
-    flex-direction: column;
-    width: 100%;
-    align-items: stretch;
-  }
+    .btnReturn,
+    .btnRemove {
+      font-size: 15px;
+      padding: 10px;
+    }
+    .cupon {
+      flex-direction: column;
+      width: 100%;
+      align-items: stretch;
+    }
 
-  .cupon button {
-    width: 100%;
-  }
+    .cupon button {
+      width: 100%;
+    }
 
-  .processCheck {
-    width: 100%;
-  }
+    .processCheck {
+      width: 100%;
+    }
 
-  .btnProcees {
-    width: 100%;
+    .btnProcees {
+      width: 100%;
+    }
   }
-}
 }
