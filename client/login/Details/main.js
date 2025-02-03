@@ -19,6 +19,7 @@ productName.textContent = product.productName
 
 document.querySelector(".mainImage").src= product.images[0].src
 
+
 let active = document.querySelector(".active")
 active.textContent = product.price.discount > 0? " In Stock" : " Stock"
 
