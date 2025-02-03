@@ -82,7 +82,7 @@ export function showOrdersTable(orders) {
   }
 }
 
-// search
+//! search
 let searchForm = document.querySelector(".searchForm");
 searchForm.onsubmit = (e) => {
     e.preventDefault();
