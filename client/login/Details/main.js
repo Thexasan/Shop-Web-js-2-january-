@@ -7,6 +7,7 @@ let productName = document.querySelector(".product-name")
 productName.textContent = product.productName
 
 
+
 // let thumbnails = document.querySelector(".thumbnails")
 // product.images.forEach(e => {
 //     let image = document.createElement('img')
@@ -17,6 +18,7 @@ productName.textContent = product.productName
 
 
 document.querySelector(".mainImage").src= product.images[0].src
+
 
 let active = document.querySelector(".active")
 active.textContent = product.price.discount > 0? " In Stock" : " Stock"

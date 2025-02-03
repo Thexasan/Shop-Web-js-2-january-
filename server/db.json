@@ -49,6 +49,11 @@
       "id": "f7da",
       "name": "Women's Fashion",
       "avatar": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFtSURBVHgB7VQ9UoNAGN2FRjtsYAYacgOEC5jOMpaWnkBvYKhstbQyuYE3SO0MIDeQkk5KG8D34ZLBCNk1YSZNvpmd/f3e2337dhk7xqGDqyzyPM/Vdf2FmigGyqIsyzBN00yWq0QQBMEHKndjOAPJOUiKbbkak4PPCLyuawKcUKE2jWmaNpPlSwk45wUAQ4DdkCRClqWYdqX57J8h7mMlwK/iOH4djaB7FyRTkiQTWY5Uoo1wRb2oqmqqkqB8AkhjQJpPauOiz2TuaUPpBEL397ZPbRpTyVWx6a0Ab6zaWpTGfN+/k+XrQxMkiW3bD7DpHN0TlCfofg2CZ1j2FP0LzF06jmOYpvmW5/lXHw4fAF9bEYAFAMMoih67a2j3ILhnP18HPcJp39fxh4AkQTWnRJKD3DL059BGQL4CkYtu8yBh3V8b0WWSADxnAwFZCsuyltsk452d931ou0aGF948wrWLcDw2VoyJdYz94xsx+KoqOa+ArAAAAABJRU5ErkJggg=="
+    },
+    {
+      "id": "0d4c",
+      "name": "Phone",
+      "avatar": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACohjseAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE7SURBVHgB7drRbQIxEATQSZR/KOFSQUrIdZJLBUkHIR0kFXCpJFABdIA7gA5grTWfHGDjPS2aJ43gAwSDlwPJBoiIKnpAvqnkQ9Khnp1kIflO902tJHujrGCsSy+8kbSSZiD/GH7zPwPPbdNrxMd9IsMT8rTp9hc6QkPecXqM49j1OD1+ATqec8kLMuQWPLrkexEkM4zkEXeOBb1jQe9Y0DsW9I4FvWNB71jQOxb0jgW9Y0HvWNA7FvSOBb27+4Klmy8T6DZXTROMoIfd5ucxc2S4xfZZ7a3laYqpHvqpdqivQ8EKWl9k4ko0MGRZsJFsoXvuZiM31s+EWcHSi8w1guQZWi7AiGXBKMCYh38yReOcu4JryZvkC7oqAXU00ONi0RLGXBzlKj2MN5O8ou5V8Q963Mv8MB4R0VkHp/+D5zynMmkAAAAASUVORK5CYII="
     }
   ],
   "brands": [
@@ -266,6 +271,39 @@
     {
       "id": "6",
       "productName": "iphone 16 pro max",
+      "description": "Lorem ipsum dolor sit amet, consect",
+      "category": "Man’s Fashion",
+      "brand": "Puma",
+      "price": {
+        "cost": 200.99,
+        "discount": 20,
+        "count": 10
+      },
+      "options": {},
+      "color": [
+        {
+          "name": "black",
+          "rgb": "#00000"
+        }
+      ],
+      "images": [
+        {
+          "id": 1,
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/800px-BMW.svg.png"
+        },
+        {
+          "id": 2,
+          "src": "base64"
+        },
+        {
+          "id": 3,
+          "src": "base64"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "productName": "market",
       "description": "Lorem ipsum dolor sit amet, consect",
       "category": "Man’s Fashion",
       "brand": "Puma",

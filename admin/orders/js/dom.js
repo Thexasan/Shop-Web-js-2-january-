@@ -8,6 +8,7 @@ let trash = document.querySelector(".trash");
 let checkAll = document.querySelector(".checkAll");
 let isCheckAll = false;
 let deleteItems = [];
+let resultsCount = document.querySelector(".resultsCount"); // Select the element for results count
 
 export function showOrdersTable(orders) {
     resultsCount.textContent = `${orders.length} Results`;
@@ -69,9 +70,9 @@ export function showOrdersTable(orders) {
       tdId.innerHTML = order.orderId
       checkbox.onclick = () => {
         if (checkbox.checked) {
-          deleteItems.push(order.orderId);
+          deleteItems.push(order.id);
         } else {
-          deleteItems = deleteItems.filter((id) => id !== order.orderId);
+          deleteItems = deleteItems.filter((id) => id !== order.id);
         }
       };
       box.append(checkbox, tdId);

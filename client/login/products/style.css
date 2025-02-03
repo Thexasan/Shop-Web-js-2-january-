@@ -1,4 +1,3 @@
-
 *{
     margin: 0;
     padding: 0;
@@ -46,6 +45,9 @@ a{
 .hover{
     border-bottom: 1px solid #C6C6C6;
 }
+
+
+
 .undernav{
     margin: 30px 10%;
     display: flex;

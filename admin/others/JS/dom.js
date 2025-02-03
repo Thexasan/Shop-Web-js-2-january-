@@ -13,7 +13,9 @@ export function get(categories) {
     grid.innerHTML = "";
 
     if (categories.length > 0) {
-        grid.style.background = ""; // Reset background
+        grid.style.backgroundColor = ''
+        grid.style.color = 'black'
+        grid.innerHTML = ""
         categories.forEach((category) => {
             let card = document.createElement("div");
             card.classList.add("card");
@@ -29,7 +31,7 @@ export function get(categories) {
 
             grid.appendChild(card);
         });
-    } else {
+    } else { 
         grid.innerHTML = `<p class="not-found">CAN NOT FOUND</p>`;
         grid.style.background = "red";
         grid.style.color = "white";
