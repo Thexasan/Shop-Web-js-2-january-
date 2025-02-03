@@ -1,9 +1,11 @@
 import { fetchOrders } from "./api.js";
+
 // CATEGORY LIST
 let categoryListDiv = document.querySelector(".categorylist");
 let seeMoreBtn = document.querySelector(".see-more");
 let seeLessBtn = document.querySelector(".see-less");
-
+let allProductsBtn = document.querySelector(".all-products-btn");
+allProductsBtn.style.color = "red";
 export function fetchCategories(categories) {
     categoryListDiv.innerHTML = ""; 
     let visibleCategories = categories.slice(0, 5);
@@ -25,12 +27,10 @@ export function fetchCategories(categories) {
         seeMoreBtn.style.display = "block";
     };
 }
-
 // BRANDS LIST
 let brandListDiv = document.querySelector(".brandlist");
 let seeMoreBtnB = document.querySelector(".see-moreB");
 let seeLessBtnB = document.querySelector(".see-lessB");
-
 export function fetchBrands(brands) {
     brandListDiv.innerHTML = ""; 
     let visibleBrands = brands.slice(0, 5);
@@ -56,15 +56,30 @@ export function fetchBrands(brands) {
     };
 }
 
-// Create Category Element
 function createCategoryElement(category, containerDiv) {
     let categoryElement = document.createElement("div");
     categoryElement.classList.add("category1");
     categoryElement.innerText = category.name;
-    containerDiv.appendChild(categoryElement);
 
-    categoryElement.onclick = () => fetchOrders("category", category.id);
+    categoryElement.onclick = async () => {
+        document.querySelectorAll(".category1").forEach(el => el.style.color = "black"); 
+        allProductsBtn.style.color ="black"
+        categoryElement.style.color = "red"; 
+        console.log(category.id);
+        let products = await fetchOrders("product", category.id); 
+        console.log(products);
+        
+        displayProducts(products);
+    };
+    containerDiv.appendChild(categoryElement);
 }
+
+allProductsBtn.onclick = async () => {
+    document.querySelectorAll(".category1").forEach(el => el.style.color = "black"); 
+    allProductsBtn.style.color = "red";
+    let allProducts = await fetchOrders("product");
+    displayProducts(allProducts);
+};
 
 function createBrandElement(brand, containerDiv) {
     let brandElement = document.createElement("div");
@@ -73,42 +88,73 @@ function createBrandElement(brand, containerDiv) {
     let checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.classList.add("brandcheckbox");
+    checkbox.value = brand.brandName;
 
     let brandName = document.createElement("span");
     brandName.innerText = brand.brandName;
 
-    brandElement.append(checkbox,brandName);
-
+    checkbox.onchange = async () => {
+        let checkedBrands = Array.from(document.querySelectorAll(".brandcheckbox:checked"))
+            .map(checkbox => checkbox.value);
+        let products = await fetchOrders("product", null, checkedBrands.join(","));
+        displayProducts(products); 
+    };
+    brandElement.append(checkbox, brandName);
     containerDiv.appendChild(brandElement);
 }
 
+
 // features
-const features = [
+let features = [
     "Metallic",
     "Plastic cover",
     "8GB Ram",
     "Super power",
-    "Large Memory"
+    "Large Memory",
+    "Water Resistant",
+    "Fast Charging",
+    "Touchscreen",
+    "Wireless Connectivity",
+    "Ultra HD Display",
+    "Energy Efficient",
+    "Lightweight Design",
+    "Noise Cancellation",
+    "Long Battery Life",
+    "Dual SIM Support"
 ];
 const featureListDiv = document.querySelector(".featureslist");
-const seeAllBtn = document.querySelector(".see-all");
-let visibleFeatures = features.slice(0, 3);
-
-function displayFeatures(featuresArray) {
+const seeMoreBtnF = document.querySelector(".see-allF");
+const seeLessBtnF = document.querySelector(".see-lessF");
+export function fetchFeatures() {
     featureListDiv.innerHTML = ""; 
-    featuresArray.forEach(feature => {
-        let checkboxDiv = document.createElement("div");
-        checkboxDiv.innerHTML = `<input type="checkbox"> ${feature}`;
-        featureListDiv.appendChild(checkboxDiv);
-    });
-}
-displayFeatures(visibleFeatures);
+    let visibleFeatures = features.slice(0, 6);
+    let hiddenFeatures = features.slice(6);
+    visibleFeatures.forEach(feature => createFeatureElement(feature, featureListDiv));
+    seeMoreBtnF.style.display = hiddenFeatures.length > 0 ? "block" : "none";
+    seeLessBtnF.style.display = "none"; 
 
-seeAllBtn.onclick = function (e) {
-    e.preventDefault();
-    displayFeatures(features); 
-    seeAllBtn.style.display = "none"; 
-};
+    seeMoreBtnF.onclick = () => {
+        hiddenFeatures.forEach(feature => createFeatureElement(feature, featureListDiv));
+        seeMoreBtnF.style.display = "none";
+        seeLessBtnF.style.display = "block";
+    };
+
+    seeLessBtnF.onclick = () => {
+        document.querySelectorAll(".feature1").forEach((element, index) => {
+            if (index >= 3) element.remove(); 
+        });
+        seeLessBtnF.style.display = "none";
+        seeMoreBtnF.style.display = "block";
+    };
+}
+function createFeatureElement(feature, containerDiv) {
+    let featureElement = document.createElement("div");
+    featureElement.classList.add("feature1");
+    featureElement.innerHTML = `<input type="checkbox"> ${feature}`;
+    containerDiv.appendChild(featureElement);
+}
+fetchFeatures();
+
 
 
 // range
@@ -126,34 +172,115 @@ applyFilter.onclick = async() => {
         console.error("Error fetching products:", error);
     }
 }
-function displayProducts(products) {
-    let container = document.querySelector(".filteredProducts"); 
+
+export function displayProducts(products) {
+    let container = document.querySelector(".productsContainer");
     container.innerHTML = ""; 
     if (products.length === 0) {
-        container.innerHTML = "<p>No products found in this range.</p>";
+        container.innerHTML = `<p class="center">No products found.</p>`;
+        return;
     }
-    products.forEach(product => {
-        let productDiv = document.createElement("div");
-        productDiv.classList.add("product");
-        productDiv.innerHTML = `<p>${product.productName} - ${product.price.cost}</p>`;
-        container.append(productDiv);
+    let visibleProducts = products.slice(0, 9); 
+    let hiddenProducts = products.slice(8)
+
+    visibleProducts.forEach(product => {
+        let productCard = document.createElement("div");
+        productCard.classList.add("product-card");
+
+        let rating = Math.floor(Math.random() * 6); 
+        let stars = '';
+        for (let i = 0; i < 5; i++) {
+            stars += i < rating ? "⭐" : ``; 
+        }
+
+        productCard.innerHTML = `
+        <div class="product-images">
+        <img src="${product.images[0].src}" alt="${product.productName}" class="product-main-image">
+        <div class="column"><img src="./images/heart -small.png" class="eyee">
+        <img src="./images/eye-icon.png" class="eye"></div>
+         </div>
+            <div class="product-info">
+                <h4>${product.productName}</h4>
+                <div class="flexx">
+                    <div class="product-price">${product.price.cost}</div>
+                    <div class="rating">${stars}</div> 
+                </div>
+            </div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        `;
+
+        // eyeIcon
+       let eyeIcon = productCard.querySelector(".eye");
+        eyeIcon.onclick = () => {
+            window.location.href = `/product-page.html?id=${product.id}`;
+        }; 
+
+        container.appendChild(productCard);
+
+        let addToCartBtn = productCard.querySelector(".add-to-cart-btn");
+        addToCartBtn.onclick = () => {
+            addToCart(product);
+        };
     });
+    
+    let seeMoreBtn = document.querySelector(".see-moreP");
+    let seeLessBtn = document.querySelector(".see-lessP");
+
+    if (hiddenProducts.length > 0) {
+        seeMoreBtn.style.display = "block"; 
+    } else {
+        seeMoreBtn.style.display = "none"; 
+    }
+    seeMoreBtn.onclick = () => {
+        hiddenProducts.forEach(product => {
+            let productCard = document.createElement("div");
+            productCard.classList.add("product-card");
+
+            productCard.innerHTML = `
+                <div class="product-images">
+                    <img src="${product.images[0].src}" alt="${product.productName}" class="product-main-image">
+                   <div class="column"><img src="./images/heart -small.png" class="eyee">
+                    <img src="./images/eye-icon.png" class="eye"></div>
+                </div>
+                <div class="product-info">
+                    <h4>${product.productName}</h4>
+                    <div class="product-price">${product.price.cost}</div>
+                </div>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            `;
+            container.appendChild(productCard);
+
+            let addToCartBtn = productCard.querySelector(".add-to-cart-btn");
+            addToCartBtn.onclick = () => {
+                addToCart(product);
+            };
+        });
+
+        seeMoreBtn.style.display = "none"; 
+        seeLessBtn.style.display = "block"; 
+    };
+
+    seeLessBtn.onclick = () => {
+        container.innerHTML = ""; 
+        displayProducts(products); 
+        seeMoreBtn.style.display = "block"; 
+        seeLessBtn.style.display = "none"; 
+    };
+}
+
+let cart = [];
+function addToCart(product) {
+    cart.push(product);
+    alert(`${product.productName} added to cart!`);
 }
 
 
 // PRODUCTS
 const productsContainer = document.querySelector(".productsContainer");
 export function fetchProduct(products) {
-    /* productsContainer.innerHTML = ""; */
-    console.log(products)
-
     products.forEach(product => {
         let productCard = document.createElement("div");
         productCard.classList.add("product-card");
-   /*      let p = document.createElement("p")
-        p.innerHTML = product.productName
-        productCard.appendChild(p)
- */
         productCard.innerHTML = `
         <img src="${product.images[0].src}">
         <div class="product-info">
@@ -167,3 +294,46 @@ export function fetchProduct(products) {
         productsContainer.append(productCard);
     });
 }
+
+// search
+let search = document.querySelector(".search");
+search.oninput = async () => {
+    let value = search.value.toLowerCase().trim();
+    let products = await fetchOrders("product");
+    let filterData = products.filter(el => el.productName.toLowerCase().includes(value));
+    displayProducts(filterData);
+};
+
+// Condition
+let conditionListDiv = document.querySelector(".conditionlist");
+let conditions = ["Any", "Refurbished", "Brand new", "Old items"];
+
+conditions.forEach((condition, index) => {
+    let conditionElement = document.createElement("div");
+    conditionElement.innerHTML = `
+        <input type="radio" name="condition" ${index === 0 ? "checked" : ""}>
+        <label>${condition}</label>
+    `;
+    conditionListDiv.appendChild(conditionElement);
+});
+
+// RATING
+let ratingsListDiv = document.querySelector(".ratingslist");
+for (let i = 5; i >= 2; i--) {
+    let ratingElement = document.createElement("div");
+    let stars = "";
+    for (let j = 0; j < 5; j++) {
+        if (j < i) {
+            stars += `<span class="filled-star">★</span>`;
+        } else {
+            stars += `<span class="empty-star">★</span>`; 
+        }
+    }
+    ratingElement.innerHTML = `
+        <input type="checkbox">
+        <label>${stars}</label>
+    `;
+    ratingsListDiv.appendChild(ratingElement);
+}
+
+
