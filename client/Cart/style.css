@@ -3,6 +3,9 @@
   padding: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+body {
+  overflow-x: hidden;
+}
 .navbar-elem {
   display: flex;
   align-items: center;
@@ -51,7 +54,7 @@
 }
 .footer-component {
   width: 100%;
-  height: 300px;
+  min-height: 300px;
   padding: 20px 0px;
   background-color: black;
   color: white;
@@ -62,13 +65,16 @@
 .components {
   width: 85%;
   margin: auto;
-  height: 230px;
+  min-height: 230px;
   background-color: black;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  gap: 20px;
 }
 .searchEmailForm {
-  width: 230px;
+  width: 100%;
+  max-width: 230px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -108,7 +114,8 @@
   padding: 10px 0px;
 }
 .lists {
-  width: 200px;
+  width: 100%;
+  max-width: 200px;
 }
 .social-net {
   display: flex;
@@ -135,28 +142,32 @@
 .product-descript {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
+}
+.product-descript img {
+  width: 50px;
+  height: 50px;
 }
 table {
   width: 90%;
   margin: auto;
   margin-top: 50px;
   margin-bottom: 40px;
+  border-collapse: collapse;
 }
-th {
-  text-align: left;
-  padding: 15px;
-}
+th,
 td {
   text-align: left;
-  padding: 10px 10px;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
 }
 .prod-hover {
   box-shadow: 0px 0px 8px rgb(190, 187, 187);
   border-radius: 10px;
 }
 .inpCnt {
-  width: 15%;
+  width: 100%;
+  max-width: 80px;
   border: 1px solid gray;
   border-radius: 5px;
   padding: 7px 6px;
@@ -167,6 +178,7 @@ td {
   display: flex;
   justify-content: end;
   gap: 15px;
+  flex-wrap: wrap;
 }
 .btnReturn {
   padding: 10px 25px;
@@ -273,4 +285,258 @@ td {
   color: red;
   border: 1px solid red;
   cursor: pointer;
+}
+
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  transition: 0.3s;
+}
+
+.mobile-nav {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: white;
+  width: 200px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 15px 0;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-nav ul li {
+  padding: 10px 15px;
+}
+
+.mobile-nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+/*style cnt add cart*/
+.structure-cartAdd {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.structure-cartAdd img {
+  width: 30px;
+  height: 30px;
+}
+.cntCartAdd {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #db4444;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 100%;
+  min-width: 22px;
+  min-height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.delete-btn{
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .navigation,
+  .searchForm {
+    display: none;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+
+  .mobile-nav {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: 0.3s ease-in-out;
+  }
+
+  .mobile-nav .box-burger:hover {
+    background-color: rgb(205, 202, 202);
+  }
+
+  .mobile-nav.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .footer-component {
+    overflow: hidden;
+  }
+  .components {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .boxes,
+  .lists {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .searchEmailForm {
+    max-width: 100%;
+  }
+
+  .social-net {
+    justify-content: center;
+  }
+  table {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  th,
+  td {
+    padding: 10px;
+  }
+
+  .inpCnt {
+    max-width: 60px;
+  }
+
+  .product-descript img {
+    width: 40px;
+    height: 40px;
+  }
+  .bnts-tool {
+    justify-content: center;
+  }
+
+  .btnReturn,
+  .btnRemove {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .tool-update {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .cupon {
+    width: 80%;
+    justify-content: center;
+  }
+
+  .cupon input {
+    flex-grow: 1;
+  }
+
+  .processCheck {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-component {
+    padding: 10px 0px;
+    overflow: hidden;
+  }
+
+  .components {
+    width: 95%;
+  }
+
+  .lists {
+    max-width: 100%;
+  }
+
+  .social-net img {
+    width: 20px;
+    height: 20px;
+  }
+  th,
+  td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .inpCnt {
+    max-width: 50px;
+    font-size: 14px;
+  }
+
+  .product-descript img {
+    width: 30px;
+    height: 30px;
+  }
+
+  thead {
+    display: none;
+
+    tr {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    td {
+      display: block;
+      text-align: right;
+      padding-left: 50%;
+      position: relative;
+    }
+
+    td::before {
+      position: absolute;
+      left: 10px;
+      width: 45%;
+      text-align: left;
+      font-weight: bold;
+    }
+
+    .btnReturn,
+    .btnRemove {
+      font-size: 15px;
+      padding: 10px;
+    }
+    .cupon {
+      flex-direction: column;
+      width: 100%;
+      align-items: stretch;
+    }
+
+    .cupon button {
+      width: 100%;
+    }
+
+    .processCheck {
+      width: 100%;
+    }
+
+    .btnProcees {
+      width: 100%;
+    }
+  }
 }

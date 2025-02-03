@@ -81,6 +81,13 @@ export function get(products) {
     tbody.append(tr);
     let deleteBut = tr.querySelector("#deleteBut");
     deleteBut.onclick = () => deleteProduct(product.id);
+    let editBut = tr.querySelector("#editBut");
+    editBut.onclick = () => {
+      localStorage.setItem("product", JSON.stringify(product))
+      console.log(product);
+      ;
+      window.location = "./editPage/index.html";
+    };
     let checkBox = tr.querySelector(".checkBox");
     checkBox.checked = isCheckAll;
 
@@ -149,7 +156,7 @@ searchForm.onsubmit = (e) => {
   get(filterData);
 };
 
-let addBut = document.querySelector(".add")
+let addBut = document.querySelector(".add");
 addBut.onclick = () => {
-  window.location = "./addPage/index.html"
-}
+  window.location = "./addPage/index.html";
+};

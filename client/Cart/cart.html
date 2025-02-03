@@ -9,7 +9,7 @@
   <body>
     <header>
       <nav class="navbar-elem">
-        <img src="./img/logo.png" alt="" />
+        <img src="./img/logo.png" alt="Logo" />
 
         <ul class="navigation">
           <li>Home</li>
@@ -25,15 +25,37 @@
               type="search"
               placeholder="What are you looking for?"
             />
-            <button type="submit" class="btnSearch">
-              <img src="./img/Component 2.png" alt="" srcset="" />
-            </button>   
+
+
+            <button type="submit" class="btnSearch"> 
+              <img src="./img/Component 2.png" alt="Search" />
+            </button>
           </form>
-          <img src="./img/Vector.png" alt="" />
-          <img src="./img/Cart.png" alt="" />
-          <img src="./img/user.png" alt="" />
+          <img src="./img/Vector.png" alt="Wishlist" />
+
+          <div class="structure-cartAdd">
+            <img class="cartClick" src="./img/Cart.png" alt="Cart" />
+            <span class="cntCartAdd" style="display: none;">0</span>
+          </div>          
+          <img src="./img/user.png" alt="User" />
+        </div>
+
+        <div class="burger-menu" id="burgerMenu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
         </div>
       </nav>
+
+      <div class="mobile-nav" id="mobileNav">
+        <ul>
+
+          <li class="box-burger"><a href="#">Home</a></li>
+          <li class="box-burger"><a href="#">Contact</a></li>
+          <li class="box-burger"><a href="#">About</a></li>
+          <li class="box-burger"><a href="#">Sign Up</a></li>
+        </ul>
+      </div>
     </header>
 
     <main class="mainPage">
@@ -53,22 +75,7 @@
             <th></th>
           </tr>
         </thead>
-        <tbody>
-          <tr class="prod-hover">
-            <td>
-              <div class="product-descript">
-                <img src="./img/Monitor-Cart-Small.png" alt="" />
-                <p>LCD Monitor</p>
-              </div>
-            </td>
-            <td>$650</td>
-            <td>
-              <input class="inpCnt" type="number" />
-            </td>
-            <td>$650</td>
-            <td><img src="./img/icon-cancel.png" alt="" /></td>
-          </tr>
-        </tbody>
+        <tbody class="tbody"></tbody>
       </table>
 
       <div class="bnts-tool">
@@ -93,10 +100,10 @@
               <p>Shipping:</p>
               <p>Free</p>
             </div>
-            <divc class="subtotal-prices">
+            <div class="subtotal-prices">
               <p>Total:</p>
               <p>$1750</p>
-            </divc>
+            </div>
             <button type="submit" class="btnProcees">
               Procees to checkout
             </button>
@@ -163,5 +170,6 @@
       </div>
     </footer>
 
+    <script type="module" src="./JS/script.js"></script>
   </body>
 </html>

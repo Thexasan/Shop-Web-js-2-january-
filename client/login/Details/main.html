@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Details</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar-elem">
+        <img src="img/Group 1116606595.png" alt="Logo" />
+    
+        <ul class="navigation">
+          <li>Home</li>
+          <li>Contact</li>
+          <li>About</li>
+          <li>Sign Up</li>
+        </ul>
+    
+        <div class="tools-toOption">
+          <form class="searchForm">
+            <input
+              class="search-product"
+              type="search"
+              placeholder="What are you looking for?"
+            />
+            <button type="submit" class="btnSearch">
+              <img src="img/Component 2.png" alt="Search" />
+            </button>
+          </form>
+          <img src="img/Vector (1).png" alt="Wishlist" />
+          <div class="structure-cartAdd">
+            <img class="cartClick" src="./img/Cart1.png" alt="Cart" />
+            <span class="cntCartAdd" style="display: none;">0</span>
+          </div>          
+          <img src="./img/user.png" alt="User" />
+        </div>
+    
+        <!-- Бургер-меню -->
+        <div class="burger-menu" id="burgerMenu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </nav>
+    
+      <div class="mobile-nav" id="mobileNav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Sign Up</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="mainPage">
+      <div class="container">
+        <div class="BOX">
+          <div class="thumbnails">
+            <!-- <img src="img/Frame 894.png" alt="Thumbnail 1" />
+            <img src="img/Frame 895.png" alt="Thumbnail 2" />
+            <img src="img/Frame 896.png" alt="Thumbnail 3" />
+            <img src="img/Frame 896.png" alt="Thumbnail 4" /> -->
+          
+          </div>
+          <div  class="main-image">
+            <img  src="img/Frame 919.png" id="mainImg" class="mainImage" alt="Main Product Image" />
+          </div>
+        </div>
+
+        <div class="product-details">
+          <h1 class="product-name"> Havic HV G-92 Gamepad</h1>
+          <div class="ratings">
+            <img src="./img/Four Star.png" alt="" /> (150 Reviews) |
+            <span class="active"> In Stock</span>
+          </div>
+          <p class="price">$192.00</p>
+          <p class="description">
+            <!-- PlayStation 5 Controller Skin High quality vinyl with air channel
+            adhesive for easy bubble free install & mess free removal Pressure
+            sensitive. -->
+          </p>
+          <div class="options">
+            <div class="colors">
+              <!-- <span class="color color1"></span>
+              <span class="color color2"></span> -->
+            </div>
+            <div class="sizes">
+              <button>XS</button>
+              <button>S</button>
+              <button>M</button>
+              <button>L</button>
+              <button>XL</button>
+            </div>
+          </div>
+          <div class="purchase">
+            <input type="number" value="2" min="1" />
+            <button class="buy">Buy Now</button>
+            <button class="like">
+              <img src="./img/Vector (1).png" alt="" />
+            </button>
+          </div>
+          <div class="delivery-info">
+            <div class="box1">
+              <img src="./img/icon-delivery.png" alt="" />
+              <p>Free Delivery - <a href="#">Enter postal code</a></p>
+            </div>
+            <div class="box2">
+              <img src="./img/Icon-return (1).png" alt="" />
+              <p>Return Delivery - <a href="#">30 Days Return</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer-component">
+      <div class="components">
+        <div class="boxes">
+          <h2>Exclusive</h2>
+          <h3>Subscribe</h3>
+          <p>Get 10% off your first order</p>
+          <form class="searchEmailForm">
+            <input
+              class="emailEnter"
+              type="search"
+              placeholder="Enter your Email"
+            />
+            <button class="btnEmail">
+              <img src="./img/icon-send.png" alt="" srcset="" />
+            </button>
+          </form>
+        </div>
+        <div class="lists">
+          <h2>Support</h2>
+          <ul class="list-info">
+            <li class="info">111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</li>
+            <li class="info">exclusive@gmail.com</li>
+            <li class="info">+88015-88888-9999</li>
+          </ul>
+        </div>
+        <div class="lists">
+          <h2>Account</h2>
+          <ul class="list-info">
+            <li class="info">My Account</li>
+            <li class="info">Cart</li>
+            <li class="info">Wishlist</li>
+            <li class="info">Shop</li>
+          </ul>
+        </div>
+        <div class="lists">
+          <h2>Quick Link</h2>
+          <ul class="list-info">
+            <li class="info">Privacy Policy</li>
+            <li class="info">Terms Of Use</li>
+            <li class="info">FAQ</li>
+            <li class="info">Contact</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Social</h2>
+          <div class="social-net">
+            <img src="./img/Icon-Facebook.png" alt="" />
+            <img src="./img/Icon-Twitter.png" alt="" />
+            <img src="./img/icon-instagram (1).png" alt="" />
+            <img src="./img/Icon-Linkedin.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="descript">
+        <p>&copy; Copyright Rimel 2022. All right reserved</p>
+      </div>
+    </footer>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
