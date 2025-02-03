@@ -8,8 +8,6 @@ let allProductsBtn = document.querySelector(".all-products-btn");
 allProductsBtn.style.color = "red";
 export function fetchCategories(categories) {
     categoryListDiv.innerHTML = ""; 
-
-    
     let visibleCategories = categories.slice(0, 5);
     let hiddenCategories = categories.slice(5);
     visibleCategories.forEach(category => createCategoryElement(category, categoryListDiv));
@@ -183,8 +181,8 @@ export function displayProducts(products) {
         container.append(noProductsMessage);
         return; 
     }
-    let visibleProducts = products.slice(0, 4); 
-    let hiddenProducts = products.slice(4);
+    let visibleProducts = products.slice(0, 7); 
+    let hiddenProducts = products.slice(7);
 
     visibleProducts.forEach(product => {
         let productCard = document.createElement("div");
