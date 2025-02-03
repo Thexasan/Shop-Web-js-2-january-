@@ -9,26 +9,36 @@ let modalFormEdit = document.querySelector(".modaleEdit");
 let modalEdit = document.querySelector("#categoryModalE");
 let myFiles = ""
 
-
-
 export function get(categories) {
     grid.innerHTML = "";
-    categories.forEach((category) => {
-        let card = document.createElement("div");
-        card.classList.add("card");
-        card.innerHTML = `
-        <img src="${category.avatar}" alt="Phones">
-        <p>${category.name}</p>
-        <span class="edit">✎</span>
-        <button class="delete">Delete</button>
-       `;
-        card.querySelector(".delete").onclick = () => deleteCategory(category.id);
-        card.querySelector(".edit").onclick = () => {
-            handlOpenModalEdit(category);
-        };
-        grid.appendChild(card);
-    });
+
+    if (categories.length > 0) {
+        grid.style.background = ""; // Reset background
+        categories.forEach((category) => {
+            let card = document.createElement("div");
+            card.classList.add("card");
+            card.innerHTML = `
+                <img src="${category.avatar}" alt="Phones">
+                <p>${category.name}</p>
+                <span class="edit">✎</span>
+                <button class="delete">Delete</button>
+            `;
+
+            card.querySelector(".delete").onclick = () => deleteCategory(category.id);
+            card.querySelector(".edit").onclick = () => handlOpenModalEdit(category);
+
+            grid.appendChild(card);
+        });
+    } else {
+        grid.innerHTML = `<p class="not-found">CAN NOT FOUND</p>`;
+        grid.style.background = "red";
+        grid.style.color = "white";
+        grid.style.padding = "10px";
+        grid.style.fontWeight = "bold";
+        grid.style.textAlign = "center";
+    }
 }
+
 
 if (modalFormEdit) {
     modalFormEdit.onsubmit = async (event) => {
@@ -41,7 +51,7 @@ if (modalFormEdit) {
             imageEdit.src = file;
         }
         console.log(file);
-        
+
         let editCategory = {
             name: categoryInputEdit ? categoryInputEdit.value : "",
             avatar: myFiles,
@@ -50,7 +60,7 @@ if (modalFormEdit) {
         modalFormEdit.reset();
         modalEdit.close();
     };
-    
+
     let fileInputEdit = document.querySelector("#file-uploadEdit");
     if (fileInputEdit) {
         fileInputEdit.onchange = async (e) => {
@@ -85,9 +95,9 @@ let modalForm = document.querySelector(".modal");
 if (modalForm) {
     modalForm["base"].onchange = async (e) => {
         file = await fileTobase64(e.target.files[0]);
-        myFiles=file
+        myFiles = file
     };
-    
+
     modalForm.onsubmit = async (event) => {
         event.preventDefault();
         let newCategory = {
@@ -100,17 +110,14 @@ if (modalForm) {
 }
 
 // ! search
+let search = document.querySelector("#search")
 
-let searchForm = document.querySelector(".searchForm");
-searchForm.onsubmit = (e) => {
-    e.preventDefault();
-    let value = e.target["search"].value
-   
-  getCategory(value);
-};
+search.oninput = async () => {
+    let value = search.value.toLowerCase().trim()
+    let cotegory = await getCategory()
+    let filter = cotegory.filter(e => e.name.toLowerCase().includes(value))
+    get(filter)
+    console.log(getCategory);
 
-
-
-// 
-
+}
 

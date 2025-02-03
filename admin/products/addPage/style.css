@@ -566,6 +566,7 @@ span {
   width: 50px;
   height: 55px;
   border-radius: 50%; 
+  cursor: pointer;
 }
 .prewieColor
 {
@@ -573,10 +574,123 @@ span {
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
-  padding: 10px 0px;
+  padding: 0px 0px;
 }
 .selected
 {
   border: 2px solid black;
   padding: 1px;
+}
+.mainDiv
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.colorModal
+{
+  width: 400px;
+  height: 200px;
+  margin: auto;
+}
+.header
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: red; */
+  width: 90%;
+  padding: 10px 0px;
+}
+.inputs
+{
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  gap: 5px;
+  /* background-color: red; */
+  width: 80%;
+  padding: 10px 0px;
+}
+.border
+{
+  width: 100px;
+  padding: 1px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid gray;
+}
+.exitButModal
+{
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.hexCode
+{
+  font-size: 18px;
+  font-weight: bold;
+}
+.colorNameInp
+{
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.selectColor
+{
+  width: 35px;
+  height: 35px;
+  border: none;
+  cursor: pointer;
+}
+.buts 
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: red; */
+  width: 55%;
+  padding: 10px 0px;
+}
+.buts button
+{
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+.cancel
+{
+  color: #2563eb;
+}
+.createBut
+{
+  color: #fff;
+  background-color: #2563eb;
+}
+.file-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: red;
+  border-bottom: 1px solid #ddd;
+}
+.item-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.delete-btn {
+  cursor: pointer;
+  color: red;
+  font-size: 18px;
+  font-weight: bold;
 }
