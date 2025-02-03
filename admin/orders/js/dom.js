@@ -70,9 +70,9 @@ export function showOrdersTable(orders) {
       tdId.innerHTML = order.orderId
       checkbox.onclick = () => {
         if (checkbox.checked) {
-          deleteItems.push(order.orderId);
+          deleteItems.push(order.id);
         } else {
-          deleteItems = deleteItems.filter((id) => id !== order.orderId);
+          deleteItems = deleteItems.filter((id) => id !== order.id);
         }
       };
       box.append(checkbox, tdId);
@@ -83,9 +83,10 @@ export function showOrdersTable(orders) {
 }
 
 // search
-let searchForm = document.querySelector(".searchForm");
-searchForm.onsubmit = (e) => {
-    e.preventDefault();
-    let value = e.target["search"].value
-  fetchOrders(value);
+let search= document.querySelector(".search");
+search.oninput = async() => {
+  let value = search.value.toLowerCase().trim();
+  let order = await fetchOrders("orders")
+  let filterData = order.filter(e => e.fullName.toLowerCase().includes(value))
+  showOrdersTable(filterData);  
 };

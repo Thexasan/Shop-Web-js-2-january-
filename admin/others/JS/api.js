@@ -2,22 +2,17 @@ import { deleteData, putData } from "../../../requests/request.js";
 import { getData, postData } from "../../../requests/request.js   ";
 import { get } from "./dom.js"
 
-export async function getCategory(name) {
+export async function getCategory() {
     try {
-        if (name){
-            let data = await getData(`/category?name=${name}`)
-            get(data)
+      let data = await getData("/category")
+       get(data)
+       return data
         }
-        else {
-            let data = await getData("/category")
-            get(data)
-        }
-    } catch (error) {
+    catch (error) {
         console.error(error);
 
     }
 }
-
 export async function postCategory(newCategory) {
     try {
         await postData('/category', newCategory)

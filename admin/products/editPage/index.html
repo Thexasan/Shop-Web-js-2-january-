@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Form</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="../imagesS/logo1.png">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <aside class="left">
+        <img src="../imagesS/chartIMageSho.png" alt="" />
+        <div class="searchBox">
+          <i class="bi bi-search" id="searchIcon"></i> 
+          <input type="search" class="searchInp" placeholder="search..." />
+        </div>
+      </aside>
+      <aside class="right">
+        <img src="../imagesS/shoh.png" alt="" class="notifications" />
+        <div class="profileAdmin">
+          <div class="circle">R</div>
+          <p class="name">rahdin kumar</p>
+        </div>
+      </aside>
+    </nav>
+    <main class="main">
+      <aside class="asideBar">
+        <li class="">
+          <i class="bi bi-house-door"></i><a href="" class="">Dashboard</a>
+        </li>
+        <li class="">
+          <i class="bi bi-list-ul"></i><a href="" class="">Orders</a>
+        </li>
+        <li class="active">
+          <i class="bi bi-tag"></i><a href="" class="">Products</a>
+        </li>
+        <li class="">
+          <i class="bi bi-folder"></i><a href="" class="">other</a>
+        </li>
+      </aside>
+      <aside class="jsBox">
+        <form action="" class="mainForm">
+          <div class="formLeft">
+            <div class="alls">
+              <div class="head">
+                <button class="exit"><a href="../index.html"><</a></button>
+                <a href="../index.html">Products</a><span>/</span
+                ><a href="">Edit</a>
+              </div>
+            </div>
+            <p class="info">Information</p>
+            <input
+              type="text"
+              name="productNameInp"
+              class="productNameInp"
+              placeholder="product Name"
+            />
+            <br />
+            <br />
+            <textarea
+              name="description"
+              class="description"
+              placeholder="Description"
+              id=""
+            ></textarea>
+            <div class="selects">
+              <select name="categories" class="categories" id="">
+                <option value="Categories">Categories</option>
+              </select>
+              <select name="brands" class="brands" id="">
+                <option value="Brands">Brands</option>
+              </select>
+            </div>
+            <div class="priceBox">
+              <p class="priceP">Price</p>
+              <input type="number" name="productPrice" placeholder="Price" />
+              <input type="number" name="discount" placeholder="discount" />
+              <input type="number" name="count" placeholder="count" />
+            </div>
+            <div class="optionsDiv">
+              <div class="chap">
+                <h3>Different Options</h3>
+                <p>This product has multiple options</p>
+              </div>
+              <!-- From Uiverse.io by zanina-yassine -->
+              <div class="container">
+                <input type="checkbox" class="checkbox" id="checkbox" />
+                <label class="switch" for="checkbox">
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </div>
+            <div class="otherOptions" style="display: none;">
+              <p class="optionss">Options</p>
+              <input type="text" name="option1" placeholder="option1" value="Size">
+              <input type="text" name="valueOption" placeholder="value1">
+              <input type="text" name="option2" placeholder="option2" value="Weight">
+              <input type="text" name="valueOption" placeholder="value2">
+              <button class="addMoreBut">+ Add More</button>
+            </div>
+          </div>
+          <div class="formRight">
+            <div class="buttons">
+              <button class="cancelBut" type="button">cancel</button>
+              <button class="SaveBut" type="submit">save</button>
+            </div>
+            <div class="colors">
+              <div class="up">
+                <p class="colorN">Colour:</p>
+                <button class="addNewColor" type="button">✔️Create new</button>
+              </div>
+              <div class="prewieColor"></div>
+            </div>
+            <h2 style="margin-right: 150px">Images</h2>
+            <div class="upload-container" id="uploadBox" onclick="document.getElementById('fileInput').click()">
+              <img src="../imagesS/addphotoss.png" alt="" />
+              <input
+                type="file"
+                id="fileInput"
+                multiple 
+                hidden
+              />
+              <p><strong>Click to upload</strong> or drag and drop</p>
+              <p>(SVG, JPG, PNG, or GIF, max 900×400)</p>
+            </div>
+
+            <table class="file-list">
+              <thead>
+                <tr>
+                  <th>Image</th>
+                  <th>File name</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="fileList" class="filelist"></tbody>
+            </table>
+          </div>
+        </form>
+      </aside>
+    </main>
+    <dialog class="colorModal">
+      <form class="mainDiv">
+        <div class="header">
+          <h3>New color</h3>
+          <button class="exitButModal" type="button">X</button>
+        </div>
+        <div class="inputs">
+          <input type="text" class="colorNameInp" name="colorNameInp" placeholder="Color Name">
+          <div class="border">
+            <input type="color" name="selectColor" id="" class="selectColor">
+            <span class="hexCode"></span>
+          </div>
+        </div>
+        <div class="buts">
+          <button class="cancel" type="button">Cancel</button>
+          <button class="createBut" type="submit">Create</button>
+        </div>
+      </form>
+    </dialog>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

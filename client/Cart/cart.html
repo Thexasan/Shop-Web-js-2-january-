@@ -9,7 +9,7 @@
   <body>
     <header>
       <nav class="navbar-elem">
-        <img src="./img/logo.png" alt="" />
+        <img src="./img/logo.png" alt="Logo" />
 
         <ul class="navigation">
           <li>Home</li>
@@ -25,15 +25,37 @@
               type="search"
               placeholder="What are you looking for?"
             />
-            <button type="submit" class="btnSearch">
-              <img src="./img/Component 2.png" alt="" srcset="" />
-            </button>   
+
+
+            <button type="submit" class="btnSearch"> 
+              <img src="./img/Component 2.png" alt="Search" />
+            </button>
           </form>
-          <img src="./img/Vector.png" alt="" />
-          <img src="./img/Cart.png" alt="" />
-          <img src="./img/user.png" alt="" />
+          <img src="./img/Vector.png" alt="Wishlist" />
+
+          <div class="structure-cartAdd">
+            <img src="./img/Cart.png" alt="Cart" />
+            <span class="cntCartAdd">2</span>
+          </div>
+          <img src="./img/user.png" alt="User" />
+        </div>
+
+        <div class="burger-menu" id="burgerMenu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
         </div>
       </nav>
+
+      <div class="mobile-nav" id="mobileNav">
+        <ul>
+
+          <li class="box-burger"><a href="#">Home</a></li>
+          <li class="box-burger"><a href="#">Contact</a></li>
+          <li class="box-burger"><a href="#">About</a></li>
+          <li class="box-burger"><a href="#">Sign Up</a></li>
+        </ul>
+      </div>
     </header>
 
     <main class="mainPage">
@@ -63,7 +85,7 @@
             </td>
             <td>$650</td>
             <td>
-              <input class="inpCnt" type="number" />
+              <input class="inpCnt" min="0" type="number" />
             </td>
             <td>$650</td>
             <td><img src="./img/icon-cancel.png" alt="" /></td>
@@ -93,10 +115,10 @@
               <p>Shipping:</p>
               <p>Free</p>
             </div>
-            <divc class="subtotal-prices">
+            <div class="subtotal-prices">
               <p>Total:</p>
               <p>$1750</p>
-            </divc>
+            </div>
             <button type="submit" class="btnProcees">
               Procees to checkout
             </button>
@@ -163,5 +185,6 @@
       </div>
     </footer>
 
+    <script src="./JS/script.js"></script>
   </body>
 </html>
