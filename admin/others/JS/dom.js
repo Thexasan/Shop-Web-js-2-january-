@@ -31,7 +31,7 @@ export function get(categories) {
 
             grid.appendChild(card);
         });
-    } else {
+    } else { 
         grid.innerHTML = `<p class="not-found">CAN NOT FOUND</p>`;
         grid.style.background = "red";
         grid.style.color = "white";
