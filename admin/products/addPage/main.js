@@ -86,19 +86,32 @@ let fileInput = document.querySelector("#fileInput");
 let filelist = document.querySelector(".filelist");
 fileInput.onchange = async () => {
   let files = Array.from(fileInput.files);
+  console.log(files);
+
+  imagesGet(files);
+};
+function imagesGet(files) {
+  filelist.innerHTML = "";
   files.forEach(async (file) => {
     let base64 = await fileTobase64(file);
+
     let item = document.createElement("tr");
     item.innerHTML = `
         <td><img class="item-img" src="${base64}" alt="preview"></td>
         <td><span>${file.name}</span></td>
-        <td><span class="delete-btn" onclick="this.parentElement.remove()">🗑️</span></td>
+        <td><span class="delete-btn">🗑️</span></td>
         `;
-    images.push({src : base64});
+    images.push({ src: base64, name: file.name });
+
+    let btnDel = item.querySelector(".delete-btn");
     filelist.append(item);
+    btnDel.onclick = () => {
+      // images = images.filter((e) => e.src !== base64);
+    };
   });
-  console.log(images);
-};
+}
+
+
 let brands = document.querySelector(".brands");
 let categories = document.querySelector(".categories");
 function formData(category, brand) {
