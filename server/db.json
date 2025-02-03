@@ -11,7 +11,7 @@
       "id": "5b26"
     },
     {
-      "id": 2,
+      "id": "2",
       "avatar": "base64",
       "name": "Man’s Fashion"
     },
@@ -164,7 +164,7 @@
       "brand": "Puma",
       "price": {
         "cost": 200.99,
-        "discount": 20,
+        "discount": 50,
         "count": 10
       },
       "options": {},
@@ -336,6 +336,20 @@
       "email": "smith@smith.com",
       "password": "smith123",
       "roleId": 1
+    },
+    {
+      "id": "c8e8",
+      "firstName": "Izatullo Doronshozodaaaaaaaaaaaaaa",
+      "email": "doroshozoda.i@icloud.com",
+      "password": "12345678",
+      "roleId": 1
+    },
+    {
+      "id": "1d9c",
+      "firstName": "Izatullo Doronshozodaaaaaaaaaaaaaa",
+      "email": "doroshozoda.i@icloud.com",
+      "password": "999999999999999999999",
+      "roleId": 1
     }
   ],
   "orders": [
@@ -379,9 +393,6 @@
           ]
         }
       ],
-<<<<<<< HEAD
-      "id": "8f28"
-=======
       "id": "ca5d"
     },
     {
@@ -425,7 +436,6 @@
         }
       ],
       "id": "ca5d"
->>>>>>> 4c2b4294bed887825367e1d6f13c37f73e1e6dc4
     }
   ]
 }
