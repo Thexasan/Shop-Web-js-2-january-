@@ -15,7 +15,7 @@ export function get(categories) {
     if (categories.length > 0) {
         grid.style.backgroundColor = ''
         grid.style.color = 'black'
-        grid.innerHTML = ""; // Reset background
+        grid.innerHTML = ""
         categories.forEach((category) => {
             let card = document.createElement("div");
             card.classList.add("card");
