@@ -86,35 +86,26 @@ let fileInput = document.querySelector("#fileInput");
 let filelist = document.querySelector(".filelist");
 fileInput.onchange = async () => {
   let files = Array.from(fileInput.files);
-  console.log(files);
-
-  imagesGet(files);
-};
-function imagesGet(files) {
-  filelist.innerHTML = "";
   files.forEach(async (file) => {
     let base64 = await fileTobase64(file);
-
-    let item = document.createElement("tr");
+    let item = document.createElement("div");
     item.innerHTML = `
-        <td><img class="item-img" src="${base64}" alt="preview"></td>
-        <td><span>${file.name}</span></td>
-        <td><span class="delete-btn">🗑️</span></td>
+        <img class="item-img" src="${base64}" alt="preview">
+        <span>${file.name}</span>
+        <span class="delete-btn">🗑️</span>
         `;
-    images.push({ src: base64, name: file.name });
 
-    let btnDel = item.querySelector(".delete-btn");
-    filelist.append(item);
-    btnDel.onclick = () => {
-      // images = images.filter((e) => e.src !== base64);
+    let deleteBut = item.querySelector(".delete-btn");
+    deleteBut.onclick = () => { 
+      images = images.filter((img) => img !== base64);
+      item.remove();
+      console.log("Updated images array:", images);
     };
+    images.push(base64);
+    filelist.append(item);
   });
-}
-
-let option1 = document.querySelector(".o1")
-let option2 = document.querySelector(".o2")
-let value1 = document.querySelector(".v1")
-let value2 = document.querySelector(".v2")
+  console.log("Final images array:", images);
+};
 let brands = document.querySelector(".brands");
 let categories = document.querySelector(".categories");
 function formData(category, brand) {
@@ -143,9 +134,7 @@ function formData(category, brand) {
       category: mainForm["categories"].value,
       brand: mainForm["brands"].value,
       price: price,
-      options: {
-        [option1.value] : value1.value,
-      },
+      options: {},
       color: userColor,
       images: images,
     };

@@ -1,4 +1,5 @@
-import { getData, deleteData, postData } from "../../../requests/request.js";
+
+import { getData, deleteData} from "../../../requests/request.js";
 import { get } from "./dom.js";
 export async function fetchData() {
   try {

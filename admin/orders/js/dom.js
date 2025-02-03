@@ -8,7 +8,6 @@ let trash = document.querySelector(".trash");
 let checkAll = document.querySelector(".checkAll");
 let isCheckAll = false;
 let deleteItems = [];
-let resultsCount = document.querySelector(".resultsCount"); // Select the element for results count
 
 export function showOrdersTable(orders) {
     resultsCount.textContent = `${orders.length} Results`;
@@ -82,10 +81,11 @@ export function showOrdersTable(orders) {
   }
 }
 
-//! search
-let searchForm = document.querySelector(".searchForm");
-searchForm.onsubmit = (e) => {
-    e.preventDefault();
-    let value = e.target["search"].value
-  fetchOrders(value);
+// search
+let search= document.querySelector(".search");
+search.oninput = async() => {
+  let value = search.value.toLowerCase().trim();
+  let order = await fetchOrders("orders")
+  let filterData = order.filter(e => e.fullName.toLowerCase().includes(value))
+  showOrdersTable(filterData);  
 };
