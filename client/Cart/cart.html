@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>cart</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="../../logoImage/logo1.png">
   </head>
   <body>
     <header>
@@ -12,10 +13,10 @@
         <img src="./img/logo.png" alt="Logo" />
 
         <ul class="navigation">
-          <li>Home</li>
-          <li>Contact</li>
-          <li>About</li>
-          <li>Sign Up</li>
+          <li > <a href="/client/login/homepage.html">Home</a></li>
+          <li> <a href="../contact/contact.html" >Contact</a></li>
+          <li><a href="../about/index.html" >About</a> </li>
+           <li> <a href="../login/registratsiya.html" >Sign up</a> </li>
         </ul>
 
         <div class="tools-toOption">
@@ -34,9 +35,9 @@
           <img src="./img/Vector.png" alt="Wishlist" />
 
           <div class="structure-cartAdd">
-            <img src="./img/Cart.png" alt="Cart" />
-            <span class="cntCartAdd">2</span>
-          </div>
+            <img class="cartClick" src="./img/Cart.png" alt="Cart" />
+            <span class="cntCartAdd" style="display: none;">0</span>
+          </div>          
           <img src="./img/user.png" alt="User" />
         </div>
 
@@ -50,10 +51,10 @@
       <div class="mobile-nav" id="mobileNav">
         <ul>
 
-          <li class="box-burger"><a href="#">Home</a></li>
-          <li class="box-burger"><a href="#">Contact</a></li>
-          <li class="box-burger"><a href="#">About</a></li>
-          <li class="box-burger"><a href="#">Sign Up</a></li>
+          <li class="box-burger"><a href="/client/login/homepage.html">Home</a></li>
+          <li class="box-burger"><a href="../contact/contact.html" >Contact</a></li>
+          <li class="box-burger"><a href="../about/index.html" >About</a> </li>
+          <li class="box-burger"><a href="../login/registratsiya.html" >Sign up</a></li>
         </ul>
       </div>
     </header>
@@ -75,22 +76,7 @@
             <th></th>
           </tr>
         </thead>
-        <tbody>
-          <tr class="prod-hover">
-            <td>
-              <div class="product-descript">
-                <img src="./img/Monitor-Cart-Small.png" alt="" />
-                <p>LCD Monitor</p>
-              </div>
-            </td>
-            <td>$650</td>
-            <td>
-              <input class="inpCnt" min="0" type="number" />
-            </td>
-            <td>$650</td>
-            <td><img src="./img/icon-cancel.png" alt="" /></td>
-          </tr>
-        </tbody>
+        <tbody class="tbody"></tbody>
       </table>
 
       <div class="bnts-tool">
@@ -119,7 +105,7 @@
               <p>Total:</p>
               <p>$1750</p>
             </div>
-            <button type="submit" class="btnProcees">
+            <button type="button" class="btnProcees">
               Procees to checkout
             </button>
           </form>
@@ -185,6 +171,6 @@
       </div>
     </footer>
 
-    <script src="./JS/script.js"></script>
+    <script type="module" src="./JS/script.js"></script>
   </body>
 </html>

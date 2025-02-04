@@ -10,8 +10,15 @@ let colorModal = document.querySelector(".colorModal");
 let selectColor = document.querySelector(".selectColor");
 let hexCode = document.querySelector(".hexCode");
 let exitButModal = document.querySelector(".exitButModal");
-let cancel = document.querySelector(".cancel");
-let mainDiv = document.querySelector(".mainDiv");
+let cancel = document.querySelector(".cancelButProducts");
+let succesModal = document.querySelector(".succesModal");
+let addNew = document.querySelector(".addNew");
+let prevBut = document.querySelector(".prevBut");
+let cancelButProducts  =document.querySelector(".cancelButProducts")
+let createBut = document.querySelector(".createBut")
+let colorNameInp = document.querySelector(".colorNameInp")
+
+console.log(cancelButProducts);
 
 async function getCategory() {
   let category = await getData(`/category`);
@@ -57,7 +64,6 @@ getColor(colors);
 let colorValue = null;
 selectColor.oninput = () => {
   colorValue = selectColor.value;
-  // console.log(colorValue);
   hexCode.innerHTML = colorValue;
 };
 checkbox.onclick = () => {
@@ -67,10 +73,10 @@ addNewColorBut.onclick = () => {
   colorModal.showModal();
   exitButModal.onclick = () => colorModal.close();
   cancel.onclick = () => colorModal.close();
-  mainDiv.onsubmit = (e) => {
+  createBut.onclick= (e) => {
     e.preventDefault();
     let newColor = {
-      name: mainDiv["colorNameInp"].value,
+      name: colorNameInp.value,
       rgb: colorValue,
     };
     console.log(newColor);
@@ -111,10 +117,10 @@ function imagesGet(files) {
   });
 }
 
-let option1 = document.querySelector(".o1")
-let option2 = document.querySelector(".o2")
-let value1 = document.querySelector(".v1")
-let value2 = document.querySelector(".v2")
+let option1 = document.querySelector(".o1");
+let option2 = document.querySelector(".o2");
+let value1 = document.querySelector(".v1");
+let value2 = document.querySelector(".v2");
 let brands = document.querySelector(".brands");
 let categories = document.querySelector(".categories");
 function formData(category, brand) {
@@ -144,16 +150,29 @@ function formData(category, brand) {
       brand: mainForm["brands"].value,
       price: price,
       options: {
-        [option1.value] : value1.value,
+          [option1.value || "defaultKey1"]: value1.value || null,
+          [option2.value || "defaultKey2"]: value2.value || null,
       },
       color: userColor,
       images: images,
     };
-    await postProduct(newProduct);
-    alert("sucsessFully added product");
-    console.log(newProduct);
+    succesModal.showModal();
+    addNew.onclick = async () => {
+      await postProduct(newProduct);
+      console.log(newProduct);
+      mainForm.reset()
+    };
+    prevBut.onclick = async () => {
+      window.location.href = `../index.html`
+      await postProduct(newProduct);
+      console.log(newProduct);
+    };
+    cancelButProducts.onclick = () => {
+      window.location.href = "../index.html"
+    }
   };
 }
+
 //post-product
 async function postProduct(newProduct) {
   try {

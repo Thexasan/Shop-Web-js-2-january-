@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="../../logoImage/logo1.png">
   </head>
   <body>
     <header>
@@ -12,10 +13,10 @@
         <img src="../login/Details/img/Group 1116606595.png" alt="Logo" />
 
         <ul class="navigation">
-          <li>Home</li>
-          <li>Contact</li>
-          <li>About</li>
-          <li>Sign Up</li>
+          <li><a href="../login/homepage.html">Home</a> </li>
+          <li><a href="../contact/contact.html">Contact</a> </li>
+          <li style="color: #DB4444;">About</li>
+          <li> <a href="../login/registratsiya.html">Sign Up</a></li>
         </ul>
 
         <div class="tools-toOption">
@@ -30,7 +31,10 @@
             </button>
           </form>
           <img src="../login/Details/img/Vector (1).png" alt="Wishlist" />
-          <img src="../login/Details/img/Cart1.png" alt="Cart" />
+          <div class="structure-cartAdd">
+            <img class="cartClick" src="../login/Details/img/Cart1.png" alt="Cart" />
+            <span class="cntCartAdd" style="display: none;">0</span>
+          </div>    
           <img src="../login/Details/img/user.png" alt="User" />
         </div>
 
@@ -212,6 +216,6 @@
         <p>&copy; Copyright Rimel 2022. All right reserved</p>
       </div>
     </footer>
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>

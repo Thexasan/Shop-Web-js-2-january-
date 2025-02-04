@@ -8,8 +8,8 @@
   align-items: center;
   background-color: #1c2536;
   justify-content: space-between;
-  padding: 10px 20px;
-  width: 97.3%;
+  padding: 10px 0px;
+  width: 100%;
 }
 .left {
   display: flex;

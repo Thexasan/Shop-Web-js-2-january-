@@ -126,7 +126,7 @@ export async function updateControl(products) {
     numbers.append(pageBut);
   }
   prevBut.onclick = () => {
-    if (currentPage > 1) {
+    if (currentPage < 1) {
       currentPage--;
       get(products);
     }
@@ -160,3 +160,8 @@ let addBut = document.querySelector(".add");
 addBut.onclick = () => {
   window.location = "./addPage/index.html";
 };
+
+let AddOrdersBut = document.querySelector(".AddOrders")
+AddOrdersBut.onclick = () => {
+  window.location = "./addPage/index.html"
+}

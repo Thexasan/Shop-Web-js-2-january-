@@ -1,0 +1,735 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  overflow-x: hidden;
+}
+.navbar-elem {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 0px;
+  border: 1px solid rgb(222, 218, 218);
+}
+.navigation {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+.navigation li:hover {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
+.tools-toOption {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.tools-toOption img:hover {
+  cursor: pointer;
+}
+.searchForm {
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 0px 10px;
+  background-color: #f5f5f5;
+}
+.search-product {
+  width: 100%;
+  padding: 10px 10px;
+  background-color: #f5f5f5;
+  outline: none;
+  border: none;
+}
+.btnSearch {
+  border: none;
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+.footer-component {
+  width: 100%;
+  min-height: 300px;
+  padding: 20px 0px;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.components {
+  width: 85%;
+  margin: auto;
+  min-height: 230px;
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+.searchEmailForm {
+  width: 100%;
+  max-width: 230px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 0px 10px;
+  border: 1px solid white;
+  background-color: black;
+  border-radius: 5px;
+  margin: 10px 0px;
+}
+.emailEnter {
+  width: 100%;
+  padding: 13px 10px;
+  background-color: black;
+  outline: none;
+  border: none;
+  color: white;
+}
+.btnEmail {
+  border: none;
+  background-color: black;
+  cursor: pointer;
+}
+.boxes p {
+  padding: 10px 0px;
+}
+.list-info {
+  list-style: none;
+  padding: 10px 0px;
+}
+.list-info li:hover {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
+.info {
+  padding: 10px 0px;
+}
+.lists {
+  width: 100%;
+  max-width: 200px;
+}
+.social-net {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0px;
+}
+.descript {
+  width: 100%;
+  border-top: 1px solid rgb(36, 34, 34);
+  background-color: black;
+  padding: 15px 0px;
+  color: gray;
+  text-align: center;
+}
+.mainPage {
+  width: 85%;
+  margin: auto;
+}
+.navigate {
+  display: flex;
+  gap: 15px;
+  margin: 30px 0px;
+}
+.product-descript {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.product-descript img {
+  width: 50px;
+  height: 50px;
+}
+table {
+  width: 90%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  border-collapse: collapse;
+}
+th,
+td {
+  text-align: left;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+.prod-hover {
+  box-shadow: 0px 0px 8px rgb(190, 187, 187);
+  border-radius: 10px;
+}
+.inpCnt {
+  width: 100%;
+  max-width: 80px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 7px 6px;
+  font-size: 16px;
+}
+.bnts-tool {
+  width: 95%;
+  display: flex;
+  justify-content: end;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.btnReturn {
+  padding: 10px 25px;
+  background-color: black;
+  color: white;
+  font-size: 17px;
+  margin-bottom: 35px;
+  border-radius: 5px;
+  border: none;
+}
+.btnReturn:hover {
+  border: 1px solid black;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
+.btnRemove {
+  background-color: red;
+  padding: 10px 25px;
+  color: white;
+  font-size: 17px;
+  margin-bottom: 35px;
+  border-radius: 5px;
+  border: none;
+}
+.btnRemove:hover {
+  border: 1px solid red;
+  color: red;
+  background-color: white;
+  cursor: pointer;
+}
+.tool-update {
+  width: 90%;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.cupon {
+  width: 30%;
+  display: flex;
+  align-items: start;
+  gap: 20px;
+}
+.cupon input {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 10px 10px;
+  font-size: 16px;
+}
+.cupon button {
+  padding: 13px 30px;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  border: none;
+}
+.cupon button:hover {
+  border: 1px solid red;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+.processCheck {
+  width: 35%;
+  height: 280px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgb(196, 196, 196);
+  padding: 25px 20px 0px 20px;
+}
+.subtotal-price {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0px;
+  padding: 10px 0px;
+}
+.divv {
+  border-bottom: 1px solid rgb(174, 169, 169);
+}
+.subtotal-prices {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0px;
+  padding: 10px 0px;
+}
+.subtotal-prices p {
+  font-size: 25px;
+  font-weight: bold;
+}
+.btnProcees {
+  width: 60%;
+  padding: 13px 30px;
+  background-color: red;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+}
+.btnProcees:hover {
+  background-color: white;
+  color: red;
+  border: 1px solid red;
+  cursor: pointer;
+}
+
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  transition: 0.3s;
+}
+
+.mobile-nav {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: white;
+  width: 200px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 15px 0;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-nav ul li {
+  padding: 10px 15px;
+}
+
+.mobile-nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+/*style cnt add cart*/
+.structure-cartAdd {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.structure-cartAdd img {
+  width: 30px;
+  height: 30px;
+}
+.cntCartAdd {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #db4444;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 100%;
+  min-width: 22px;
+  min-height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.delete-btn{
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .navigation,
+  .searchForm {
+    display: none;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+
+  .mobile-nav {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: 0.3s ease-in-out;
+  }
+
+  .mobile-nav .box-burger:hover {
+    background-color: rgb(205, 202, 202);
+  }
+
+  .mobile-nav.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .footer-component {
+    overflow: hidden;
+  }
+  .components {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .boxes,
+  .lists {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .searchEmailForm {
+    max-width: 100%;
+  }
+
+  .social-net {
+    justify-content: center;
+  }
+  table {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  th,
+  td {
+    padding: 10px;
+  }
+
+  .inpCnt {
+    max-width: 60px;
+  }
+
+  .product-descript img {
+    width: 40px;
+    height: 40px;
+  }
+  .bnts-tool {
+    justify-content: center;
+  }
+
+  .btnReturn,
+  .btnRemove {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .tool-update {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .cupon {
+    width: 80%;
+    justify-content: center;
+  }
+
+  .cupon input {
+    flex-grow: 1;
+  }
+
+  .processCheck {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-component {
+    padding: 10px 0px;
+    overflow: hidden;
+  }
+
+  .components {
+    width: 95%;
+  }
+
+  .lists {
+    max-width: 100%;
+  }
+
+  .social-net img {
+    width: 20px;
+    height: 20px;
+  }
+  th,
+  td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .inpCnt {
+    max-width: 50px;
+    font-size: 14px;
+  }
+
+  .product-descript img {
+    width: 30px;
+    height: 30px;
+  }
+
+  thead {
+    display: none;
+
+    tr {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    td {
+      display: block;
+      text-align: right;
+      padding-left: 50%;
+      position: relative;
+    }
+
+    td::before {
+      position: absolute;
+      left: 10px;
+      width: 45%;
+      text-align: left;
+      font-weight: bold;
+    }
+
+    .btnReturn,
+    .btnRemove {
+      font-size: 15px;
+      padding: 10px;
+    }
+    .cupon {
+      flex-direction: column;
+      width: 100%;
+      align-items: stretch;
+    }
+
+    .cupon button {
+      width: 100%;
+    }
+
+    .processCheck {
+      width: 100%;
+    }
+
+    .btnProcees {
+      width: 100%;
+    }
+  }
+}
+
+.container
+{
+  display: flex;
+  align-items: center;
+}
+.billing-details
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.mainForm
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.mainForm input
+{
+  width: 300px;
+  margin: 10px 0px;
+}
+.container
+{
+  display: flex;
+  align-items: start;
+  padding: 50px 0px;
+  width: 90%;
+  margin: auto;
+  justify-content: space-between;
+}
+.DivForm
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: column;
+  box-shadow: 0px 0px 5px;
+  padding: 50px 50px;
+  width: 500px;
+  /* height: 400px; */
+  /* background-color: red; */
+  /* padding: 100px; */
+}
+.DivForm input
+{
+  width: 90%;
+  padding: 10px 20px;
+}
+.rightBox
+{
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: column;
+  /* box-shadow: 0px 0px 5px; */
+  padding: 50px 0px;
+  width: 500px;
+  /* height: 400px; */
+  /* background-color: red; */
+  /* padding: 100px; */
+}
+.jsBox
+{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: auto;
+  border-bottom: 1px solid gray;
+  padding: 10px 0px;
+}
+.card 
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
+  /* border: 2px solid black; */
+}
+.with
+{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.card img
+{
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+.within
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* width: 100px; */
+  gap: 200px;
+  /* background-color: #db4444; */
+  margin: auto;
+  margin-left: 100px;
+}
+.Total
+{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: start;
+}
+.price 
+{
+  font-size: 20px;
+  font-weight: bold;
+}
+.div 
+{
+  /* display: flex; */
+  align-items: center;
+}
+.checkout-container {
+  margin-left: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+.payment-options label {
+  display: block;
+  margin: 10px 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.payment-options input[type="radio"] {
+  margin-right: 10px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.card-icon {
+  width: 30px;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.coupon-section {
+  margin: 20px 0;
+}
+
+#coupon-code {
+  padding: 8px;
+  width: 60%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#apply-btn {
+  padding: 8px 12px;
+  background-color: white;
+  color: #d9534f;
+  border: 1px solid #d9534f;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#apply-btn:hover {
+  background-color: #d9534f;
+  color: white;
+}
+
+.place-order-btn {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.place-order-btn:hover {
+  background-color: #c9302c;
+}

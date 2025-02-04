@@ -1,5 +1,27 @@
 import { fetchOrders } from "./api.js";
 
+// burgerMenu
+document.addEventListener("DOMContentLoaded", () => {
+    const burgerMenu = document.getElementById("burgerMenu");
+    const mobileNav = document.getElementById("mobileNav");
+    const navLinks = document.querySelector(".nav-links");
+
+    burgerMenu.addEventListener("click", () => {
+        burgerMenu.classList.toggle("active");
+        mobileNav.classList.toggle("active");
+        navLinks.classList.toggle("active");
+    });
+
+    document.addEventListener("click", (event) => {
+        if (!mobileNav.contains(event.target) && !burgerMenu.contains(event.target)) {
+            mobileNav.classList.remove("active");
+            burgerMenu.classList.remove("active");
+            navLinks.classList.remove("active");
+        }
+    });
+});
+
+
 // CATEGORY LIST
 let categoryListDiv = document.querySelector(".categorylist");
 let seeMoreBtn = document.querySelector(".see-more");
@@ -8,8 +30,6 @@ let allProductsBtn = document.querySelector(".all-products-btn");
 allProductsBtn.style.color = "red";
 export function fetchCategories(categories) {
     categoryListDiv.innerHTML = ""; 
-
-    
     let visibleCategories = categories.slice(0, 5);
     let hiddenCategories = categories.slice(5);
     visibleCategories.forEach(category => createCategoryElement(category, categoryListDiv));
@@ -183,8 +203,8 @@ export function displayProducts(products) {
         container.append(noProductsMessage);
         return; 
     }
-    let visibleProducts = products.slice(0, 4); 
-    let hiddenProducts = products.slice(4);
+    let visibleProducts = products.slice(0, 7); 
+    let hiddenProducts = products.slice(7);
 
     visibleProducts.forEach(product => {
         let productCard = document.createElement("div");
@@ -216,6 +236,7 @@ export function displayProducts(products) {
         let eyeIcon = productCard.querySelector(".eye");
         eyeIcon.onclick = () => {
             localStorage.setItem("productById", JSON.stringify(product));
+            window.location = "/client/login/Details/main.html"
         };
 
         let addToCartBtn = productCard.querySelector(".add-to-cart-btn");
@@ -254,6 +275,11 @@ export function displayProducts(products) {
                 `;
                 container.appendChild(productCard);
 
+                        eyeIcon.onclick = () => {
+            localStorage.setItem("productById", JSON.stringify(product));
+            window.location = "/client/login/Details/main.html"
+        };
+
                 let addToCartBtn = productCard.querySelector(".add-to-cart-btn");
                 addToCartBtn.onclick = () => {
                     addToCart(product);
@@ -267,10 +293,27 @@ export function displayProducts(products) {
         }
     };
 }
-let cart = [];
+
+let cartCount = document.querySelector(".cntCartAdd");
+
+function updateCartCount() {
+    let cart = JSON.parse(localStorage.getItem("cartSend")) || [];
+    if (cart.length > 0) {
+        cartCount.style.display = "flex";
+        cartCount.textContent = cart.length;
+    } else {
+        cartCount.style.display = "none";
+    }
+}
+
+updateCartCount();
+
 function addToCart(product) {
+    let cart = JSON.parse(localStorage.getItem("cartSend")) || [];
     cart.push(product);
-    alert(`${product.productName} added to cart!`);
+    localStorage.setItem("cartSend", JSON.stringify(cart));
+
+    updateCartCount();
 }
 
 
@@ -335,4 +378,8 @@ for (let i = 5; i >= 2; i--) {
     ratingsListDiv.appendChild(ratingElement);
 }
 
-
+let cartClick = document.querySelector(".cartClick");
+cartClick.style.cursor = "pointer";
+cartClick.onclick = () => {
+    window.location = "/client/Cart/cart.html";
+}

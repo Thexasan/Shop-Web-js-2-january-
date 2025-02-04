@@ -6,6 +6,8 @@
     <title>Details</title>
     <link rel="stylesheet" href="./style.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="icon" href="../../../logoImage/logo1.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -13,10 +15,10 @@
         <img src="img/Group 1116606595.png" alt="Logo" />
     
         <ul class="navigation">
-          <li>Home</li>
-          <li>Contact</li>
-          <li>About</li>
-          <li>Sign Up</li>
+          <li > <a href="../homepage.html">Home</a></li>
+          <li> <a href="../contact/contact.html" >Contact</a></li>
+          <li><a href="../about/index.html" >About</a> </li>
+           <li> <a href="../login/registratsiya.html" >Sign up</a> </li>
         </ul>
     
         <div class="tools-toOption">
@@ -31,7 +33,10 @@
             </button>
           </form>
           <img src="img/Vector (1).png" alt="Wishlist" />
-          <img src="img/Cart1.png" alt="Cart" />
+          <div class="structure-cartAdd">
+            <img class="cartClick" src="./img/Cart1.png" alt="Cart" />
+            <span class="cntCartAdd" style="display: none;">0</span>
+          </div>          
           <img src="./img/user.png" alt="User" />
         </div>
     
@@ -53,7 +58,9 @@
       </div>
     </header>
 
-    <main class="mainPage">
+    <main class="mainPage" data-aos="fade-down"
+    data-aos-easing="linear"
+    data-aos-duration="1500">
       <div class="container">
         <div class="BOX">
           <div class="thumbnails">
@@ -75,6 +82,7 @@
             <span class="active"> In Stock</span>
           </div>
           <p class="price">$192.00</p>
+          <p class="total-price">$192.00</p>          
           <p class="description">
             <!-- PlayStation 5 Controller Skin High quality vinyl with air channel
             adhesive for easy bubble free install & mess free removal Pressure
@@ -94,7 +102,7 @@
             </div>
           </div>
           <div class="purchase">
-            <input type="number" value="2" min="1" />
+            <input type="number" value="1" min="1" />
             <button class="buy">Buy Now</button>
             <button class="like">
               <img src="./img/Vector (1).png" alt="" />
@@ -171,6 +179,10 @@
         <p>&copy; Copyright Rimel 2022. All right reserved</p>
       </div>
     </footer>
-    <script type="module" src="main.js"></script>
+    <script type="module" src="./main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

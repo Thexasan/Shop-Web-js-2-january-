@@ -127,7 +127,7 @@ a {
   background-color: #2563eb;
   color: #fff;
   font-size: 18px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   cursor: pointer;
   font-weight: bold;
 }
