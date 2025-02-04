@@ -64,11 +64,11 @@ acc.onclick = () => {
   clickModal.close();
 };
 order.onclick = () => {
-  window.location = "#";
+  window.location = "../Account/index.html";
   clickModal.close();
 };
 logout.onclick = () => {
-  window.location = "./registratsiya.html";
+  window.location = "./login.html";
   clickModal.close();
 };
 
