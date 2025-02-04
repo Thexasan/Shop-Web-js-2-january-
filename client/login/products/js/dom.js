@@ -1,4 +1,6 @@
 import { fetchOrders } from "./api.js";
+
+// burgerMenu
 document.addEventListener("DOMContentLoaded", () => {
     const burgerMenu = document.getElementById("burgerMenu");
     const mobileNav = document.getElementById("mobileNav");
