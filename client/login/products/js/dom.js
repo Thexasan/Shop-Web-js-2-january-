@@ -1,4 +1,24 @@
 import { fetchOrders } from "./api.js";
+document.addEventListener("DOMContentLoaded", () => {
+    const burgerMenu = document.getElementById("burgerMenu");
+    const mobileNav = document.getElementById("mobileNav");
+    const navLinks = document.querySelector(".nav-links");
+
+    burgerMenu.addEventListener("click", () => {
+        burgerMenu.classList.toggle("active");
+        mobileNav.classList.toggle("active");
+        navLinks.classList.toggle("active");
+    });
+
+    document.addEventListener("click", (event) => {
+        if (!mobileNav.contains(event.target) && !burgerMenu.contains(event.target)) {
+            mobileNav.classList.remove("active");
+            burgerMenu.classList.remove("active");
+            navLinks.classList.remove("active");
+        }
+    });
+});
+
 
 // CATEGORY LIST
 let categoryListDiv = document.querySelector(".categorylist");

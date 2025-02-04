@@ -8,11 +8,11 @@
 .logo1{
     display: none;
 }
-.burger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
+/* .burger { */
+    /* display: none; */
+    /* flex-direction: column; */
+    /* cursor: pointer; */
+/* } */
 nav{
     display: flex;
     justify-content: space-between;
@@ -255,6 +255,9 @@ cursor: pointer;
     .logo{
         display: none;
     }
+    .hover{
+        border: transparent;
+    }
     .logo1{
         display: block;
         display: flex;
@@ -273,9 +276,9 @@ cursor: pointer;
     ul.active {
         display: flex;
     }
-    .burger {
-        display: flex;
-    }
+    /* .burger { */
+        /* display: flex; */
+    /* } */
     .nav-links {
         display: none;
     }
@@ -308,7 +311,7 @@ cursor: pointer;
     }
     .product-card{
         margin: auto;
-        width: 80%;
+        width: 90%;
     }
     .product-card img{
         width: 100%;
@@ -319,6 +322,7 @@ cursor: pointer;
     .main1{
         width: 100%;
         margin: auto;
+        margin: 40px;
     }
 }
 
@@ -411,3 +415,82 @@ color: rgb(190, 184, 184);
         width: 200px;
     }
 }
+/* Mobile Navigation */
+.mobile-nav {
+    display: none; 
+    width: 250px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(100%); 
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    z-index: 1000;
+}
+.mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.mobile-nav ul li {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+}
+.mobile-nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    display: block;
+}
+.burger-menu {
+    display: none; 
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    position: relative;
+    z-index: 1100;
+}
+.res{
+    display: flex;
+    gap: 10px;
+}
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    transition: 0.3s;
+}
+@media screen and (max-width: 540px) {
+    .burger-menu {
+        display: flex;
+    }
+    .mobile-nav {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+    }
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+    }
+    .burger-menu.active .bar {
+        background-color: transparent;
+    }
+    .burger-menu.active .bar:nth-child(1) {
+        transform: rotate(45deg);
+        position: absolute;
+    }
+    .burger-menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .burger-menu.active .bar:nth-child(3) {
+        transform: rotate(-45deg);
+        position: absolute;
+    }
+}
+
+  
