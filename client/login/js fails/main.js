@@ -46,7 +46,7 @@ let getFromProducts=(data)=>{
                     <img src="./images/Fill Eye.png" alt="" style="position: absolute; top: 10px; right: 10px;">
                 </div>
                 <p>${el.productName}</p>
-                <span style="  color: #DB4444;">${el.price.cost - el.price.discount}</span>  <span style="text-decoration: line-through;">${el.price.cost}</span>`
+                <span style="  color: #DB4444;">$ ${el.price.cost - el.price.discount}</span>  <span style="text-decoration: line-through;">${el.price.cost}</span>`
 
          cards.appendChild(card)     
     })
@@ -64,7 +64,7 @@ let getProductsWithoutSale= (data)=>{
                     <img src="./images/Fill Eye.png" alt="" style="position: absolute; top: 10px; right: 10px;">
                 </div>
                 <p>${el.productName}</p>
-                <span style="  color: #DB4444;">${el.price.cost}</span> `
+                <span style="  color: #DB4444;">$ ${el.price.cost}</span> `
 
                 cardss.appendChild(card)
     })
@@ -78,3 +78,88 @@ el.onclick=()=>{
     window.location='./products/index.html'
 }
 })
+
+
+let clickModal=document.querySelector('.infoClick')
+let btnInfo=document.querySelector('.aboutUser')
+
+btnInfo.onclick=()=>{
+    clickModal.showModal()
+}
+
+let acc=document.querySelector('.acc')
+let order=document.querySelector('.ord')
+let logout=document.querySelector('.log')
+
+acc.onclick=()=>{
+    window.location="#"
+    clickModal.close()
+}
+order.onclick=()=>{
+    window.location="#"
+    clickModal.close()
+}
+logout.onclick=()=>{
+    window.location="./registratsiya.html"
+    clickModal.close()
+}
+
+
+const days=document.querySelector('.days')
+const hrs=document.querySelector('.hours')
+const min=document.querySelector('.min')
+const sec=document.querySelector('.sec')
+
+const dayss=document.querySelector('.dayys')
+const hours=document.querySelector('.hrss')
+const mins=document.querySelector('.mins')
+const secs=document.querySelector('.secs')
+
+const currentDay= new Date().getDate()
+// console.log(currentDay);
+
+const newDay=new Date(`${currentDay + 3} Feb 2025  00:00:00` )
+// console.log(newDay);
+
+function countdownTimer(){
+    const currentDayy= Date.now()
+    const gap = newDay - currentDayy;
+    // console.log(gap);
+    const d = Math.floor(gap / 1000 /60 / 60 / 24)
+    const h = Math.floor((gap / 1000 / 60 / 60) % 24)
+    const m = Math.floor((gap / 1000 / 60) % 60)
+    const s = Math.floor((gap / 1000) % 60)
+    // console.log(d);
+    // console.log(h);
+    // console.log(m);
+    // console.log(s);
+    days.innerHTML= d < 10 ? '0' + d : d
+    hrs.innerHTML= h < 10 ? '0' + h : h
+    min.innerHTML= m < 10 ? '0' + m : m
+    sec.innerHTML= s < 10 ? '0' + s : s
+    
+}
+setInterval(countdownTimer, 1000)
+
+
+function countdownTimerr(){
+    const currentDayy= Date.now()
+    const gap = newDay - currentDayy;
+    // console.log(gap);
+    const dd = Math.floor(gap / 1000 /60 / 60 / 24)
+    const hh= Math.floor((gap / 1000 / 60 / 60) % 24)
+    const mm = Math.floor((gap / 1000 / 60) % 60)
+    const ss = Math.floor((gap / 1000) % 60)
+    // console.log(d);
+    // console.log(h);
+    // console.log(m);
+    // console.log(s);
+    dayss.innerHTML= dd < 10 ? '0' + dd : dd
+    hours.innerHTML= hh < 10 ? '0' + hh : hh
+    mins.innerHTML= mm < 10 ? '0' + mm : mm
+    secs.innerHTML= ss < 10 ? '0' + ss : ss
+    
+}
+setInterval(countdownTimerr, 1000)
+
+
