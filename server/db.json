@@ -315,6 +315,13 @@
       "email": "doroshozoda.i@icloud.com",
       "password": "999999999999999999999",
       "roleId": 1
+    },
+    {
+      "id": "1b06",
+      "firstName": "Izatullo Doronshozodaaaaaaaaaaaaaa",
+      "email": "doroshozoda.i@icloud.com",
+      "password": "234567",
+      "roleId": 1
     }
   ],
   "orders": [

@@ -53,7 +53,7 @@ let getFromProducts = (data) => {
                     <p style="position: absolute; top: 0; left: 10px; padding: 5px; text-align: center; letter-spacing: 1px; border-radius: 5px; width: 50px; color: white; background-color: #DB4444;"> -${Math.round(
                       el.price.discount / num
                     )}%</p>
-                    <img src="./images/Fill Eye.png" alt="" style="position: absolute; top: 10px; right: 10px;">
+                     <img src="./images/Fill Eye.png" alt="" style="position: absolute; top: 10px; right: 10px;" class='showPro'>
                 </div>
                 <p>${el.productName}</p>
                 <span style="  color: #DB4444;">$ ${
@@ -62,6 +62,12 @@ let getFromProducts = (data) => {
       el.price.cost
     }</span>`;
 
+    let infoCard=card.querySelector('.showPro')
+    infoCard.onclick=()=>{
+      localStorage.setItem('productById', JSON.stringify(el))
+      window.location='./Details/main.html'
+      
+    }
     cards.appendChild(card);
   });
   updateControl(data)
@@ -76,11 +82,16 @@ let getProductsWithoutSale = (data) => {
     card.classList.add("card");
     card.innerHTML = `<div class="topOfCard">
                     <img src="${el.images[0].src}" alt="" class='topp'>
-                    <img src="./images/Fill Eye.png" alt="" style="position: absolute; top: 10px; right: 10px;">
+                    <img src="./images/Fill Eye.png" alt="" style="position: absolute; top: 10px; right: 10px;" class='showPro'>
                 </div>
                 <p>${el.productName}</p>
                 <span style="  color: #DB4444;">$ ${el.price.cost}</span> `;
-
+                let infoCard=card.querySelector('.showPro')
+                infoCard.onclick=()=>{
+                  localStorage.setItem('productById', JSON.stringify(el))
+                  window.location='./Details/main.html'
+                  
+                }
     cardss.appendChild(card);
   });
   updateControl(data);
@@ -97,6 +108,7 @@ more.forEach((el) => {
 let clickModal = document.querySelector(".infoClick");
 let btnInfo = document.querySelector(".aboutUser");
 
+
 btnInfo.onclick = () => {
   clickModal.showModal();
 };
@@ -106,7 +118,7 @@ let order = document.querySelector(".ord");
 let logout = document.querySelector(".log");
 
 acc.onclick = () => {
-  window.location = "#";
+  window.location = "../Account/index.html";
   clickModal.close();
 };
 order.onclick = () => {
@@ -223,3 +235,18 @@ function updateControl(data) {
   };
 }
 updateControl()
+
+let closeBtnSec=document.querySelector('.dialogCloseBtnSec')
+let closeBtn=document.querySelector('.dialogCloseBtn')
+let burgerBtn = document.querySelector('.burgerBtn')
+let burgerModal = document.querySelector('.burgerModal')
+burgerBtn.onclick=()=>{
+    burgerModal.showModal()
+    closeBtn.onclick=()=>{
+        burgerModal.close()
+    }
+}
+
+closeBtnSec.onclick=()=>{
+    clickModal.close()
+}

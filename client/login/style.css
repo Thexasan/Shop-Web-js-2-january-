@@ -198,7 +198,7 @@ table {
   color: white;
   border: 0;
   position: absolute;
-  top: -480px;
+  top: -450px;
   border-radius: 20px;
   right: -1050px;
 }
@@ -208,7 +208,7 @@ table {
   display: flex;
   flex-direction: column;
 }
-.infoClick button {
+.infoClick .acc, .ord, .log {
   border: 0;
   background-color: transparent;
   color: white;
@@ -218,9 +218,24 @@ table {
   align-items: center;
   gap: 5px;
 }
+.dialogCloseBtnSec{
+    padding: 10px 10px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+     font-size: 14px;
+     border-radius: 7px;
+     letter-spacing: 2px;
+}
 a {
   text-decoration: none;
   color: black;
+}
+@media (max-width:520px) {
+    .infoClick{
+        right: -200px;
+        top: -650px;
+    }
 }
 .head ul li:hover {
   text-decoration: underline;
@@ -268,6 +283,9 @@ a {
   flex-direction: column;
   letter-spacing: 1px;
   gap: 20px;
+}
+.categories ul li:hover{
+    color: #db4444;
 }
 .banners {
   width: 70%;
@@ -473,6 +491,12 @@ a {
     display: block;
     font-size: 30px;
   }
+  .topOfCard{
+    width: 100%;
+  }
+  .topp{
+    width: 100%;
+  }
 }
 .viewBestSelling {
   padding: 15px 55px;
@@ -611,6 +635,9 @@ a {
   }
   .first {
     grid-area: 2/1/3/2;
+  }
+  .cardss .card{
+    width: 100%;
   }
 }
 .last {
@@ -797,3 +824,30 @@ body {
   text-decoration: none;
   color: #000000;
 }
+.burgerModal{
+    border: 0;
+    width: 140px;
+    position: absolute;
+    top: -550px;
+    border-radius: 20px;
+    left: -230px;
+    
+}
+.burgerModal ul {
+    text-align: left;
+    gap: 20px;
+    padding-left: 0;
+}
+.dialogCloseBtn{
+    padding: 10px 40px;
+    border: 0;
+     background-color: blue;
+     color: white;
+     font-size: 17px;
+     border-radius: 7px;
+     letter-spacing: 1px;
+}
+/* 
+.aboutUser{
+  display: none;
+} */
