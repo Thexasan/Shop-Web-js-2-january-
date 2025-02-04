@@ -275,6 +275,11 @@ export function displayProducts(products) {
                 `;
                 container.appendChild(productCard);
 
+                        eyeIcon.onclick = () => {
+            localStorage.setItem("productById", JSON.stringify(product));
+            window.location = "/client/login/Details/main.html"
+        };
+
                 let addToCartBtn = productCard.querySelector(".add-to-cart-btn");
                 addToCartBtn.onclick = () => {
                     addToCart(product);

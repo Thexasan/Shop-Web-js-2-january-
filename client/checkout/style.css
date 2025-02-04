@@ -672,7 +672,10 @@ td {
   width: 300px;
   text-align: center;
 }
-
+a{
+  color: black;
+  text-decoration: none;
+}
 .payment-options label {
   display: block;
   margin: 10px 0;

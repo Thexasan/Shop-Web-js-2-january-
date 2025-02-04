@@ -26,7 +26,7 @@ function displayCart() {
         let tr = document.createElement("tr");
         tr.classList.add("prod-hover");
 
-        let quantity = product.quantity || 1; // ✅ Берём сохранённое количество
+        let quantity = product.quantity || 1;
 
         tr.innerHTML = `
             <td>
@@ -56,8 +56,8 @@ function displayCart() {
             let quantity = parseInt(this.value);
             if (isNaN(quantity) || quantity < 1) quantity = 1;
 
-            cart[index].quantity = quantity; // ✅ Обновляем количество в `cart`
-            localStorage.setItem("cartSend", JSON.stringify(cart)); // ✅ Сохраняем в `localStorage`
+            cart[index].quantity = quantity; 
+            localStorage.setItem("cartSend", JSON.stringify(cart)); 
 
             let price = cart[index].price.cost;
             let subtotal = quantity * price;
@@ -107,3 +107,7 @@ document.querySelector(".btnRemove").addEventListener("click", function () {
     displayCart();
     updateCartCount();
 });
+
+let btnProcees = document.querySelector(".btnProcees");
+btnProcees.onclick = () => 
+    window.location = "/client/checkout/index.html"
