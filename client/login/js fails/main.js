@@ -1,3 +1,4 @@
+import { updateCartCount } from "../../Cart/JS/cartsUtils.js";
 import { getData } from "../../../requests/request.js";
 async function getCategory() {
   try {
@@ -26,6 +27,7 @@ async function getProducts() {
     let data = await getData(`/products`);
     getFromProducts(data);
     getProductsWithoutSale(data);
+     updateCartCount();
   } catch (error) {
     console.error(error);
   }

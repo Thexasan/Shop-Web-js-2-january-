@@ -214,6 +214,7 @@ export function displayProducts(products) {
         let eyeIcon = productCard.querySelector(".eye");
         eyeIcon.onclick = () => {
             localStorage.setItem("productById", JSON.stringify(product));
+            window.location = "/client/login/Details/main.html"
         };
 
         let addToCartBtn = productCard.querySelector(".add-to-cart-btn");
@@ -286,7 +287,6 @@ function addToCart(product) {
     localStorage.setItem("cartSend", JSON.stringify(cart));
 
     updateCartCount();
-    alert(`${product.productName} added to cart!`);
 }
 
 
