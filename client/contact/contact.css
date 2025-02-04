@@ -2,8 +2,6 @@
   margin: 0;
   padding: 0;
 }
-
-/* General Styles */
 .contact {
     padding: 40px 0;
     background: #fff;
@@ -37,7 +35,6 @@
     /* font-size: 20px; */
     /* margin-right: 15px; */
   /* } */
-
   .icon img{
     margin: 0 8px;
   }
@@ -49,8 +46,6 @@
     margin: 0;
     font-size: 14px;
   }
-  
-  /* Form Styling */
   .contact-form {
     flex: 1;
     background: #fff;
@@ -78,8 +73,8 @@
     margin-bottom: 10px;
   }
   button {
-    width: 100%;
-    padding: 10px;
+    width: 40%;
+    padding: 14px;
     background: #e74c3c;
     color: white;
     border: none;
@@ -99,11 +94,14 @@
     .input-group {
       flex-direction: column;
     }
+    button{
+      margin-left: 1px;
+    }
   }
 
 
 
-   /* footer */
+  /* footer */
 footer h3{
   color: #FAFAFA;
   font-size: 24px;
