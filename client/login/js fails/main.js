@@ -223,3 +223,18 @@ function updateControl(data) {
   };
 }
 updateControl()
+
+let closeBtnSec=document.querySelector('.dialogCloseBtnSec')
+let closeBtn=document.querySelector('.dialogCloseBtn')
+let burgerBtn = document.querySelector('.burgerBtn')
+let burgerModal = document.querySelector('.burgerModal')
+burgerBtn.onclick=()=>{
+    burgerModal.showModal()
+    closeBtn.onclick=()=>{
+        burgerModal.close()
+    }
+}
+
+closeBtnSec.onclick=()=>{
+    clickModal.close()
+}
