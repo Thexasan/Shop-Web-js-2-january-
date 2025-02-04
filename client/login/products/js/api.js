@@ -4,7 +4,6 @@ import { fetchBrands, fetchCategories, fetchProduct } from "./dom.js";
 export async function fetchOrders(type, category = null, brand = null) {
     try {
         let endpoint;
-
         if (type === "category") {
             endpoint = "/category";
         } else if (type === "brand") { 
@@ -30,6 +29,6 @@ export async function fetchOrders(type, category = null, brand = null) {
 
         return data;
     } catch (error) {
-        console.error(`Error fetching ${type}:`, error);
+        console.error(error);
     }
 }
