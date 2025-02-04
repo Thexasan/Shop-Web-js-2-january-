@@ -47,5 +47,42 @@ inputPassword.forEach((el) => {
   });
 });
 
+let clickModal = document.querySelector(".infoClick");
+let btnInfo = document.querySelector(".aboutUser");
 
 
+btnInfo.onclick = () => {
+  clickModal.showModal();
+};
+
+let acc = document.querySelector(".acc");
+let order = document.querySelector(".ord");
+let logout = document.querySelector(".log");
+
+acc.onclick = () => {
+  window.location = "../Account/index.html";
+  clickModal.close();
+};
+order.onclick = () => {
+  window.location = "#";
+  clickModal.close();
+};
+logout.onclick = () => {
+  window.location = "./registratsiya.html";
+  clickModal.close();
+};
+
+let closeBtnSec=document.querySelector('.dialogCloseBtnSec')
+let closeBtn=document.querySelector('.dialogCloseBtn')
+let burgerBtn = document.querySelector('.burgerBtn')
+let burgerModal = document.querySelector('.burgerModal')
+burgerBtn.onclick=()=>{
+    burgerModal.showModal()
+    closeBtn.onclick=()=>{
+        burgerModal.close()
+    }
+}
+
+closeBtnSec.onclick=()=>{
+    clickModal.close()
+}
