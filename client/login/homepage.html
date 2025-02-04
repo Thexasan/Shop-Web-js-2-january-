@@ -1,350 +1,420 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-</head>
-<body>
+    <link rel="icon" href="../../logoImage/logo1.png" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
     <header>
-        <nav class="head">
-            <div class="burger">
-                <button class="burgerBtn" style="border: 0; background-color: transparent;"><img src="./images/material-symbols-light_menu.png" alt="" style="width: 100%;"></button> 
-                <p>Exclusive</p>
-            </div>
-            <dialog class="burgerModal">
-                <ul style="display: flex; flex-direction: column;">
-                    <li style="text-decoration: none; color: #DB4444;">Home</li>
-                    <li> <a href="../contact/contact.html" >Contact</a></li>
-                    <li><a href="../about/index.html" >About</a> </li>
-                     <li> <a href="./registratsiya.html" >Sign up</a> </li>
-                </ul>
-                <button class="dialogCloseBtn">Close</button>
-            </dialog>
-            <img src="./images/Group 1116606595.png" alt="" class="izzy">
-            <ul>
-                <li style="text-decoration: none; color: #DB4444;">Home</li>
-                <li> <a href="../contact/contact.html" >Contact</a></li>
-                <li><a href="../about/index.html" >About</a> </li>
-                     <li> <a href="./registratsiya.html" >Sign up</a> </li>
-            </ul>
+      <nav class="head">
+        <div class="burger">
+          <button
+            class="burgerBtn"
+            style="border: 0; background-color: transparent"
+          >
+            <img
+              src="./images/material-symbols-light_menu.png"
+              alt=""
+              style="width: 100%"
+            />
+          </button>
+          <p>Exclusive</p>
+        </div>
+        <dialog class="burgerModal">
+          <ul style="display: flex; flex-direction: column">
+            <li style="text-decoration: none; color: #db4444">Home</li>
+            <li><a href="../contact/contact.html">Contact</a></li>
+            <li><a href="../about/index.html">About</a></li>
+            <li><a href="./registratsiya.html">Sign up</a></li>
+          </ul>
+          <button class="dialogCloseBtn">Close</button>
+        </dialog>
+        <img src="./images/Group 1116606595.png" alt="" class="izzy" />
+        <ul>
+          <li style="text-decoration: none; color: #db4444">Home</li>
+          <li><a href="../contact/contact.html">Contact</a></li>
+          <li><a href="../about/index.html">About</a></li>
+          <li><a href="./registratsiya.html">Sign up</a></li>
+        </ul>
 
+        <div class="poisk">
+          <div class="search">
+            <input type="text" placeholder="What are you looking for?" />
+            <button><img src="./images/Component 2.png" alt="" /></button>
+          </div>
 
-            <div class="poisk">
-               <div class="search">
-                <input type="text" placeholder="What are you looking for?">
-                <button> <img src="./images/Component 2.png" alt=""></button>
-            </div>
-
-            <div class="imgs">
-                <img src="./images/Wishlist.png" alt="" class="serd">        
-                <button style="padding: 10px;"> <a href="../Cart/cart.html" target="_blank"><img src="./images/Cart1.png" alt=""></a> </button> 
-                <button class="aboutUser"> <img src="./images/user.png" alt=""></button>    
-            </div> 
-            </div>
-            
-           
-        </nav>
+          <div class="imgs">
+            <img src="./images/Wishlist.png" alt="" class="serd" />
+            <button style="padding: 10px">
+              <a href="../Cart/cart.html" target="_blank"
+                ><img src="./images/Cart1.png" alt=""
+              /></a>
+            </button>
+            <button class="aboutUser">
+              <img src="./images/user.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </nav>
     </header>
-    
 
     <div class="mediaPoisk">
-        <input type="text" placeholder="Search">
-        <button> <img src="./images/Component 2.png" alt=""></button>
+      <input type="text" placeholder="Search" />
+      <button><img src="./images/Component 2.png" alt="" /></button>
     </div>
 
     <main>
-        <section class="catPlace">
-           <aside class="categories">
+      <section class="catPlace" data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="1500">
+        <aside class="categories"></aside>
+        <aside class="banners">
+          <div class="slider">
+            <div class="slide"></div>
+          </div>
+        </aside>
+      </section>
 
-           </aside>
-           <aside class="banners">
-               <div class="slider">
-                <div class="slide">
-                </div>
-               </div>
-           </aside>
-        </section>
-
-        <section class="sales">
-            <div class="zagolovok">
-                <div class="redCub"></div>
-                <p>Today’s</p>
-            </div>
-            <div class="timer">
-                <div class="text">
-                    <p>Flash Sales</p>
-                   <div class="timerr">
-                    <div >
-                        <h3 class="days">00</h3>
-                        <p>days</p>
-                    </div>
-                    <div >
-                        <h3 class="hours">00</h3>
-                        <p>hours</p>
-                    </div>
-                    <div >
-                        <h3 class="min">00</h3>
-                        <p>minute</p>
-                    </div>
-                    <div >
-                        <h3 class="sec">00</h3>
-                        <p>seconds</p>
-                    </div>
-                   </div>
-                </div>
-                
-                <div class="btnsRL">
-                    <button class="prevBut"> <img src="./images/icons_arrow-left.png" alt=""></button>
-                    <button class="nextBut"> <img src="./images/icons arrow-right.png" alt=""></button>
-                </div>
-            </div>
-
-            <div class="cards">
-            </div>
-             <div class="btnmore">
-
-                 <button class="more">View All Products</button>
-             </div>
-        </section>
-
-
-        <section class="sales">
-            <div class="zagolovok">
-                <div class="redCub"></div>
-                <p>This Month</p>
-            </div>
-            <div class="timer">
-                <div class="text">
-                    <p>Best Selling Products</p>
-                </div>
-                
-                <button class="viewBestSelling"> <a href="./products/index.html" style="color: white;">View All</a> </button>
-            </div>
-
-            <div class="cardds">
-              <div class="card">
-                <div class="topOfCard">
-                    <img src="./images/672462_ZAH9D_5626_002_100_0000_Light-The-North-Face-x-Gucci-coat 1.png" alt="">
-                    <img src="./images/Fill Eye.png" alt="" style="position: absolute; top: 10px; right: 10px;">
-                </div>
-                <p>HAVIT HV-G92 Gamepad</p>
-                <span style="  color: #DB4444;">$120</span>  <span style="text-decoration: line-through;">$160</span>
-              </div>
-              <div class="card">
-                <div class="topOfCard">
-                    <img src="./images/672462_ZAH9D_5626_002_100_0000_Light-The-North-Face-x-Gucci-coat 1.png" alt="">
-                    <img src="./images/Fill Eye.png" alt="" style="position: absolute; top: 10px; right: 10px;">
-                </div>
-                <p>HAVIT HV-G92 Gamepad</p>
-                <span style="  color: #DB4444;">$120</span>  <span style="text-decoration: line-through;">$160</span>
-              </div>
-              <div class="card">
-                <div class="topOfCard">
-                    <img src="./images/672462_ZAH9D_5626_002_100_0000_Light-The-North-Face-x-Gucci-coat 1.png" alt="">
-                    <img src="./images/Fill Eye.png" alt="" style="position: absolute; top: 10px; right: 10px;">
-                </div>
-                <p>HAVIT HV-G92 Gamepad</p>
-                <span style="  color: #DB4444;">$120</span>  <span style="text-decoration: line-through;">$160</span>
-              </div>
-              <div class="card">
-                <div class="topOfCard">
-                    <img src="./images/672462_ZAH9D_5626_002_100_0000_Light-The-North-Face-x-Gucci-coat 1.png" alt="">
-                    <img src="./images/Fill Eye.png" alt="" style="position: absolute; top: 10px; right: 10px;">
-                </div>
-                <p>HAVIT HV-G92 Gamepad</p>
-                <span style="  color: #DB4444;">$120</span>  <span style="text-decoration: line-through;">$160</span>
-              </div>
-              <div class="card">
-                <div class="topOfCard">
-                    <img src="./images/672462_ZAH9D_5626_002_100_0000_Light-The-North-Face-x-Gucci-coat 1.png" alt="">
-                    <img src="./images/Fill Eye.png" alt="" style="position: absolute; top: 10px; right: 10px;">
-                </div>
-                <p>HAVIT HV-G92 Gamepad</p>
-                <span style="  color: #DB4444;">$120</span>  <span style="text-decoration: line-through;">$160</span>
-              </div>
-              <div class="card">
-                <div class="topOfCard">
-                    <img src="./images/672462_ZAH9D_5626_002_100_0000_Light-The-North-Face-x-Gucci-coat 1.png" alt="">
-                    <img src="./images/Fill Eye.png" alt="" style="position: absolute; top: 10px; right: 10px;">
-                </div>
-                <p>HAVIT HV-G92 Gamepad</p>
-                <span style="  color: #DB4444;">$120</span>  <span style="text-decoration: line-through;">$160</span>
-              </div>
-            </div>
-             
-        </section>
-
-
-        <section class="about">
-         <aside class="asideInfo">
-            <p style="color: #00FF66; margin: 0;">Categories</p>
-            <p class="musicexp">Enhance Your  <br>Music Experience</p>
-            <div class="boxCircle">
-                <div class="circle">
-                    <h3 class="dayys">00</h3>
-                    <p>days</p>
-                </div>
-                <div class="circle">
-                    <h3 class="hrss">00</h3>
-                    <p>hours</p>
-                </div>
-                <div class="circle">
-                    <h3 class="mins">00</h3>
-                    <p>minute</p>
-                </div>
-                <div class="circle">
-                    <h3 class="secs">00</h3>
-                    <p>seconds</p>
-                </div>
-            </div>
-            <button class="buyNow">Buy now</button>
-         </aside>
-         <aside style="position: relative;" class="infoImg">
-            <img src="./images/Frame 694.png" alt="" class="topImg" style="position: relative; z-index: 20;">
-            <img src="./images/Ellipse 23.png" alt="" class="posImg">
-         </aside>
-        </section>
-
-
-        <section class="sales">
-            <div class="zagolovok">
-                <div class="redCub"></div>
-                <p>Our Products</p>
-            </div>
-            <div class="timer">
-                <div class="text">
-                    <p>Explore Our Products</p>
-                </div>
-                
-            </div>
-
-            <div class="cardss">
-            </div>
-             <div class="btnmore">
-
-                 <button class="more">View All Products</button>
-             </div>
-        </section>
-
-
-
-
-
-        <section class="arrival">
-            <div class="zagolovok">
-                <div class="redCub"></div>
-                <p>Featured</p>
-            </div>
-            <div class="timer">
-                <div class="text">
-                    <p>New Arrival</p>
-                </div>
-                
-            </div>
-
-            <aside class="bottom">
-               <div class="sec">
-                <img src="./images/Frame 684.png" alt="" >
-               </div>
-               <div class="first">
-                <img src="./images/Frame 685.png" alt="">
-            </div>
-            <div>
-                <img src="./images/Frame 686.png" alt="">
-            </div>
-            <div>
-                <img src="./images/Frame 687.png" alt="">
-            </div>
-            </aside>
-        </section>
-
-        <section class="last">
-            <div class="box box1">
-                <img src="./images/Services.png" alt="">
-                <h3>FREE AND FAST DELIVERY</h3>
-                <p>Free delivery for all orders over $140</p>
-            </div>
-            <div class="box box2">
-                <img src="./images/Services.png" alt="">
-                <h3>FREE AND FAST DELIVERY</h3>
-                <p>Free delivery for all orders over $140</p>
-            </div>
-            <div class="box box3">
-                <img src="./images/Services.png" alt="">
-                <h3>FREE AND FAST DELIVERY</h3>
-                <p>Free delivery for all orders over $140</p>
-            </div>
-        </section>
-
-    </main>
-    
-    <dialog class="infoClick">
-        <div class="dialogflex">
-            <div class="dialogbox">
-                <img src="./images/user (1).png" alt="">
-                <button class="acc">Account</button>
-            </div>
-            <div class="dialogbox">
-                <img src="./images/icon-mallbag.png" alt="">
-                <button class="ord">My order</button>
-            </div>
-            <div class="dialogbox">
-                <img src="./images/Icon-logout.png" alt="">
-                <button class="log">Logout</button>
-            </div>
-            <button class="dialogCloseBtnSec">Close</button>
+      <section class="sales" data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="1500">
+        <div class="zagolovok">
+          <div class="redCub"></div>
+          <p>Today’s</p>
         </div>
-      </dialog>
-    
+        <div class="timer">
+          <div class="text">
+            <p>Flash Sales</p>
+            <div class="timerr">
+              <div>
+                <h3 class="days">00</h3>
+                <p>days</p>
+              </div>
+              <div>
+                <h3 class="hours">00</h3>
+                <p>hours</p>
+              </div>
+              <div>
+                <h3 class="min">00</h3>
+                <p>minute</p>
+              </div>
+              <div>
+                <h3 class="sec">00</h3>
+                <p>seconds</p>
+              </div>
+            </div>
+          </div>
 
-       
+          <div class="btnsRL">
+            <button class="prevBut">
+              <img src="./images/icons_arrow-left.png" alt="" />
+            </button>
+            <button class="nextBut">
+              <img src="./images/icons arrow-right.png" alt="" />
+            </button>
+          </div>
+        </div>
+
+        <div class="cards"></div>
+        <div class="btnmore">
+          <button class="more">View All Products</button>
+        </div>
+      </section>
+
+      <section class="sales" data-aos="fade-up"
+      data-aos-duration="3000">
+        <div class="zagolovok">
+          <div class="redCub"></div>
+          <p>This Month</p>
+        </div>
+        <div class="timer">
+          <div class="text">
+            <p>Best Selling Products</p>
+          </div>
+
+          <button class="viewBestSelling">
+            <a href="./products/index.html" style="color: white">View All</a>
+          </button>
+        </div>
+
+        <div class="cardds">
+          <div class="card">
+            <div class="topOfCard">
+              <img
+                src="./images/672462_ZAH9D_5626_002_100_0000_Light-The-North-Face-x-Gucci-coat 1.png"
+                alt=""
+              />
+              <img
+                src="./images/Fill Eye.png"
+                alt=""
+                style="position: absolute; top: 10px; right: 10px"
+              />
+            </div>
+            <p>HAVIT HV-G92 Gamepad</p>
+            <span style="color: #db4444">$120</span>
+            <span style="text-decoration: line-through">$160</span>
+          </div>
+          <div class="card">
+            <div class="topOfCard">
+              <img
+                src="./images/672462_ZAH9D_5626_002_100_0000_Light-The-North-Face-x-Gucci-coat 1.png"
+                alt=""
+              />
+              <img
+                src="./images/Fill Eye.png"
+                alt=""
+                style="position: absolute; top: 10px; right: 10px"
+              />
+            </div>
+            <p>HAVIT HV-G92 Gamepad</p>
+            <span style="color: #db4444">$120</span>
+            <span style="text-decoration: line-through">$160</span>
+          </div>
+          <div class="card">
+            <div class="topOfCard">
+              <img
+                src="./images/672462_ZAH9D_5626_002_100_0000_Light-The-North-Face-x-Gucci-coat 1.png"
+                alt=""
+              />
+              <img
+                src="./images/Fill Eye.png"
+                alt=""
+                style="position: absolute; top: 10px; right: 10px"
+              />
+            </div>
+            <p>HAVIT HV-G92 Gamepad</p>
+            <span style="color: #db4444">$120</span>
+            <span style="text-decoration: line-through">$160</span>
+          </div>
+          <div class="card">
+            <div class="topOfCard">
+              <img
+                src="./images/672462_ZAH9D_5626_002_100_0000_Light-The-North-Face-x-Gucci-coat 1.png"
+                alt=""
+              />
+              <img
+                src="./images/Fill Eye.png"
+                alt=""
+                style="position: absolute; top: 10px; right: 10px"
+              />
+            </div>
+            <p>HAVIT HV-G92 Gamepad</p>
+            <span style="color: #db4444">$120</span>
+            <span style="text-decoration: line-through">$160</span>
+          </div>
+          <div class="card">
+            <div class="topOfCard">
+              <img
+                src="./images/672462_ZAH9D_5626_002_100_0000_Light-The-North-Face-x-Gucci-coat 1.png"
+                alt=""
+              />
+              <img
+                src="./images/Fill Eye.png"
+                alt=""
+                style="position: absolute; top: 10px; right: 10px"
+              />
+            </div>
+            <p>HAVIT HV-G92 Gamepad</p>
+            <span style="color: #db4444">$120</span>
+            <span style="text-decoration: line-through">$160</span>
+          </div>
+          <div class="card">
+            <div class="topOfCard">
+              <img
+                src="./images/672462_ZAH9D_5626_002_100_0000_Light-The-North-Face-x-Gucci-coat 1.png"
+                alt=""
+              />
+              <img
+                src="./images/Fill Eye.png"
+                alt=""
+                style="position: absolute; top: 10px; right: 10px"
+              />
+            </div>
+            <p>HAVIT HV-G92 Gamepad</p>
+            <span style="color: #db4444">$120</span>
+            <span style="text-decoration: line-through">$160</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" data-aos="fade-right"
+      data-aos-offset="300"
+      data-aos-easing="ease-in-sine">
+        <aside class="asideInfo">
+          <p style="color: #00ff66; margin: 0">Categories</p>
+          <p class="musicexp">Enhance Your <br />Music Experience</p>
+          <div class="boxCircle">
+            <div class="circle">
+              <h3 class="dayys">00</h3>
+              <p>days</p>
+            </div>
+            <div class="circle">
+              <h3 class="hrss">00</h3>
+              <p>hours</p>
+            </div>
+            <div class="circle">
+              <h3 class="mins">00</h3>
+              <p>minute</p>
+            </div>
+            <div class="circle">
+              <h3 class="secs">00</h3>
+              <p>seconds</p>
+            </div>
+          </div>
+          <button class="buyNow">Buy now</button>
+        </aside>
+        <aside style="position: relative" class="infoImg">
+          <img
+            src="./images/Frame 694.png"
+            alt=""
+            class="topImg"
+            style="position: relative; z-index: 20"
+          />
+          <img src="./images/Ellipse 23.png" alt="" class="posImg" />
+        </aside>
+      </section>
+
+      <section class="sales" data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="1500">
+        <div class="zagolovok">
+          <div class="redCub"></div>
+          <p>Our Products</p>
+        </div>
+        <div class="timer">
+          <div class="text">
+            <p>Explore Our Products</p>
+          </div>
+        </div>
+
+        <div class="cardss"></div>
+        <div class="btnmore">
+          <button class="more">View All Products</button>
+        </div>
+      </section>
+
+      <section class="arrival" data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="1500">
+        <div class="zagolovok">
+          <div class="redCub"></div>
+          <p>Featured</p>
+        </div>
+        <div class="timer">
+          <div class="text">
+            <p>New Arrival</p>
+          </div>
+        </div>
+
+        <aside class="bottom">
+          <div class="sec">
+            <img src="./images/Frame 684.png" alt="" />
+          </div>
+          <div class="first">
+            <img src="./images/Frame 685.png" alt="" />
+          </div>
+          <div>
+            <img src="./images/Frame 686.png" alt="" />
+          </div>
+          <div>
+            <img src="./images/Frame 687.png" alt="" />
+          </div>
+        </aside>
+      </section>
+
+      <section class="last" data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="1500">
+        <div class="box box1">
+          <img src="./images/Services.png" alt="" />
+          <h3>FREE AND FAST DELIVERY</h3>
+          <p>Free delivery for all orders over $140</p>
+        </div>
+        <div class="box box2">
+          <img src="./images/Services.png" alt="" />
+          <h3>FREE AND FAST DELIVERY</h3>
+          <p>Free delivery for all orders over $140</p>
+        </div>
+        <div class="box box3">
+          <img src="./images/Services.png" alt="" />
+          <h3>FREE AND FAST DELIVERY</h3>
+          <p>Free delivery for all orders over $140</p>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="infoClick">
+      <div class="dialogflex">
+        <div class="dialogbox">
+          <img src="./images/user (1).png" alt="" />
+          <button class="acc">Account</button>
+        </div>
+        <div class="dialogbox">
+          <img src="./images/icon-mallbag.png" alt="" />
+          <button class="ord">My order</button>
+        </div>
+        <div class="dialogbox">
+          <img src="./images/Icon-logout.png" alt="" />
+          <button class="log">Logout</button>
+        </div>
+        <button class="dialogCloseBtnSec">Close</button>
+      </div>
+    </dialog>
 
     <footer>
-        <section>
-            <div class="footBoxes">
-                <h3>Exclusive</h3>
-                <p>Subscribe</p>
-                <p>Get 10% off your first order</p>
-                <div class="boxFooter">
-                    <input type="text" placeholder="Enter your email">
-                    <button>
-                        <img src="./images/icon-send.png" alt="">
-                    </button>
-                </div>
-            </div>
-            <div class="footBoxes">
-                <h3>Support</h3>
-                <p>111 Bijoy sarani, Dhaka, <br>
-                     DH 1515, Bangladesh.</p>
-                <p>exclusive@gmail.com</p>
-                <p>+88015-88888-9999</p>
-            </div>
-            <div class="footBoxes">
-                <h3>Account</h3>
-                <p>My Account</p>
-                <p>Cart</p>
-                <p>Wishlist</p>
-                <p>Shop</p>
-            </div>
-            <div class="footBoxes">
-                <h3>Quick Link</h3>
-                <p>Privacy Policy</p>
-                <p>Terms Of Use</p>
-                <p>FAQ</p>
-                <p>Contact</p>
-            </div>
-            <div class="footBoxes mm">
-                <h3>Social</h3>
-                <img src="./images/Frame 741.png" alt="">
-            </div>
-        </section>
-        <div class="lasttxt">
-            <p> @ Copyright Rimel 2022. All right reserved</p>
+      <section>
+        <div class="footBoxes">
+          <h3>Exclusive</h3>
+          <p>Subscribe</p>
+          <p>Get 10% off your first order</p>
+          <div class="boxFooter">
+            <input type="text" placeholder="Enter your email" />
+            <button>
+              <img src="./images/icon-send.png" alt="" />
+            </button>
+          </div>
         </div>
+        <div class="footBoxes">
+          <h3>Support</h3>
+          <p>
+            111 Bijoy sarani, Dhaka, <br />
+            DH 1515, Bangladesh.
+          </p>
+          <p>exclusive@gmail.com</p>
+          <p>+88015-88888-9999</p>
+        </div>
+        <div class="footBoxes">
+          <h3>Account</h3>
+          <p>My Account</p>
+          <p>Cart</p>
+          <p>Wishlist</p>
+          <p>Shop</p>
+        </div>
+        <div class="footBoxes">
+          <h3>Quick Link</h3>
+          <p>Privacy Policy</p>
+          <p>Terms Of Use</p>
+          <p>FAQ</p>
+          <p>Contact</p>
+        </div>
+        <div class="footBoxes mm">
+          <h3>Social</h3>
+          <img src="./images/Frame 741.png" alt="" />
+        </div>
+      </section>
+      <div class="lasttxt">
+        <p>@ Copyright Rimel 2022. All right reserved</p>
+      </div>
     </footer>
     <script type="module" src="./js fails/main.js"></script>
-</body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>

@@ -160,3 +160,8 @@ let addBut = document.querySelector(".add");
 addBut.onclick = () => {
   window.location = "./addPage/index.html";
 };
+
+let AddOrdersBut = document.querySelector(".AddOrders")
+AddOrdersBut.onclick = () => {
+  window.location = "./addPage/index.html"
+}

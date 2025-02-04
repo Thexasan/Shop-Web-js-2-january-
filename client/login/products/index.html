@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="icon" href="../../../logoImage/logo1.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <nav>
@@ -66,7 +68,8 @@
     </div>
     
     <main>
-            <aside>
+            <aside data-aos="fade-up"
+            data-aos-duration="3000">
                 <div class="group">
                     <h3 class="title titleC">Category</h3>
                     <p class="all-products-btn" style="color: red;">All Products</p>
@@ -105,7 +108,8 @@
                 </div>
             </aside>
         <div class="main1">
-            <div class="productsContainer"></div>
+            <div class="productsContainer" data-aos="fade-up"
+            data-aos-duration="3000"></div>
             <button class="toggleBtn" style="display: none;"></button>
         </div>
         
@@ -155,5 +159,9 @@
     </footer>
 
     <script type="module" src="./js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script> 
 </body>
 </html>
