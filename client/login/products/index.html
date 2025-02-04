@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Products</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -11,18 +11,21 @@
 <body>
     <nav>
         <img class="logo" src="./images/Group 1116606595.png" alt="">
-        <h3 class="logo1"><img src="./images/material-symbols-light_menu.png" alt="">Exclusive</h3>
-        <div class="burger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
+        <div class="res">
+            <div class="burger-menu" id="burgerMenu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <h3 class="logo1">Exclusive</h3>
         </div>
         <ul class="nav-links">
-            <a href="./index.html"> <li class="hover">Home</li></a>
-            <a href=""><li>Contact</li></a>
+            <a href="./index.html"><li>Home</li></a>
+            <a href="../../contact/contact.html"><li>Contact</li></a>
             <a href=""><li>About</li></a>
             <a href=""><li>Sign Up</li></a>
         </ul>
+    
         <div class="div">
             <div class="searchh">
                 <input type="search" class="search" placeholder="What are you looking for?">
@@ -36,6 +39,17 @@
             <img src="./images/user.png" alt="">
         </div>
     </nav>
+    
+    <!-- Mobile navigation menu -->
+    <div class="mobile-nav" id="mobileNav">
+        <ul class="ull">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Sign Up</a></li>
+        </ul>
+    </div>
+    
     
     <div class="hide">
         <input type="search" class="search" placeholder="What are you looking for?">

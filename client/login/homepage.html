@@ -11,15 +11,24 @@
     <header>
         <nav class="head">
             <div class="burger">
-                <img src="./images/material-symbols-light_menu.png" alt="">
+                <button class="burgerBtn" style="border: 0; background-color: transparent;"><img src="./images/material-symbols-light_menu.png" alt="" style="width: 100%;"></button> 
                 <p>Exclusive</p>
             </div>
+            <dialog class="burgerModal">
+                <ul style="display: flex; flex-direction: column;">
+                    <li style="text-decoration: none; color: #DB4444;">Home</li>
+                    <li> <a href="../contact/contact.html" >Contact</a></li>
+                    <li><a href="../about/index.html" >About</a> </li>
+                     <li> <a href="./registratsiya.html" >Sign up</a> </li>
+                </ul>
+                <button class="dialogCloseBtn">Close</button>
+            </dialog>
             <img src="./images/Group 1116606595.png" alt="" class="izzy">
             <ul>
                 <li style="text-decoration: none; color: #DB4444;">Home</li>
-                <li>Contact</li>
-                <li>About</li>
-                 <li> <a href="./registratsiya.html" target="_blank">Sign up</a> </li>
+                <li> <a href="../contact/contact.html" >Contact</a></li>
+                <li><a href="../about/index.html" >About</a> </li>
+                     <li> <a href="./registratsiya.html" >Sign up</a> </li>
             </ul>
 
 
@@ -36,6 +45,8 @@
             <span class="cntCartAdd" style="display: none;">0</span>
           </div>          
                <button class="aboutUser"> <img src="./images/user.png" alt=""></button>
+               <button style="padding: 10px;"> <a href="../Cart/cart.html" target="_blank"><img src="./images/Cart1.png" alt=""></a> </button> 
+               <button class="aboutUser" > <img src="./images/user.png" alt=""></button>
             </div> 
             </div>
             
@@ -289,6 +300,7 @@
                 <img src="./images/Icon-logout.png" alt="">
                 <button class="log">Logout</button>
             </div>
+            <button class="dialogCloseBtnSec">Close</button>
         </div>
       </dialog>
     

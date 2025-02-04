@@ -11,15 +11,24 @@
     <header>
         <nav class="head">
             <div class="burger">
-                <img src="./images/material-symbols-light_menu.png" alt="">
+                <button class="burgerBtn" style="border: 0; background-color: transparent;"><img src="./images/material-symbols-light_menu.png" alt="" style="width: 100%;"></button> 
                 <p>Exclusive</p>
             </div>
+            <dialog class="burgerModal">
+                <ul style="display: flex; flex-direction: column;">
+                    <li> <a href="./homepage.html">Home</a></li>
+                    <li> <a href="../contact/contact.html" >Contact</a></li>
+                    <li><a href="../about/index.html" >About</a> </li>
+                     <li style="text-decoration: none; color: #DB4444;"> Sign up </li>
+                </ul>
+                <button class="dialogCloseBtn">Close</button>
+            </dialog>
             <img src="./images/Group 1116606595.png" alt="" class="izzy">
             <ul>
-                <li> <a href="./homepage.html" target="_blank">Home</a> </li>
-                <li>Contact</li>
-                <li>About</li>
-                 <li style="text-decoration: none; color: #DB4444;"> Sign up</li>
+                <li> <a href="./homepage.html">Home</a></li>
+                    <li> <a href="../contact/contact.html" >Contact</a></li>
+                    <li><a href="../about/index.html" >About</a> </li>
+                     <li style="text-decoration: none; color: #DB4444;"> Sign up </li>
             </ul>
 
 
@@ -31,8 +40,8 @@
 
             <div class="imgs">
                 <img src="./images/Wishlist.png" alt="" class="serd">
-                <img src="./images/Cart1.png" alt="">
-                <img src="./images/user.png" alt="">
+               <button style="padding: 10px;"> <a href="../Cart/cart.html" target="_blank"><img src="./images/Cart1.png" alt=""></a> </button> 
+               <button class="aboutUser" > <img src="./images/user.png" alt=""></button>
             </div> 
             </div>
             
@@ -61,7 +70,7 @@
                     <p>Forget Password?</p>
                 </div>
     
-                <button type="submit">Log in</button>
+                <button type="submit" class="loginBtn">Log in</button>
             </div>
            
            </form>
@@ -111,6 +120,23 @@
             <p> @ Copyright Rimel 2022. All right reserved</p>
         </div>
     </footer>
+    <dialog class="infoClick">
+        <div class="dialogflex">
+            <div class="dialogbox">
+                <img src="./images/user (1).png" alt="">
+                <button class="acc">Account</button>
+            </div>
+            <div class="dialogbox">
+                <img src="./images/icon-mallbag.png" alt="">
+                <button class="ord">My order</button>
+            </div>
+            <div class="dialogbox">
+                <img src="./images/Icon-logout.png" alt="">
+                <button class="log">Logout</button>
+            </div>
+            <button class="dialogCloseBtnSec">Close</button>
+        </div>
+      </dialog>
     <script type="module" src="./js fails/login.js"></script>
 </body>
 </html>
