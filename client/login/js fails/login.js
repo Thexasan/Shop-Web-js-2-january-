@@ -7,7 +7,6 @@ let lega = document.querySelectorAll(".lega");
 
 formLogin.onsubmit = async (e) => {
   e.preventDefault();
-
   let userEmail = formLogin["emailLogin"].value.trim();
   let userPassword = formLogin["passwordlogin"].value.trim();
 
@@ -47,3 +46,6 @@ inputPassword.forEach((el) => {
     lega.forEach((el) => (el.style.color = ""));
   });
 });
+
+
+
