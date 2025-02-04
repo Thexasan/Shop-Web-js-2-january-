@@ -126,7 +126,7 @@ export async function updateControl(products) {
     numbers.append(pageBut);
   }
   prevBut.onclick = () => {
-    if (currentPage > 1) {
+    if (currentPage < 1) {
       currentPage--;
       get(products);
     }
