@@ -287,9 +287,27 @@ export function displayProducts(products) {
         }
     };
 }
-let cart = [];
+
+let cartCount = document.querySelector(".cntCartAdd");
+
+function updateCartCount() {
+    let cart = JSON.parse(localStorage.getItem("cartSend")) || [];
+    if (cart.length > 0) {
+        cartCount.style.display = "flex";
+        cartCount.textContent = cart.length;
+    } else {
+        cartCount.style.display = "none";
+    }
+}
+
+updateCartCount();
+
 function addToCart(product) {
+    let cart = JSON.parse(localStorage.getItem("cartSend")) || [];
     cart.push(product);
+    localStorage.setItem("cartSend", JSON.stringify(cart));
+
+    updateCartCount();
     alert(`${product.productName} added to cart!`);
 }
 
@@ -355,4 +373,8 @@ for (let i = 5; i >= 2; i--) {
     ratingsListDiv.appendChild(ratingElement);
 }
 
-
+let cartClick = document.querySelector(".cartClick");
+cartClick.style.cursor = "pointer";
+cartClick.onclick = () => {
+    window.location = "/client/Cart/cart.html";
+}
