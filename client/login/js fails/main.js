@@ -143,7 +143,7 @@ function countdownTimer() {
   const m = Math.floor((gap / 1000 / 60) % 60);
   const s = Math.floor((gap / 1000) % 60);
   // console.log(d);
-  // console.log(h);
+  // console.log(h); 
   // console.log(m);
   // console.log(s);
   days.innerHTML = d < 10 ? "0" + d : d;

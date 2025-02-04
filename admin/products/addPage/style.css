@@ -695,3 +695,57 @@ span {
   font-weight: bold;
 
 }
+.succesModal
+{
+  width: 500px;
+  height: 200px;
+  margin: auto;
+  border: none;
+  box-shadow: 0px 0px 10px;
+  padding: 20px;
+  border-radius: 20px;
+}
+.flex
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+}
+.flex h3
+{
+  font-size: 18px;
+  font-weight: bold;
+}
+.flex p 
+{
+  color: gray;
+  font-weight: bold;
+  font-size: 18px;
+}
+.flexButs
+{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.flexButs button
+{
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+.prevBut
+{
+  color: #2563eb;
+  cursor: pointer;
+  background-color: transparent;
+}
+.addNew 
+{
+  background-color: #2563eb;
+  color: #fff;
+}
