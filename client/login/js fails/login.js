@@ -7,7 +7,6 @@ let lega = document.querySelectorAll(".lega");
 
 formLogin.onsubmit = async (e) => {
   e.preventDefault();
-
   let userEmail = formLogin["emailLogin"].value.trim();
   let userPassword = formLogin["passwordlogin"].value.trim();
 
@@ -47,3 +46,43 @@ inputPassword.forEach((el) => {
     lega.forEach((el) => (el.style.color = ""));
   });
 });
+
+let clickModal = document.querySelector(".infoClick");
+let btnInfo = document.querySelector(".aboutUser");
+
+
+btnInfo.onclick = () => {
+  clickModal.showModal();
+};
+
+let acc = document.querySelector(".acc");
+let order = document.querySelector(".ord");
+let logout = document.querySelector(".log");
+
+acc.onclick = () => {
+  window.location = "../Account/index.html";
+  clickModal.close();
+};
+order.onclick = () => {
+  window.location = "../Account/index.html";
+  clickModal.close();
+};
+logout.onclick = () => {
+  window.location = "./login.html";
+  clickModal.close();
+};
+
+let closeBtnSec=document.querySelector('.dialogCloseBtnSec')
+let closeBtn=document.querySelector('.dialogCloseBtn')
+let burgerBtn = document.querySelector('.burgerBtn')
+let burgerModal = document.querySelector('.burgerModal')
+burgerBtn.onclick=()=>{
+    burgerModal.showModal()
+    closeBtn.onclick=()=>{
+        burgerModal.close()
+    }
+}
+
+closeBtnSec.onclick=()=>{
+    clickModal.close()
+}

@@ -1,5 +1,27 @@
 import { fetchOrders } from "./api.js";
 
+// burgerMenu
+document.addEventListener("DOMContentLoaded", () => {
+    const burgerMenu = document.getElementById("burgerMenu");
+    const mobileNav = document.getElementById("mobileNav");
+    const navLinks = document.querySelector(".nav-links");
+
+    burgerMenu.addEventListener("click", () => {
+        burgerMenu.classList.toggle("active");
+        mobileNav.classList.toggle("active");
+        navLinks.classList.toggle("active");
+    });
+
+    document.addEventListener("click", (event) => {
+        if (!mobileNav.contains(event.target) && !burgerMenu.contains(event.target)) {
+            mobileNav.classList.remove("active");
+            burgerMenu.classList.remove("active");
+            navLinks.classList.remove("active");
+        }
+    });
+});
+
+
 // CATEGORY LIST
 let categoryListDiv = document.querySelector(".categorylist");
 let seeMoreBtn = document.querySelector(".see-more");
@@ -214,6 +236,7 @@ export function displayProducts(products) {
         let eyeIcon = productCard.querySelector(".eye");
         eyeIcon.onclick = () => {
             localStorage.setItem("productById", JSON.stringify(product));
+            window.location = "/client/login/Details/main.html"
         };
 
         let addToCartBtn = productCard.querySelector(".add-to-cart-btn");
@@ -286,7 +309,6 @@ function addToCart(product) {
     localStorage.setItem("cartSend", JSON.stringify(cart));
 
     updateCartCount();
-    alert(`${product.productName} added to cart!`);
 }
 
 

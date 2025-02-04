@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+  <nav>
+    <img class="logo" src="./img/Group 1116606595.png" alt="">
+    <div class="res">
+        <div class="burger-menu" id="burgerMenu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <h3 class="logo1">Exclusive</h3>
+    </div>
+    <ul class="nav-links">
+      <a href="../login/homepage.html"><li>Home</li></a>
+      <a href="#"><li style=" color: #DB4444;">Contact</li></a>
+        <a href="../about/index.html"><li>About</li></a>
+        <a href="../login/registratsiya.html"><li>Sign Up</li></a>
+    </ul>
+
+    <div class="div">
+        <div class="searchh">
+            <input type="search" class="search" placeholder="What are you looking for?">
+            <img src="./img/Component 2.png" alt="">
+        </div>
+        <img class="wish" src="./img/Wishlist.png" alt="">
+        <img src="./img/Cart1.png" alt="">
+        <img src="./img/user.png" alt="">
+    </div>
+</nav>
+
+<!-- Mobile navigation -->
+<div class="mobile-nav" id="mobileNav">
+    <ul class="ull">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Sign Up</a></li>
+    </ul>
+</div>
+
+
+<div class="hide">
+    <input type="search" class="search" placeholder="What are you looking for?">
+    <img src="./images/Component 2.png" alt="">
+</div>
+<div class="undernav">
+    <div class="link">
+        <a href=""><span class="link1">Home  /</span></a>
+        <a href=""><span class="link2">Contact</span></a>
+    </div>        
+</div>
+
+    <section class="contact">
+        <div class="container">
+          <div class="contact-info">
+            <div class="box">
+              <div class="icon"><img src="./img/icons-phone.png" alt=""></div>
+              <div class="text">
+                <h3>Call To Us</h3>
+                <p>We are available 24/7, 7 days a week.</p>
+                <p>Phone: +8801611112222</p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="icon"><img src="./img/icons-mail.png" alt=""></div>
+              <div class="text">
+                <h3>Write To Us</h3>
+                <p>Fill out our form and we will contact you within 24 hours.</p>
+                <p>Emails: customer@exclusive.com</p>
+                <p>Emails: support@exclusive.com</p>
+              </div>
+            </div>
+          </div>
+      
+          <div class="contact-form">
+            <form>
+              <div class="input-group">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Phone" required>
+              </div>
+              <textarea placeholder="Your Message" required></textarea>
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <section>
+            <div class="footBoxes">
+                <h3>Exclusive</h3>
+                <p>Subscribe</p>
+                <p>Get 10% off your first order</p>
+                <div class="boxFooter">
+                    <input type="text" placeholder="Enter your email">
+                    <button>
+                        <img src="./img/icon-send.png" alt="">
+                    </button>
+                </div>
+            </div>
+            <div class="footBoxes">
+                <h3>Support</h3>
+                <p>111 Bijoy sarani, Dhaka, <br>
+                     DH 1515, Bangladesh.</p>
+                <p>exclusive@gmail.com</p>
+                <p>+88015-88888-9999</p>
+            </div>
+            <div class="footBoxes">
+                <h3>Account</h3>
+                <p>My Account</p>
+                <p>Cart</p>
+                <p>Wishlist</p>
+                <p>Shop</p>
+            </div>
+            <div class="footBoxes">
+                <h3>Quick Link</h3>
+                <p>Privacy Policy</p>
+                <p>Terms Of Use</p>
+                <p>FAQ</p>
+                <p>Contact</p>
+            </div>
+            <div class="footBoxes mm">
+                <h3>Social</h3>
+                <img src="./img/Frame 741.png" alt="">
+            </div>
+        </section>
+        <div class="lasttxt">
+            <p> @ Copyright Rimel 2022. All right reserved</p>
+        </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+    const burgerMenu = document.getElementById("burgerMenu");
+    const mobileNav = document.getElementById("mobileNav");
+    const navLinks = document.querySelector(".nav-links");
+
+    burgerMenu.addEventListener("click", () => {
+        burgerMenu.classList.toggle("active");
+        mobileNav.classList.toggle("active");
+        navLinks.classList.toggle("active");
+    });
+
+    document.addEventListener("click", (event) => {
+        if (!mobileNav.contains(event.target) && !burgerMenu.contains(event.target)) {
+            mobileNav.classList.remove("active");
+            burgerMenu.classList.remove("active");
+            navLinks.classList.remove("active");
+        }
+    });
+});
+    </script>
+</body>
+</html>
